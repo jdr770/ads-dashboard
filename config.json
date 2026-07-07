@@ -29,6 +29,12 @@
       "group": "perso"
     },
     {
+      "id": "act_1585141998932759",
+      "label": "🇱🇺 LUX TH_1 (PV)",
+      "target_cpl": 30.0,
+      "group": "perso"
+    },
+    {
       "id": "act_2026890828170822",
       "label": "🇧🇪 JRC RENO TOIT (restreint)",
       "target_cpl": 4.5,
@@ -147,6 +153,14 @@
       ]
     },
     {
+      "label": "☀️ PV LUX",
+      "name_contains": [
+        "LUXPV",
+        "LUX PV",
+        "PV_LUX"
+      ]
+    },
+    {
       "label": "🪟 Châssis LUX",
       "name_contains": [
         "CHASSIS"
@@ -155,7 +169,8 @@
     {
       "label": "🇱🇺 Multi PVCH LUX",
       "name_contains": [
-        "PVCH"
+        "PVCH",
+        "MULTI LUX"
       ]
     }
   ]

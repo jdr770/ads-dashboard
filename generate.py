@@ -170,16 +170,31 @@ def render(accounts, recos, alerts):
                      f'<td>{fmt_cpl(c["cpl_w"], c["target"])}</td>'
                      f'<td>{c["freq"]:.1f}</td></tr>')
     alert_cards = [(lvl, m) for lvl, _k, m in alerts]
+    prods = ""
+    for p in CFG.get("products", []):
+        st = lt = sw = lw = 0.0
+        for a in accounts:
+            for c in a["campaigns"]:
+                hit = a["id"] in p.get("accounts", []) or any(
+                    pat.lower() in c["name"].lower() for pat in p.get("name_contains", []))
+                if hit:
+                    st += c["spend_t"]; lt += c["leads_t"]; sw += c["spend_w"]; lw += c["leads_w"]
+        cpl_t = f"{st/lt:.2f}€" if lt else "—"
+        cpl_w = f"{sw/lw:.2f}€ · {lw:.0f} leads" if lw else "—"
+        prods += (f'<div class="pcard"><div class="pl">{esc(p["label"])}</div>'
+                  f'<div class="pv">{cpl_t}</div><div class="ps">{lt:.0f} leads auj.</div>'
+                  f'<div class="ps muted2">7j : {cpl_w}</div></div>')
     reco_html = "".join(f'<div class="card {lvl}">{esc(m)}</div>' for lvl, m in (alert_cards + recos)) or '<div class="card green">Rien à signaler ✅</div>'
     backlog = "".join(f'<div class="card blue"><b>{esc(b["market"])}</b> · {b["count"]} vidéos<br><span class="small">{esc(b["note"])}</span></div>' for b in CFG["video_backlog"])
     return f"""<div class="head"><h1>📊 Leadfy Ads</h1><div class="upd">MAJ {upd}</div>
 {kpi_blocks}</div>
-<section id="cerveau"><h2>🧠 Cerveau</h2>{reco_html}</section>
 <section id="campagnes"><h2>📈 Campagnes</h2><div class="twrap"><table>
 <tr><th>Campagne</th><th>€ auj.</th><th>Leads</th><th>CPL auj.</th><th>CPL 7j</th><th>Fréq.</th></tr>
 {rows}</table></div></section>
+<section id="produits"><h2>💶 CPL par produit</h2><div class="pgrid">{prods}</div></section>
+<section id="cerveau"><h2>🧠 Cerveau</h2>{reco_html}</section>
 <section id="videos"><h2>🎬 Vidéos à lancer</h2>{backlog}</section>
-<nav><a href="#cerveau">🧠</a><a href="#campagnes">📈</a><a href="#videos">🎬</a></nav>"""
+<nav><a href="#campagnes">📈</a><a href="#produits">💶</a><a href="#cerveau">🧠</a><a href="#videos">🎬</a></nav>"""
 
 
 CSS = """*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;background:#0f1420;color:#e8ecf4;padding-bottom:70px}
@@ -191,6 +206,7 @@ section{padding:0 16px}.card{background:#1a2233;border-radius:12px;padding:12px 
 td{padding:7px 8px;border-bottom:1px solid #1e2740;white-space:nowrap}tr.acct td{background:#151c2c;font-weight:700;padding-top:12px}.cname{max-width:180px;overflow:hidden;text-overflow:ellipsis}
 .good{color:#22c55e;font-weight:700}.warn{color:#f59e0b;font-weight:700}.bad{color:#ef4444;font-weight:700}.muted{color:#4b5568}
 nav{position:fixed;bottom:0;left:0;right:0;background:#151c2c;display:flex;border-top:1px solid #2a3550}nav a{flex:1;text-align:center;padding:14px;font-size:1.3em;text-decoration:none}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.pcard{background:#1a2233;border-radius:14px;padding:12px}.pl{font-size:.78em;color:#8b94a8;font-weight:700}.pv{font-size:1.35em;font-weight:800;margin:4px 0 2px}.ps{font-size:.75em;color:#c3cad9}.muted2{color:#5d6880}
 #lock{position:fixed;inset:0;background:#0f1420;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;z-index:10}
 #lock input{background:#1a2233;border:1px solid #2a3550;border-radius:10px;padding:12px 16px;color:#fff;font-size:1em;text-align:center}#lock button{background:#3b82f6;border:0;border-radius:10px;padding:12px 26px;color:#fff;font-size:1em}"""
 

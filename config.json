@@ -113,5 +113,50 @@
     "cpl_warn_ratio": 1.5,
     "cpl_alert_ratio": 2.0,
     "min_spend_for_alert": 15.0
-  }
+  },
+  "products": [
+    {
+      "label": "🇪🇸 ISO España",
+      "accounts": [
+        "act_1548718242483908"
+      ]
+    },
+    {
+      "label": "🏠 Réno toiture",
+      "accounts": [
+        "act_980359137327107",
+        "act_2026890828170822"
+      ]
+    },
+    {
+      "label": "☀️ Solar BE",
+      "accounts": [
+        "act_3065694270339966"
+      ]
+    },
+    {
+      "label": "🏡 Multi BE",
+      "name_contains": [
+        "MULTI BE"
+      ]
+    },
+    {
+      "label": "🧱 ISO BE",
+      "name_contains": [
+        "LABORATOIRE"
+      ]
+    },
+    {
+      "label": "🪟 Châssis LUX",
+      "name_contains": [
+        "CHASSIS"
+      ]
+    },
+    {
+      "label": "🇱🇺 Multi PVCH LUX",
+      "name_contains": [
+        "PVCH"
+      ]
+    }
+  ]
 }

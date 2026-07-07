@@ -2,6 +2,7 @@
 """Génère le dashboard Leadfy Ads : pull Meta API -> règles -> HTML chiffré -> Telegram."""
 import base64, hashlib, json, os, sys, time, urllib.request, urllib.parse
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 
 FB_TOKEN = os.environ["FB_TOKEN"]
 TG_TOKEN = os.environ.get("TG_TOKEN", "")
@@ -11,6 +12,7 @@ GRAPH = "https://graph.facebook.com/v21.0/"
 
 CFG = json.load(open("config.json"))
 NOW = datetime.now(timezone.utc)
+PARIS = NOW.astimezone(ZoneInfo("Europe/Paris"))
 
 
 def api(path, params=None):
@@ -193,7 +195,7 @@ def build_recos(accounts):
                 recos.append(("red", f"Fatigue créa : {c['name']} ({acc['label']}) fréquence 7j = {c['freq']:.2f} — prévoir refresh/vague suivante"))
             elif c["freq"] >= R["freq_warn"]:
                 recos.append(("orange", f"Fréquence qui monte : {c['name']} ({acc['label']}) = {c['freq']:.2f}"))
-            if c["spend_t"] == 0 and c["budget"] > 0 and NOW.hour >= 10:
+            if c["spend_t"] == 0 and c["budget"] > 0 and PARIS.hour >= 11:
                 recos.append(("orange", f"Zéro dépense aujourd'hui : {c['name']} ({acc['label']}) — review en cours ou problème de diffusion ?"))
     for l in CFG["launches"]:
         t0 = datetime.fromisoformat(l["at"].replace("Z", "+00:00"))
@@ -219,7 +221,7 @@ def fmt_cpl(cpl, target, pill=False):
 
 
 def render(accounts, recos, alerts):
-    upd = NOW.strftime("%d/%m · %H:%M UTC")
+    upd = PARIS.strftime("%d/%m · %H:%M")
     groups = {"perso": "Perso", "certicasa": "Certicasa · géré"}
     kpi_blocks = ""
     for g, glabel in groups.items():
@@ -437,7 +439,7 @@ def main():
     json.dump({k: v for k, v in prev.items() if v == today}, open(state_f, "w"))
     # daily scan du matin (run de ~05:17 UTC = 07:17 Paris)
     if 5 <= NOW.hour < 7:
-        lines = [f"☀️ DAILY LEADFY — {NOW.strftime('%d/%m')}"]
+        lines = [f"☀️ DAILY LEADFY — {PARIS.strftime('%d/%m')}"]
         for g, glabel in (("perso", "🏠 PERSO"), ("certicasa", "🇪🇸 CERTICASA (géré)")):
             gs = sum(c["spend_w"] for a in accounts if a.get("group") == g for c in a["campaigns"])
             gl = sum(c["leads_w"] for a in accounts if a.get("group") == g for c in a["campaigns"])

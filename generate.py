@@ -228,18 +228,29 @@ def render(accounts, recos, alerts):
                        f'<div class="kpi"><div class="v">{gs:.0f}€</div><div class="l">Dépense auj.</div></div>'
                        f'<div class="kpi"><div class="v">{gl}</div><div class="l">Leads auj.</div></div>'
                        f'<div class="kpi"><div class="v">{gc}</div><div class="l">CPL</div></div></div>')
+
+    import re as _re
+    def card_key(m):
+        return _re.sub(r"[\d.,€%]+", "", m)[:80]
+    def cards(items):
+        return "".join(f'<div class="card {lvl}" data-key="{esc(card_key(m))}">{esc(m)}</div>' for lvl, m in items)
+
+    important = [(lvl, m) for lvl, _k, m in alerts] + [(l, m) for l, m in recos if l in ("red", "green")]
+    veille = [(l, m) for l, m in recos if l not in ("red", "green")]
+    imp_html = cards(important) or '<div class="card green">Rien d\'urgent ✅</div>'
+    veille_html = cards(veille) or '<div class="card green">Rien à signaler ✅</div>'
+
     rows = ""
     for acc in accounts:
         if not acc["campaigns"]:
             continue
-        rows += f'<tr class="acct"><td colspan="6">{esc(acc["label"])}</td></tr>'
+        rows += f'<div class="acct">{esc(acc["label"])}</div>'
         for c in sorted(acc["campaigns"], key=lambda x: -x["spend_w"]):
-            rows += (f'<tr><td class="cname">{esc(c["name"])}</td>'
-                     f'<td>{c["spend_t"]:.0f}€</td><td>{c["leads_t"]}</td>'
-                     f'<td>{fmt_cpl(c["cpl_t"], c["target"])}</td>'
-                     f'<td>{fmt_cpl(c["cpl_w"], c["target"])}</td>'
-                     f'<td>{c["freq"]:.1f}</td></tr>')
-    alert_cards = [(lvl, m) for lvl, _k, m in alerts]
+            rows += (f'<div class="crow"><div class="cl1"><span class="cn">{esc(c["name"])}</span>'
+                     f'<span class="ccpl">{fmt_cpl(c["cpl_t"], c["target"])}</span></div>'
+                     f'<div class="cl2">{c["spend_t"]:.0f}€ auj. · {c["leads_t"]} leads · '
+                     f'7j : {fmt_cpl(c["cpl_w"], c["target"])} · fq {c["freq"]:.1f}</div></div>')
+
     prods = ""
     for p in CFG.get("products", []):
         st = lt = sw = lw = 0.0
@@ -254,35 +265,31 @@ def render(accounts, recos, alerts):
         prods += (f'<div class="pcard"><div class="pl">{esc(p["label"])}</div>'
                   f'<div class="pv">{cpl_t}</div><div class="ps">{lt:.0f} leads auj.</div>'
                   f'<div class="ps muted2">7j : {cpl_w}</div></div>')
-    import re as _re
-    def card_key(m):
-        return _re.sub(r"[\d.,€%]+", "", m)[:80]
-    reco_html = "".join(
-        f'<div class="card {lvl}" data-key="{esc(card_key(m))}">{esc(m)}</div>'
-        for lvl, m in (alert_cards + recos)) or '<div class="card green">Rien à signaler ✅</div>'
+
     backlog = "".join(f'<div class="card blue"><b>{esc(b["market"])}</b> · {b["count"]} vidéos<br><span class="small">{esc(b["note"])}</span></div>' for b in CFG["video_backlog"])
-    return f"""<div class="head"><h1>📊 Leadfy Ads</h1><div class="upd">MAJ {upd}</div>
-{kpi_blocks}</div>
-<section id="campagnes"><h2>📈 Campagnes</h2><div class="twrap"><table>
-<tr><th>Campagne</th><th>€ auj.</th><th>Leads</th><th>CPL auj.</th><th>CPL 7j</th><th>Fréq.</th></tr>
-{rows}</table></div></section>
+    return f"""<div class="head"><h1>📊 Leadfy Ads</h1><div class="upd">MAJ {upd}</div>{kpi_blocks}</div>
+<section id="important"><h2>🚨 Important</h2>{imp_html}</section>
+<section id="campagnes"><h2>📈 Campagnes</h2><div class="clist">{rows}</div></section>
 <section id="produits"><h2>💶 CPL par produit</h2><div class="pgrid">{prods}</div></section>
-<section id="cerveau"><h2>🧠 Cerveau</h2>{reco_html}</section>
+<section id="cerveau"><h2>🧠 Veille</h2>{veille_html}</section>
 <section id="videos"><h2>🎬 Vidéos à lancer</h2>{backlog}</section>
-<nav><a href="#campagnes">📈</a><a href="#produits">💶</a><a href="#cerveau">🧠</a><a href="#videos">🎬</a></nav>"""
+<nav><a href="#important">🚨</a><a href="#campagnes">📈</a><a href="#produits">💶</a><a href="#cerveau">🧠</a><a href="#videos">🎬</a></nav>"""
 
 
 CSS = """*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;background:#0f1420;color:#e8ecf4;padding-bottom:70px}
 .head{padding:18px 16px 8px}h1{font-size:1.4em}h2{font-size:1.05em;margin:18px 0 10px}.upd{color:#8b94a8;font-size:.8em;margin:2px 0 12px}
-.glabel{font-size:.8em;color:#8b94a8;font-weight:700;margin:10px 0 6px;text-transform:uppercase;letter-spacing:.5px}.kpis{display:flex;gap:10px;margin-bottom:4px}.kpi{flex:1;background:#1a2233;border-radius:14px;padding:12px;text-align:center}.kpi .v{font-size:1.3em;font-weight:700}.kpi .l{font-size:.72em;color:#8b94a8;margin-top:2px}
+.glabel{font-size:.8em;color:#8b94a8;font-weight:700;margin:10px 0 6px;text-transform:uppercase;letter-spacing:.5px}.kpis{display:flex;gap:10px;margin-bottom:4px}
+.kpi{flex:1;background:#1a2233;border-radius:14px;padding:12px;text-align:center}.kpi .v{font-size:1.3em;font-weight:700}.kpi .l{font-size:.72em;color:#8b94a8;margin-top:2px}
 section{padding:0 16px}.card{background:#1a2233;border-radius:12px;padding:12px 14px;margin-bottom:8px;font-size:.9em;border-left:4px solid #3b82f6}
 .card[data-key]{cursor:pointer;position:relative;padding-right:52px}.card .new{position:absolute;top:10px;right:10px;background:#3b82f6;color:#fff;font-size:.62em;font-weight:800;padding:3px 7px;border-radius:20px;letter-spacing:.5px}.card.read{opacity:.45}
 .card.red{border-color:#ef4444}.card.orange{border-color:#f59e0b}.card.green{border-color:#22c55e}.card.blue{border-color:#3b82f6}.small{color:#8b94a8;font-size:.85em}
-.twrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.82em}th{text-align:left;color:#8b94a8;font-weight:600;padding:6px 8px;border-bottom:1px solid #2a3550}
-td{padding:7px 8px;border-bottom:1px solid #1e2740;white-space:nowrap}tr.acct td{background:#151c2c;font-weight:700;padding-top:12px}.cname{max-width:180px;overflow:hidden;text-overflow:ellipsis}
+.clist{display:flex;flex-direction:column}.acct{background:#151c2c;font-weight:800;font-size:.85em;padding:10px 12px;border-radius:10px;margin:10px 0 6px}
+.crow{padding:8px 12px;border-bottom:1px solid #1e2740}.cl1{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.cn{font-size:.88em;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}.ccpl{font-size:1.05em;font-weight:800;white-space:nowrap}
+.cl2{font-size:.75em;color:#8b94a8;margin-top:3px}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.pcard{background:#1a2233;border-radius:14px;padding:12px}.pl{font-size:.78em;color:#8b94a8;font-weight:700}.pv{font-size:1.35em;font-weight:800;margin:4px 0 2px}.ps{font-size:.75em;color:#c3cad9}.muted2{color:#5d6880}
 .good{color:#22c55e;font-weight:700}.warn{color:#f59e0b;font-weight:700}.bad{color:#ef4444;font-weight:700}.muted{color:#4b5568}
 nav{position:fixed;bottom:0;left:0;right:0;background:#151c2c;display:flex;border-top:1px solid #2a3550}nav a{flex:1;text-align:center;padding:14px;font-size:1.3em;text-decoration:none}
-.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.pcard{background:#1a2233;border-radius:14px;padding:12px}.pl{font-size:.78em;color:#8b94a8;font-weight:700}.pv{font-size:1.35em;font-weight:800;margin:4px 0 2px}.ps{font-size:.75em;color:#c3cad9}.muted2{color:#5d6880}
 #lock{position:fixed;inset:0;background:#0f1420;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;z-index:10}
 #lock input{background:#1a2233;border:1px solid #2a3550;border-radius:10px;padding:12px 16px;color:#fff;font-size:1em;text-align:center}#lock button{background:#3b82f6;border:0;border-radius:10px;padding:12px 26px;color:#fff;font-size:1em}"""
 

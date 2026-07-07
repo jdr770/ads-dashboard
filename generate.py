@@ -41,7 +41,7 @@ def leads_of(actions):
 
 
 def fetch_account(acc):
-    out = {"label": acc["label"], "id": acc["id"], "campaigns": [], "issues": []}
+    out = {"label": acc["label"], "id": acc["id"], "group": acc.get("group", "perso"), "campaigns": [], "issues": []}
     info = api(acc["id"], {"fields": "name,account_status"})
     out["account_status"] = info.get("account_status", 0)
     if out["account_status"] != 1:
@@ -137,9 +137,16 @@ def fmt_cpl(cpl, target):
 
 def render(accounts, recos, alerts):
     upd = NOW.strftime("%d/%m %H:%M UTC")
-    tot_spend = sum(c["spend_t"] for a in accounts for c in a["campaigns"])
-    tot_leads = sum(c["leads_t"] for a in accounts for c in a["campaigns"])
-    tot_cpl = f"{tot_spend / tot_leads:.2f}€" if tot_leads else "—"
+    groups = {"perso": "🏠 Perso", "certicasa": "🇪🇸 Certicasa (géré)"}
+    kpi_blocks = ""
+    for g, glabel in groups.items():
+        gs = sum(c["spend_t"] for a in accounts if a.get("group") == g for c in a["campaigns"])
+        gl = sum(c["leads_t"] for a in accounts if a.get("group") == g for c in a["campaigns"])
+        gc = f"{gs / gl:.2f}€" if gl else "—"
+        kpi_blocks += (f'<div class="glabel">{glabel}</div><div class="kpis">'
+                       f'<div class="kpi"><div class="v">{gs:.0f}€</div><div class="l">Dépense auj.</div></div>'
+                       f'<div class="kpi"><div class="v">{gl}</div><div class="l">Leads auj.</div></div>'
+                       f'<div class="kpi"><div class="v">{gc}</div><div class="l">CPL</div></div></div>')
     rows = ""
     for acc in accounts:
         if not acc["campaigns"]:
@@ -154,9 +161,7 @@ def render(accounts, recos, alerts):
     reco_html = "".join(f'<div class="card {lvl}">{esc(m)}</div>' for lvl, m in (alerts + recos)) or '<div class="card green">Rien à signaler ✅</div>'
     backlog = "".join(f'<div class="card blue"><b>{esc(b["market"])}</b> · {b["count"]} vidéos<br><span class="small">{esc(b["note"])}</span></div>' for b in CFG["video_backlog"])
     return f"""<div class="head"><h1>📊 Leadfy Ads</h1><div class="upd">MAJ {upd}</div>
-<div class="kpis"><div class="kpi"><div class="v">{tot_spend:.0f}€</div><div class="l">Dépense auj.</div></div>
-<div class="kpi"><div class="v">{tot_leads}</div><div class="l">Leads auj.</div></div>
-<div class="kpi"><div class="v">{tot_cpl}</div><div class="l">CPL global</div></div></div></div>
+{kpi_blocks}</div>
 <section id="cerveau"><h2>🧠 Cerveau</h2>{reco_html}</section>
 <section id="campagnes"><h2>📈 Campagnes</h2><div class="twrap"><table>
 <tr><th>Campagne</th><th>€ auj.</th><th>Leads</th><th>CPL auj.</th><th>CPL 7j</th><th>Fréq.</th></tr>
@@ -167,7 +172,7 @@ def render(accounts, recos, alerts):
 
 CSS = """*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;background:#0f1420;color:#e8ecf4;padding-bottom:70px}
 .head{padding:18px 16px 8px}h1{font-size:1.4em}h2{font-size:1.05em;margin:18px 0 10px}.upd{color:#8b94a8;font-size:.8em;margin:2px 0 12px}
-.kpis{display:flex;gap:10px}.kpi{flex:1;background:#1a2233;border-radius:14px;padding:12px;text-align:center}.kpi .v{font-size:1.3em;font-weight:700}.kpi .l{font-size:.72em;color:#8b94a8;margin-top:2px}
+.glabel{font-size:.8em;color:#8b94a8;font-weight:700;margin:10px 0 6px;text-transform:uppercase;letter-spacing:.5px}.kpis{display:flex;gap:10px;margin-bottom:4px}.kpi{flex:1;background:#1a2233;border-radius:14px;padding:12px;text-align:center}.kpi .v{font-size:1.3em;font-weight:700}.kpi .l{font-size:.72em;color:#8b94a8;margin-top:2px}
 section{padding:0 16px}.card{background:#1a2233;border-radius:12px;padding:12px 14px;margin-bottom:8px;font-size:.9em;border-left:4px solid #3b82f6}
 .card.red{border-color:#ef4444}.card.orange{border-color:#f59e0b}.card.green{border-color:#22c55e}.card.blue{border-color:#3b82f6}.small{color:#8b94a8;font-size:.85em}
 .twrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.82em}th{text-align:left;color:#8b94a8;font-weight:600;padding:6px 8px;border-bottom:1px solid #2a3550}
@@ -235,10 +240,13 @@ def main():
     json.dump(sorted(cur), open(state_f, "w"))
     # daily scan du matin (run de ~05:17 UTC = 07:17 Paris)
     if 5 <= NOW.hour < 7:
-        tot_s = sum(c["spend_w"] for a in accounts for c in a["campaigns"])
-        tot_l = sum(c["leads_w"] for a in accounts for c in a["campaigns"])
-        lines = [f"☀️ DAILY LEADFY — {NOW.strftime('%d/%m')}",
-                 f"7 derniers jours : {tot_s:.0f}€ · {tot_l} leads · CPL {tot_s/tot_l:.2f}€" if tot_l else "Pas de leads sur 7j", ""]
+        lines = [f"☀️ DAILY LEADFY — {NOW.strftime('%d/%m')}"]
+        for g, glabel in (("perso", "🏠 PERSO"), ("certicasa", "🇪🇸 CERTICASA (géré)")):
+            gs = sum(c["spend_w"] for a in accounts if a.get("group") == g for c in a["campaigns"])
+            gl = sum(c["leads_w"] for a in accounts if a.get("group") == g for c in a["campaigns"])
+            gc = f"CPL {gs/gl:.2f}€" if gl else "pas de leads"
+            lines.append(f"{glabel} · 7j : {gs:.0f}€ · {gl} leads · {gc}")
+        lines.append("")
         for a in accounts:
             for c in a["campaigns"]:
                 cpl = f"{c['cpl_w']:.2f}€" if c["cpl_w"] else "—"

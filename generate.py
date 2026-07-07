@@ -209,47 +209,52 @@ def esc(s):
     return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
-def fmt_cpl(cpl, target):
+def fmt_cpl(cpl, target, pill=False):
     if cpl is None:
         return '<span class="muted">—</span>'
     cls = "good" if cpl <= target else ("warn" if cpl <= target * 1.5 else "bad")
+    if pill:
+        return f'<span class="pill {cls}">{cpl:.2f}€</span>'
     return f'<span class="{cls}">{cpl:.2f}€</span>'
 
 
 def render(accounts, recos, alerts):
-    upd = NOW.strftime("%d/%m %H:%M UTC")
-    groups = {"perso": "🏠 Perso", "certicasa": "🇪🇸 Certicasa (géré)"}
+    upd = NOW.strftime("%d/%m · %H:%M UTC")
+    groups = {"perso": "Perso", "certicasa": "Certicasa · géré"}
     kpi_blocks = ""
     for g, glabel in groups.items():
         gs = sum(c["spend_t"] for a in accounts if a.get("group") == g for c in a["campaigns"])
         gl = sum(c["leads_t"] for a in accounts if a.get("group") == g for c in a["campaigns"])
         gc = f"{gs / gl:.2f}€" if gl else "—"
-        kpi_blocks += (f'<div class="glabel">{glabel}</div><div class="kpis">'
-                       f'<div class="kpi"><div class="v">{gs:.0f}€</div><div class="l">Dépense auj.</div></div>'
-                       f'<div class="kpi"><div class="v">{gl}</div><div class="l">Leads auj.</div></div>'
+        kpi_blocks += (f'<div class="eyebrow">{glabel}</div><div class="kpis">'
+                       f'<div class="kpi"><div class="v">{gs:.0f}<span class="u">€</span></div><div class="l">dépense</div></div>'
+                       f'<div class="kpi"><div class="v">{gl}</div><div class="l">leads</div></div>'
                        f'<div class="kpi"><div class="v">{gc}</div><div class="l">CPL</div></div></div>')
 
     import re as _re
     def card_key(m):
         return _re.sub(r"[\d.,€%]+", "", m)[:80]
     def cards(items):
-        return "".join(f'<div class="card {lvl}" data-key="{esc(card_key(m))}">{esc(m)}</div>' for lvl, m in items)
+        return "".join(f'<div class="card {lvl}" data-key="{esc(card_key(m))}"><span class="dot"></span><span class="ctext">{esc(m)}</span></div>' for lvl, m in items)
 
     important = [(lvl, m) for lvl, _k, m in alerts] + [(l, m) for l, m in recos if l in ("red", "green")]
     veille = [(l, m) for l, m in recos if l not in ("red", "green")]
-    imp_html = cards(important) or '<div class="card green">Rien d\'urgent ✅</div>'
-    veille_html = cards(veille) or '<div class="card green">Rien à signaler ✅</div>'
+    imp_html = cards(important) or '<div class="empty">Rien d\'urgent — le système tourne.</div>'
+    veille_html = cards(veille) or '<div class="empty">Rien à signaler.</div>'
 
     rows = ""
     for acc in accounts:
         if not acc["campaigns"]:
             continue
-        rows += f'<div class="acct">{esc(acc["label"])}</div>'
+        a_s = sum(c["spend_t"] for c in acc["campaigns"])
+        a_l = sum(c["leads_t"] for c in acc["campaigns"])
+        rows += (f'<div class="acct"><span>{esc(acc["label"])}</span>'
+                 f'<span class="asub">{a_s:.0f}€ · {a_l} leads</span></div>')
         for c in sorted(acc["campaigns"], key=lambda x: -x["spend_w"]):
             rows += (f'<div class="crow"><div class="cl1"><span class="cn">{esc(c["name"])}</span>'
-                     f'<span class="ccpl">{fmt_cpl(c["cpl_t"], c["target"])}</span></div>'
-                     f'<div class="cl2">{c["spend_t"]:.0f}€ auj. · {c["leads_t"]} leads · '
-                     f'7j : {fmt_cpl(c["cpl_w"], c["target"])} · fq {c["freq"]:.1f}</div></div>')
+                     f'{fmt_cpl(c["cpl_t"], c["target"], pill=True)}</div>'
+                     f'<div class="cl2"><span>{c["spend_t"]:.0f}€</span><span>{c["leads_t"]} leads</span>'
+                     f'<span>7j {fmt_cpl(c["cpl_w"], c["target"])}</span><span>fq {c["freq"]:.1f}</span></div></div>')
 
     prods = ""
     for p in CFG.get("products", []):
@@ -264,34 +269,76 @@ def render(accounts, recos, alerts):
         cpl_w = f"{sw/lw:.2f}€ · {lw:.0f} leads" if lw else "—"
         prods += (f'<div class="pcard"><div class="pl">{esc(p["label"])}</div>'
                   f'<div class="pv">{cpl_t}</div><div class="ps">{lt:.0f} leads auj.</div>'
-                  f'<div class="ps muted2">7j : {cpl_w}</div></div>')
+                  f'<div class="ps dim">7j · {cpl_w}</div></div>')
 
-    backlog = "".join(f'<div class="card blue"><b>{esc(b["market"])}</b> · {b["count"]} vidéos<br><span class="small">{esc(b["note"])}</span></div>' for b in CFG["video_backlog"])
-    return f"""<div class="head"><h1>📊 Leadfy Ads</h1><div class="upd">MAJ {upd}</div>{kpi_blocks}</div>
-<section id="important"><h2>🚨 Important</h2>{imp_html}</section>
-<section id="campagnes"><h2>📈 Campagnes</h2><div class="clist">{rows}</div></section>
-<section id="produits"><h2>💶 CPL par produit</h2><div class="pgrid">{prods}</div></section>
-<section id="cerveau"><h2>🧠 Veille</h2>{veille_html}</section>
-<section id="videos"><h2>🎬 Vidéos à lancer</h2>{backlog}</section>
-<nav><a href="#important">🚨</a><a href="#campagnes">📈</a><a href="#produits">💶</a><a href="#cerveau">🧠</a><a href="#videos">🎬</a></nav>"""
+    backlog = "".join(f'<div class="vcard"><div class="vhead"><b>{esc(b["market"])}</b><span class="vcount">{b["count"]}</span></div><div class="vnote">{esc(b["note"])}</div></div>' for b in CFG["video_backlog"])
+    return f"""<header><div class="brand"><span class="tick"></span>LEADFY <b>ADS</b></div><span class="maj">{upd}</span></header>
+<div class="wrap">{kpi_blocks}</div>
+<section id="important"><h2><span class="tick"></span>Actions</h2>{imp_html}</section>
+<section id="campagnes"><h2><span class="tick"></span>Campagnes</h2><div class="clist">{rows}</div></section>
+<section id="produits"><h2><span class="tick"></span>CPL par produit</h2><div class="pgrid">{prods}</div></section>
+<section id="cerveau"><h2><span class="tick"></span>Veille</h2>{veille_html}</section>
+<section id="videos"><h2><span class="tick"></span>Vidéos à lancer</h2>{backlog}</section>
+<nav><a href="#important"><i>🚨</i>Actions</a><a href="#campagnes"><i>📈</i>Camp.</a><a href="#produits"><i>💶</i>CPL</a><a href="#cerveau"><i>🧠</i>Veille</a><a href="#videos"><i>🎬</i>Vidéos</a></nav>"""
 
 
-CSS = """*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;background:#0f1420;color:#e8ecf4;padding-bottom:70px}
-.head{padding:18px 16px 8px}h1{font-size:1.4em}h2{font-size:1.05em;margin:18px 0 10px}.upd{color:#8b94a8;font-size:.8em;margin:2px 0 12px}
-.glabel{font-size:.8em;color:#8b94a8;font-weight:700;margin:10px 0 6px;text-transform:uppercase;letter-spacing:.5px}.kpis{display:flex;gap:10px;margin-bottom:4px}
-.kpi{flex:1;background:#1a2233;border-radius:14px;padding:12px;text-align:center}.kpi .v{font-size:1.3em;font-weight:700}.kpi .l{font-size:.72em;color:#8b94a8;margin-top:2px}
-section{padding:0 16px}.card{background:#1a2233;border-radius:12px;padding:12px 14px;margin-bottom:8px;font-size:.9em;border-left:4px solid #3b82f6}
-.card[data-key]{cursor:pointer;position:relative;padding-right:52px}.card .new{position:absolute;top:10px;right:10px;background:#3b82f6;color:#fff;font-size:.62em;font-weight:800;padding:3px 7px;border-radius:20px;letter-spacing:.5px}.card.read{opacity:.45}
-.card.red{border-color:#ef4444}.card.orange{border-color:#f59e0b}.card.green{border-color:#22c55e}.card.blue{border-color:#3b82f6}.small{color:#8b94a8;font-size:.85em}
-.clist{display:flex;flex-direction:column}.acct{background:#151c2c;font-weight:800;font-size:.85em;padding:10px 12px;border-radius:10px;margin:10px 0 6px}
-.crow{padding:8px 12px;border-bottom:1px solid #1e2740}.cl1{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
-.cn{font-size:.88em;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}.ccpl{font-size:1.05em;font-weight:800;white-space:nowrap}
-.cl2{font-size:.75em;color:#8b94a8;margin-top:3px}
-.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.pcard{background:#1a2233;border-radius:14px;padding:12px}.pl{font-size:.78em;color:#8b94a8;font-weight:700}.pv{font-size:1.35em;font-weight:800;margin:4px 0 2px}.ps{font-size:.75em;color:#c3cad9}.muted2{color:#5d6880}
-.good{color:#22c55e;font-weight:700}.warn{color:#f59e0b;font-weight:700}.bad{color:#ef4444;font-weight:700}.muted{color:#4b5568}
-nav{position:fixed;bottom:0;left:0;right:0;background:#151c2c;display:flex;border-top:1px solid #2a3550}nav a{flex:1;text-align:center;padding:14px;font-size:1.3em;text-decoration:none}
-#lock{position:fixed;inset:0;background:#0f1420;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;z-index:10}
-#lock input{background:#1a2233;border:1px solid #2a3550;border-radius:10px;padding:12px 16px;color:#fff;font-size:1em;text-align:center}#lock button{background:#3b82f6;border:0;border-radius:10px;padding:12px 26px;color:#fff;font-size:1em}"""
+CSS = """:root{--bg:#0c1118;--s1:#141b26;--s2:#1a2331;--line:rgba(148,170,200,.10);--tx:#e9eef5;--tx2:#93a1b7;--tx3:#62708a;--ac:#5eead4;--good:#4ade80;--warn:#fbbf24;--bad:#fb7185}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--tx);padding-bottom:calc(74px + env(safe-area-inset-bottom))}
+header{display:flex;justify-content:space-between;align-items:center;padding:16px;position:sticky;top:0;background:rgba(12,17,24,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);z-index:5;border-bottom:1px solid var(--line)}
+.brand{font-size:1.02em;font-weight:400;letter-spacing:.16em;display:flex;align-items:center;gap:9px}.brand b{font-weight:800}
+.maj{font-size:.68em;color:var(--tx3);font-variant-numeric:tabular-nums;letter-spacing:.05em}
+.tick{display:inline-block;width:4px;height:15px;border-radius:2px;background:var(--ac)}
+.wrap{padding:14px 16px 0}
+.eyebrow{font-size:.66em;color:var(--tx3);font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin:12px 2px 7px}
+.kpis{display:flex;gap:8px}
+.kpi{flex:1;background:linear-gradient(180deg,var(--s2),var(--s1));border:1px solid var(--line);border-radius:12px;padding:12px 10px;text-align:center}
+.kpi .v{font-size:1.42em;font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:-.01em}.kpi .v .u{font-size:.6em;font-weight:600;color:var(--tx2);margin-left:1px}
+.kpi .l{font-size:.62em;color:var(--tx3);margin-top:3px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+section{padding:0 16px}
+h2{display:flex;align-items:center;gap:9px;font-size:.78em;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--tx2);margin:26px 0 10px;scroll-margin-top:64px}
+.card{display:flex;gap:10px;align-items:flex-start;background:var(--s1);border:1px solid var(--line);border-radius:11px;padding:11px 13px;margin-bottom:7px;font-size:.86em;line-height:1.45}
+.card[data-key]{cursor:pointer;position:relative;padding-right:54px}
+.card .dot{flex:none;width:8px;height:8px;border-radius:50%;margin-top:5px}
+.card.red .dot{background:var(--bad);box-shadow:0 0 8px rgba(251,113,133,.55)}
+.card.orange .dot{background:var(--warn)}.card.green .dot{background:var(--good)}.card.blue .dot{background:#60a5fa}
+.card.red{background:linear-gradient(180deg,rgba(251,113,133,.07),var(--s1))}
+.card.green{background:linear-gradient(180deg,rgba(74,222,128,.06),var(--s1))}
+.card .new{position:absolute;top:9px;right:10px;background:var(--ac);color:#062b25;font-size:.6em;font-weight:800;padding:3px 7px;border-radius:99px;letter-spacing:.1em}
+.card.read{opacity:.38}
+.empty{color:var(--tx3);font-size:.85em;padding:10px 2px}
+.clist{background:var(--s1);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.acct{display:flex;justify-content:space-between;align-items:center;background:var(--s2);padding:9px 13px;font-size:.72em;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.asub{color:var(--tx3);font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:0;text-transform:none}
+.crow{padding:10px 13px;border-top:1px solid var(--line)}
+.cl1{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.cn{font-size:.86em;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}
+.cl2{display:flex;gap:12px;font-size:.72em;color:var(--tx3);margin-top:4px;font-variant-numeric:tabular-nums}
+.pill{font-size:.8em;font-weight:800;font-variant-numeric:tabular-nums;padding:3px 9px;border-radius:99px;white-space:nowrap}
+.pill.good{background:rgba(74,222,128,.13);color:var(--good)}
+.pill.warn{background:rgba(251,191,36,.13);color:var(--warn)}
+.pill.bad{background:rgba(251,113,133,.14);color:var(--bad)}
+.good{color:var(--good);font-weight:700}.warn{color:var(--warn);font-weight:700}.bad{color:var(--bad);font-weight:700}.muted{color:var(--tx3)}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.pcard{background:linear-gradient(180deg,var(--s2),var(--s1));border:1px solid var(--line);border-radius:13px;padding:12px}
+.pl{font-size:.72em;color:var(--tx2);font-weight:700}
+.pv{font-size:1.5em;font-weight:800;margin:5px 0 3px;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.ps{font-size:.7em;color:var(--tx2);font-variant-numeric:tabular-nums}.dim{color:var(--tx3)}
+.vcard{background:var(--s1);border:1px solid var(--line);border-radius:11px;padding:12px 13px;margin-bottom:7px}
+.vhead{display:flex;justify-content:space-between;align-items:center;font-size:.86em}
+.vcount{background:rgba(94,234,212,.12);color:var(--ac);font-weight:800;font-size:.78em;padding:2px 9px;border-radius:99px;font-variant-numeric:tabular-nums}
+.vnote{font-size:.76em;color:var(--tx2);margin-top:6px;line-height:1.5}
+nav{position:fixed;bottom:0;left:0;right:0;background:rgba(18,24,34,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);display:flex;border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+nav a{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:9px 0 7px;font-size:.6em;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--tx3);text-decoration:none}
+nav a i{font-style:normal;font-size:1.55em}
+nav a:active{color:var(--ac)}
+#lock{position:fixed;inset:0;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;z-index:10}
+#lock .brand{font-size:1.15em}
+#lock input{background:var(--s1);border:1px solid var(--line);border-radius:11px;padding:13px 18px;color:var(--tx);font-size:1em;text-align:center;letter-spacing:.12em;outline:none}
+#lock input:focus{border-color:var(--ac)}
+#lock button{background:var(--ac);border:0;border-radius:11px;padding:13px 30px;color:#062b25;font-size:.92em;font-weight:800;letter-spacing:.06em}
+@media(prefers-reduced-motion:no-preference){.card,.pcard,.kpi{transition:opacity .18s ease}}
+"""
 
 
 def encrypt(html):
@@ -305,9 +352,10 @@ def encrypt(html):
 def write_site(content_html):
     salt, nonce, ct = encrypt(content_html)
     page = f"""<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0c1118"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>Leadfy Ads</title><style>{CSS}</style></head><body>
-<div id="lock"><div style="font-size:2em">🔒</div><input id="pw" type="password" placeholder="Code d'accès" autofocus>
+<div id="lock"><div class="brand"><span class="tick"></span>LEADFY <b>ADS</b></div><input id="pw" type="password" placeholder="Code d'accès" autofocus>
 <button onclick="unlock()">Entrer</button><div id="err" style="color:#ef4444"></div></div><div id="app"></div>
 <script>
 const S="{salt}",N="{nonce}",C="{ct}";

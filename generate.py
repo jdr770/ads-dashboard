@@ -395,11 +395,31 @@ def telegram(text):
         print("telegram fail:", e)
 
 
+def check_token():
+    out = []
+    me = api("me", {"fields": "id"})
+    if me.get("error"):
+        out.append(("red", "token_dead",
+                    "🔑 TOKEN META INVALIDE : le dashboard ne peut plus lire les comptes. Dis à Claude « répare le token dashboard »."))
+        return out
+    dbg = api("debug_token", {"input_token": FB_TOKEN}).get("data", {})
+    for label, ts in (("expiration", dbg.get("expires_at") or 0),
+                      ("expiration accès données", dbg.get("data_access_expires_at") or 0)):
+        if ts:
+            days = (ts - NOW.timestamp()) / 86400
+            if days < 10:
+                lvl = "red" if days < 3 else "orange"
+                out.append((lvl, f"token_{label}",
+                            f"🔑 Token Meta : {label} dans {max(days,0):.0f} jour(s) — régénérer le token et mettre à jour le secret FB_TOKEN (demander à Claude)"))
+    return out
+
+
 def main():
     accounts = [fetch_account(a) for a in CFG["accounts"]]
     recos, alerts = build_recos(accounts)
     test_ads = fetch_test_ads(accounts)
     recos = senior_recos(accounts, test_ads) + recos
+    alerts = check_token() + alerts
     write_site(render(accounts, recos, alerts))
     # alertes : n'envoyer que les nouvelles (état commité dans le repo)
     state_f = "alerts_state.json"

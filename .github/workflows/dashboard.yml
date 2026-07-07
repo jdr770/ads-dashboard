@@ -1,0 +1,46 @@
+name: dashboard
+on:
+  schedule:
+    - cron: "17 */2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: dashboard
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install cryptography
+      - name: Generate dashboard
+        env:
+          FB_TOKEN: ${{ secrets.FB_TOKEN }}
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT: ${{ secrets.TG_CHAT }}
+          DASH_PASSWORD: ${{ secrets.DASH_PASSWORD }}
+        run: python generate.py
+      - name: Persist alert state
+        run: |
+          git config user.name "dashboard-bot"
+          git config user.email "bot@leadfy.fr"
+          git add alerts_state.json || true
+          git diff --cached --quiet || git commit -m "alert state [skip ci]"
+          git push || true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4

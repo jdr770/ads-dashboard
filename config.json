@@ -1,0 +1,30 @@
+{
+  "accounts": [
+    {"id": "act_1548718242483908", "label": "🇪🇸 ES ISO (Certicasa)", "target_cpl": 10.0,
+     "campaign_targets": {"ES_ISO_VIDEO_TEST": 7.0, "VIDEO ZONE": 7.0}},
+    {"id": "act_939768347627456", "label": "🇧🇪 BE ISO_1", "target_cpl": 5.0,
+     "campaign_targets": {"LABORATOIRE": 3.0, "MULTI BE TEST": 6.0}},
+    {"id": "act_3065694270339966", "label": "🇧🇪 BE Solar_1", "target_cpl": 15.0},
+    {"id": "act_1101511028200755", "label": "🇱🇺 LUX PVCH (Nova 174_1)", "target_cpl": 9.0},
+    {"id": "act_980359137327107", "label": "🇧🇪 RT Wallonie (Nova 174_2)", "target_cpl": 5.0},
+    {"id": "act_2026890828170822", "label": "🇧🇪 JRC RENO TOIT (restreint)", "target_cpl": 4.5, "watch_restriction": true},
+    {"id": "act_400772636441454", "label": "🇱🇺 LUX Solar_1 (restreint)", "target_cpl": 10.0, "watch_restriction": true}
+  ],
+  "launches": [
+    {"name": "ES vidéo (test + zones)", "at": "2026-07-06T16:00:00Z"},
+    {"name": "LUX PVCH Vague 1", "at": "2026-07-07T08:00:00Z"},
+    {"name": "RT Wallonie (winners + test)", "at": "2026-07-06T21:30:00Z"},
+    {"name": "BE MULTI Vague 1", "at": "2026-07-07T10:00:00Z"}
+  ],
+  "video_backlog": [
+    {"market": "🇧🇪 BE MULTI", "note": "Vague 2 = 9 hooks restants (H2,H3,H5,H6,H8,H9,H11,H12,H14) × corps GAGNANT uniquement — après lecture 72h (~10/07)", "count": 18},
+    {"market": "🇱🇺 LUX PVCH", "note": "Vague 2 déjà montée en pause (2 ad sets) : activer le corps gagnant après lecture 72h (~10/07)", "count": 12},
+    {"market": "🇧🇪 RT Wallonie", "note": "Vagues 2-3 du test : 16 vidéos jamais lancées (A1_, A1__1*, A1__3, A1__6, A1__10-13, A2_, A2__2-4, A2__6, A2__8, A2__11-12) — *A1__1 = perdante confirmée, ne pas relancer", "count": 16},
+    {"market": "🇪🇸 ES ISO", "note": "6 hooks génériques 9:16 en réserve (déjà uploadés côté fichiers) + 12 vidéos 16:9/1:1 chez Google via Flo", "count": 6}
+  ],
+  "rules": {
+    "freq_warn": 2.2, "freq_alert": 2.6,
+    "cpl_warn_ratio": 1.5, "cpl_alert_ratio": 2.0,
+    "min_spend_for_alert": 15.0
+  }
+}

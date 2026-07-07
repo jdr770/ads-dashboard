@@ -184,7 +184,12 @@ def render(accounts, recos, alerts):
         prods += (f'<div class="pcard"><div class="pl">{esc(p["label"])}</div>'
                   f'<div class="pv">{cpl_t}</div><div class="ps">{lt:.0f} leads auj.</div>'
                   f'<div class="ps muted2">7j : {cpl_w}</div></div>')
-    reco_html = "".join(f'<div class="card {lvl}">{esc(m)}</div>' for lvl, m in (alert_cards + recos)) or '<div class="card green">Rien à signaler ✅</div>'
+    import re as _re
+    def card_key(m):
+        return _re.sub(r"[\d.,€%]+", "", m)[:80]
+    reco_html = "".join(
+        f'<div class="card {lvl}" data-key="{esc(card_key(m))}">{esc(m)}</div>'
+        for lvl, m in (alert_cards + recos)) or '<div class="card green">Rien à signaler ✅</div>'
     backlog = "".join(f'<div class="card blue"><b>{esc(b["market"])}</b> · {b["count"]} vidéos<br><span class="small">{esc(b["note"])}</span></div>' for b in CFG["video_backlog"])
     return f"""<div class="head"><h1>📊 Leadfy Ads</h1><div class="upd">MAJ {upd}</div>
 {kpi_blocks}</div>
@@ -201,6 +206,7 @@ CSS = """*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-syst
 .head{padding:18px 16px 8px}h1{font-size:1.4em}h2{font-size:1.05em;margin:18px 0 10px}.upd{color:#8b94a8;font-size:.8em;margin:2px 0 12px}
 .glabel{font-size:.8em;color:#8b94a8;font-weight:700;margin:10px 0 6px;text-transform:uppercase;letter-spacing:.5px}.kpis{display:flex;gap:10px;margin-bottom:4px}.kpi{flex:1;background:#1a2233;border-radius:14px;padding:12px;text-align:center}.kpi .v{font-size:1.3em;font-weight:700}.kpi .l{font-size:.72em;color:#8b94a8;margin-top:2px}
 section{padding:0 16px}.card{background:#1a2233;border-radius:12px;padding:12px 14px;margin-bottom:8px;font-size:.9em;border-left:4px solid #3b82f6}
+.card[data-key]{cursor:pointer;position:relative;padding-right:52px}.card .new{position:absolute;top:10px;right:10px;background:#3b82f6;color:#fff;font-size:.62em;font-weight:800;padding:3px 7px;border-radius:20px;letter-spacing:.5px}.card.read{opacity:.45}
 .card.red{border-color:#ef4444}.card.orange{border-color:#f59e0b}.card.green{border-color:#22c55e}.card.blue{border-color:#3b82f6}.small{color:#8b94a8;font-size:.85em}
 .twrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.82em}th{text-align:left;color:#8b94a8;font-weight:600;padding:6px 8px;border-bottom:1px solid #2a3550}
 td{padding:7px 8px;border-bottom:1px solid #1e2740;white-space:nowrap}tr.acct td{background:#151c2c;font-weight:700;padding-top:12px}.cname{max-width:180px;overflow:hidden;text-overflow:ellipsis}
@@ -235,8 +241,18 @@ const km=await crypto.subtle.importKey('raw',new TextEncoder().encode(pw),'PBKDF
 const key=await crypto.subtle.deriveKey({{name:'PBKDF2',salt:b64(S),iterations:200000,hash:'SHA-256'}},km,{{name:'AES-GCM',length:256}},false,['decrypt']);
 const pt=await crypto.subtle.decrypt({{name:'AES-GCM',iv:b64(N)}},key,b64(C));
 document.getElementById('app').innerHTML=new TextDecoder().decode(pt);
-document.getElementById('lock').remove();localStorage.setItem('k',pw);
+document.getElementById('lock').remove();localStorage.setItem('k',pw);initCards();
 }}catch(e){{document.getElementById('err').textContent='Code incorrect';}}}}
+function initCards(){{
+const read=new Set(JSON.parse(localStorage.getItem('readCards')||'[]'));
+document.querySelectorAll('.card[data-key]').forEach(c=>{{
+const k=c.dataset.key;
+if(read.has(k)){{c.classList.add('read');}}else{{const b=document.createElement('span');b.className='new';b.textContent='NEW';c.appendChild(b);}}
+c.addEventListener('click',()=>{{
+if(c.classList.contains('read')){{c.classList.remove('read');read.delete(k);}}
+else{{c.classList.add('read');const b=c.querySelector('.new');if(b)b.remove();read.add(k);}}
+localStorage.setItem('readCards',JSON.stringify([...read].slice(-200)));}});
+}});}}
 document.getElementById('pw').addEventListener('keydown',e=>{{if(e.key==='Enter')unlock();}});
 if(localStorage.getItem('k')){{document.getElementById('pw').value=localStorage.getItem('k');unlock();}}
 </script></body></html>"""

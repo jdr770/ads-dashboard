@@ -446,8 +446,10 @@ def main():
     if new_msgs:
         telegram("🚨 LEADFY ADS — ALERTES\n\n" + "\n".join("• " + m for m in sorted(new_msgs)))
     json.dump({k: v for k, v in prev.items() if v == today}, open(state_f, "w"))
-    # daily scan du matin (run de ~05:17 UTC = 07:17 Paris)
-    if 5 <= NOW.hour < 7:
+    # daily scan du matin (verrou : un seul envoi par jour)
+    if 5 <= NOW.hour < 7 and prev.get("__daily__") != today:
+        prev["__daily__"] = today
+        json.dump({k: v for k, v in prev.items() if v == today}, open(state_f, "w"))
         lines = [f"☀️ DAILY LEADFY — {PARIS.strftime('%d/%m')}"]
         for g, glabel in (("perso", "🏠 PERSO"), ("certicasa", "🇪🇸 CERTICASA (géré)")):
             gs = sum(c["spend_w"] for a in accounts if a.get("group") == g for c in a["campaigns"])

@@ -19,8 +19,12 @@
     {
       "id": "act_1101511028200755",
       "label": "🇱🇺 LUX PVCH (Nova 174_1)",
-      "target_cpl": 9.0,
-      "group": "perso"
+      "target_cpl": 15.0,
+      "group": "perso",
+      "campaign_targets": {
+        "CHASSIS": 25.0,
+        "PVCH": 9.0
+      }
     },
     {
       "id": "act_980359137327107",

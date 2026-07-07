@@ -95,18 +95,28 @@ def fetch_account(acc):
     return out
 
 
+def in_learning(campaign_name):
+    for l in CFG["launches"]:
+        t0 = datetime.fromisoformat(l["at"].replace("Z", "+00:00"))
+        if (NOW - t0).total_seconds() < 72 * 3600:
+            for pat in l.get("campaign_match", []):
+                if pat.lower() in campaign_name.lower():
+                    return True
+    return False
+
+
 def build_recos(accounts):
     recos, alerts = [], []
     R = CFG["rules"]
     for acc in accounts:
         for lvl, msg in acc["issues"]:
-            (alerts if lvl in ("red", "green") else recos).append((lvl, msg))
+            (alerts if lvl in ("red", "green") else recos).append((lvl, msg[:40], msg) if lvl in ("red", "green") else (lvl, msg))
         for c in acc["campaigns"]:
             ref_cpl = c["cpl_t"] if (c["spend_t"] >= R["min_spend_for_alert"] and c["leads_t"]) else c["cpl_w"]
-            spend_ref = max(c["spend_t"], c["spend_w"] / 7)
-            if ref_cpl and c["spend_w"] >= R["min_spend_for_alert"]:
+            learning = in_learning(c["name"])
+            if ref_cpl and c["spend_w"] >= R["min_spend_for_alert"] and not learning:
                 if ref_cpl >= c["target"] * R["cpl_alert_ratio"]:
-                    alerts.append(("red", f"CPL x2 : {c['name']} ({acc['label']}) à {ref_cpl:.2f}€ vs cible {c['target']:.0f}€"))
+                    alerts.append(("red", f"cplx2|{c['name']}", f"CPL x2 : {c['name']} ({acc['label']}) à {ref_cpl:.2f}€ vs cible {c['target']:.0f}€"))
                 elif ref_cpl >= c["target"] * R["cpl_warn_ratio"]:
                     recos.append(("orange", f"CPL élevé : {c['name']} ({acc['label']}) à {ref_cpl:.2f}€ vs cible {c['target']:.0f}€ — à surveiller, juger à 72h"))
             if c["freq"] >= R["freq_alert"]:
@@ -159,7 +169,8 @@ def render(accounts, recos, alerts):
                      f'<td>{fmt_cpl(c["cpl_t"], c["target"])}</td>'
                      f'<td>{fmt_cpl(c["cpl_w"], c["target"])}</td>'
                      f'<td>{c["freq"]:.1f}</td></tr>')
-    reco_html = "".join(f'<div class="card {lvl}">{esc(m)}</div>' for lvl, m in (alerts + recos)) or '<div class="card green">Rien à signaler ✅</div>'
+    alert_cards = [(lvl, m) for lvl, _k, m in alerts]
+    reco_html = "".join(f'<div class="card {lvl}">{esc(m)}</div>' for lvl, m in (alert_cards + recos)) or '<div class="card green">Rien à signaler ✅</div>'
     backlog = "".join(f'<div class="card blue"><b>{esc(b["market"])}</b> · {b["count"]} vidéos<br><span class="small">{esc(b["note"])}</span></div>' for b in CFG["video_backlog"])
     return f"""<div class="head"><h1>📊 Leadfy Ads</h1><div class="upd">MAJ {upd}</div>
 {kpi_blocks}</div>
@@ -233,12 +244,18 @@ def main():
     write_site(render(accounts, recos, alerts))
     # alertes : n'envoyer que les nouvelles (état commité dans le repo)
     state_f = "alerts_state.json"
-    prev = set(json.load(open(state_f))) if os.path.exists(state_f) else set()
-    cur = set(m for _, m in alerts)
-    new = cur - prev
-    if new:
-        telegram("🚨 LEADFY ADS — ALERTES\n\n" + "\n".join("• " + m for m in sorted(new)))
-    json.dump(sorted(cur), open(state_f, "w"))
+    today = NOW.strftime("%Y-%m-%d")
+    prev = json.load(open(state_f)) if os.path.exists(state_f) else {}
+    if not isinstance(prev, dict):
+        prev = {}
+    new_msgs = []
+    for _lvl, key, msg in alerts:
+        if prev.get(key) != today:
+            new_msgs.append(msg)
+        prev[key] = today
+    if new_msgs:
+        telegram("🚨 LEADFY ADS — ALERTES\n\n" + "\n".join("• " + m for m in sorted(new_msgs)))
+    json.dump({k: v for k, v in prev.items() if v == today}, open(state_f, "w"))
     # daily scan du matin (run de ~05:17 UTC = 07:17 Paris)
     if 5 <= NOW.hour < 7:
         lines = [f"☀️ DAILY LEADFY — {NOW.strftime('%d/%m')}"]
@@ -253,7 +270,7 @@ def main():
                 cpl = f"{c['cpl_w']:.2f}€" if c["cpl_w"] else "—"
                 lines.append(f"{a['label'][:4]} {c['name'][:28]} · {c['spend_w']:.0f}€/7j · CPL {cpl}")
         lines.append("")
-        lines += ["• " + m for _, m in (alerts + recos)[:8]]
+        lines += ["• " + m for m in ([m for _l, _k, m in alerts] + [m for _l, m in recos])[:8]]
         telegram("\n".join(lines))
     print(f"OK — {sum(len(a['campaigns']) for a in accounts)} campagnes, {len(alerts)} alertes, {len(recos)} recos")
 

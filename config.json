@@ -56,19 +56,33 @@
   "launches": [
     {
       "name": "ES vidéo (test + zones)",
-      "at": "2026-07-06T16:00:00Z"
+      "at": "2026-07-06T16:00:00Z",
+      "campaign_match": [
+        "ES_ISO_VIDEO_TEST",
+        "VIDEO ZONE"
+      ]
     },
     {
       "name": "LUX PVCH Vague 1",
-      "at": "2026-07-07T08:00:00Z"
+      "at": "2026-07-07T08:00:00Z",
+      "campaign_match": [
+        "MULTI LUX PVCH TEST"
+      ]
     },
     {
       "name": "RT Wallonie (winners + test)",
-      "at": "2026-07-06T21:30:00Z"
+      "at": "2026-07-06T21:30:00Z",
+      "campaign_match": [
+        "RT - WINNERS",
+        "RT - TEST"
+      ]
     },
     {
       "name": "BE MULTI Vague 1",
-      "at": "2026-07-07T10:00:00Z"
+      "at": "2026-07-07T10:00:00Z",
+      "campaign_match": [
+        "MULTI BE TEST"
+      ]
     }
   ],
   "video_backlog": [

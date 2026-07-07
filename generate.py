@@ -64,11 +64,12 @@ def fetch_account(acc):
         "date_preset": "last_7d", "limit": 30}).get("data", [])}
     time.sleep(2)
     if out["account_status"] == 1:
-        bad_ads = api(acc["id"] + "/ads", {
-            "fields": "name,effective_status",
+        bad_ads = [a for a in api(acc["id"] + "/ads", {
+            "fields": "name,effective_status,campaign{effective_status}",
             "filtering": json.dumps([{"field": "ad.effective_status", "operator": "IN",
                                       "value": ["DISAPPROVED", "WITH_ISSUES"]}]),
-            "limit": 20}).get("data", [])
+            "limit": 50}).get("data", [])
+            if (a.get("campaign") or {}).get("effective_status") == "ACTIVE"]
         if len(bad_ads) > 4:
             out["issues"].append(("red", f"{len(bad_ads)} ads en anomalie sur {acc['label']} (DISAPPROVED/WITH_ISSUES) — à inspecter"))
         else:

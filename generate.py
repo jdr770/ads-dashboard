@@ -94,6 +94,77 @@ def fetch_account(acc):
     return out
 
 
+def fetch_test_ads(accounts):
+    """Perf par ad depuis le lancement, pour les campagnes des launches."""
+    results = {}
+    pats = [p for l in CFG["launches"] for p in l.get("campaign_match", [])]
+    earliest = min(l["at"] for l in CFG["launches"])[:10]
+    for acc in accounts:
+        if acc["account_status"] != 1:
+            continue
+        if not any(any(p.lower() in c["name"].lower() for p in pats) for c in acc["campaigns"]):
+            continue
+        rows = api(acc["id"] + "/insights", {
+            "level": "ad", "fields": "ad_name,campaign_name,spend,actions",
+            "time_range": json.dumps({"since": earliest, "until": NOW.strftime("%Y-%m-%d")}),
+            "limit": 100}).get("data", [])
+        time.sleep(2)
+        for r in rows:
+            cname = r.get("campaign_name", "")
+            if not any(p.lower() in cname.lower() for p in pats):
+                continue
+            results.setdefault(cname, []).append({
+                "ad": r.get("ad_name", "?"), "spend": float(r.get("spend", 0) or 0),
+                "leads": leads_of(r.get("actions"))})
+    return results
+
+
+def senior_recos(accounts, test_ads):
+    out = []
+    # verdicts post-72h par campagne de test
+    for l in CFG["launches"]:
+        t0 = datetime.fromisoformat(l["at"].replace("Z", "+00:00"))
+        if (NOW - t0).total_seconds() < 72 * 3600:
+            continue
+        for cname, ads in test_ads.items():
+            if not any(p.lower() in cname.lower() for p in l.get("campaign_match", [])):
+                continue
+            # duel Corps A vs B (ads suffixées _A / _B)
+            grp = {"A": [0.0, 0], "B": [0.0, 0]}
+            for a in ads:
+                suf = a["ad"].rstrip().rsplit("_", 1)[-1]
+                if suf in grp:
+                    grp[suf][0] += a["spend"]; grp[suf][1] += a["leads"]
+            if grp["A"][1] + grp["B"][1] >= 10 and grp["A"][0] + grp["B"][0] > 50:
+                cpl_a = grp["A"][0] / grp["A"][1] if grp["A"][1] else 9999
+                cpl_b = grp["B"][0] / grp["B"][1] if grp["B"][1] else 9999
+                win, lose = ("A", "B") if cpl_a <= cpl_b else ("B", "A")
+                cw = min(cpl_a, cpl_b); cl = max(cpl_a, cpl_b)
+                fl = f"{cl:.2f}€" if cl < 9999 else "aucun lead"
+                out.append(("green", f"🏆 {cname} : Corps {win} gagne ({cw:.2f}€ vs {fl}) → lance la vague suivante en corps {win} uniquement"))
+            # coupes : ads qui ont dépensé sans convertir ou trop cher
+            cuts = []
+            tgt = None
+            for acc in accounts:
+                for c in acc["campaigns"]:
+                    if c["name"] == cname:
+                        tgt = c["target"]
+            for a in sorted(ads, key=lambda x: -x["spend"]):
+                if tgt and a["spend"] >= tgt * 2.5 and (a["leads"] == 0 or a["spend"] / a["leads"] > tgt * 2):
+                    cpl_txt = f"{a['spend']/a['leads']:.0f}€" if a["leads"] else "0 lead"
+                    cuts.append(f"{a['ad']} ({a['spend']:.0f}€, {cpl_txt})")
+            if cuts:
+                out.append(("red", f"✂️ {cname} : coupe " + " · ".join(cuts[:4])))
+    # scaling : campagnes stables largement sous leur cible
+    for acc in accounts:
+        for c in acc["campaigns"]:
+            if in_learning(c["name"]):
+                continue
+            if c["cpl_w"] and c["leads_w"] >= 30 and c["cpl_w"] < c["target"] * 0.7 and c["budget"] > 0:
+                out.append(("green", f"📈 Scaling possible : {c['name']} ({acc['label']}) à {c['cpl_w']:.2f}€ vs cible {c['target']:.0f}€ → +20-30% de budget (palier 3-4 jours, ne pas toucher pendant)"))
+    return out
+
+
 def in_learning(campaign_name):
     for l in CFG["launches"]:
         t0 = datetime.fromisoformat(l["at"].replace("Z", "+00:00"))
@@ -272,6 +343,8 @@ def telegram(text):
 def main():
     accounts = [fetch_account(a) for a in CFG["accounts"]]
     recos, alerts = build_recos(accounts)
+    test_ads = fetch_test_ads(accounts)
+    recos = senior_recos(accounts, test_ads) + recos
     write_site(render(accounts, recos, alerts))
     # alertes : n'envoyer que les nouvelles (état commité dans le repo)
     state_f = "alerts_state.json"

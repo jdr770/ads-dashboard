@@ -334,6 +334,7 @@ nav{position:fixed;bottom:0;left:0;right:0;background:rgba(18,24,34,.88);backdro
 nav a{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:9px 0 7px;font-size:.6em;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--tx3);text-decoration:none}
 nav a i{font-style:normal;font-size:1.55em}
 nav a:active{color:var(--ac)}
+#rfr{background:var(--s2);border:1px solid var(--line);color:var(--ac);font-size:1.05em;border-radius:9px;padding:4px 11px;margin-left:10px}
 #lock{position:fixed;inset:0;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;z-index:10}
 #lock .brand{font-size:1.15em}
 #lock input{background:var(--s1);border:1px solid var(--line);border-radius:11px;padding:13px 18px;color:var(--tx);font-size:1em;text-align:center;letter-spacing:.12em;outline:none}
@@ -352,6 +353,7 @@ def encrypt(html):
 
 
 def write_site(content_html):
+    build_ts = int(NOW.timestamp() * 1000)
     salt, nonce, ct = encrypt(content_html)
     page = f"""<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow">
@@ -360,7 +362,7 @@ def write_site(content_html):
 <div id="lock"><div class="brand"><span class="tick"></span>LEADFY <b>ADS</b></div><input id="pw" type="password" placeholder="Code d'accès" autofocus>
 <button onclick="unlock()">Entrer</button><div id="err" style="color:#ef4444"></div></div><div id="app"></div>
 <script>
-const S="{salt}",N="{nonce}",C="{ct}";
+const S="{salt}",N="{nonce}",C="{ct}",BT={build_ts};
 const b64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
 async function unlock(){{try{{
 const pw=document.getElementById('pw').value;
@@ -368,8 +370,15 @@ const km=await crypto.subtle.importKey('raw',new TextEncoder().encode(pw),'PBKDF
 const key=await crypto.subtle.deriveKey({{name:'PBKDF2',salt:b64(S),iterations:200000,hash:'SHA-256'}},km,{{name:'AES-GCM',length:256}},false,['decrypt']);
 const pt=await crypto.subtle.decrypt({{name:'AES-GCM',iv:b64(N)}},key,b64(C));
 document.getElementById('app').innerHTML=new TextDecoder().decode(pt);
-document.getElementById('lock').remove();localStorage.setItem('k',pw);initCards();
+document.getElementById('lock').remove();localStorage.setItem('k',pw);initCards();initRefresh();
 }}catch(e){{document.getElementById('err').textContent='Code incorrect';}}}}
+function hardReload(){{location.replace(location.pathname+'?t='+Date.now());}}
+function initRefresh(){{
+const h=document.querySelector('header');
+if(h){{const b=document.createElement('button');b.id='rfr';b.textContent='↻';b.onclick=hardReload;h.appendChild(b);}}
+document.addEventListener('visibilitychange',()=>{{
+if(document.visibilityState==='visible'&&Date.now()-BT>10*60*1000)hardReload();}});
+}}
 function initCards(){{
 const read=new Set(JSON.parse(localStorage.getItem('readCards')||'[]'));
 document.querySelectorAll('.card[data-key]').forEach(c=>{{

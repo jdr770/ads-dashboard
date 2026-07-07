@@ -45,9 +45,8 @@ def fetch_account(acc):
     info = api(acc["id"], {"fields": "name,account_status"})
     out["account_status"] = info.get("account_status", 0)
     if out["account_status"] != 1:
-        out["issues"].append(("red", f"Compte {acc['label']} : statut {out['account_status']} (restreint/désactivé)"))
         if not acc.get("watch_restriction"):
-            pass
+            out["issues"].append(("red", f"⚠️ NOUVELLE restriction : {acc['label']} vient de passer en statut {out['account_status']}"))
     elif acc.get("watch_restriction"):
         out["issues"].append(("green", f"🎉 {acc['label']} : le compte est repassé ACTIF (statut 1) — la restriction est levée !"))
     camps = api(acc["id"] + "/campaigns", {

@@ -93,6 +93,13 @@
       "campaign_match": [
         "MULTI BE TEST"
       ]
+    },
+    {
+      "name": "RT Vague 2A+2B",
+      "at": "2026-07-09T12:00:00Z",
+      "campaign_match": [
+        "RT - TEST"
+      ]
     }
   ],
   "video_backlog": [
@@ -108,8 +115,8 @@
     },
     {
       "market": "🇧🇪 RT Wallonie",
-      "note": "Vagues 2-3 du test : 16 vidéos jamais lancées (A1_, A1__1*, A1__3, A1__6, A1__10-13, A2_, A2__2-4, A2__6, A2__8, A2__11-12) — *A1__1 = perdante confirmée, ne pas relancer",
-      "count": 16
+      "note": "Réserve : A1_ (base), A2_ (base), A2__12 — les paris faibles. Vagues 2A/2B lancées le 09/07 (12 vidéos). A1__1 = perdante, jamais relancer.",
+      "count": 3
     },
     {
       "market": "🇪🇸 ES ISO",

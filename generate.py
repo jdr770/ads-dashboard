@@ -274,14 +274,40 @@ def render(accounts, recos, alerts):
                   f'<div class="ps dim">7j · {cpl_w}</div></div>')
 
     backlog = "".join(f'<div class="vcard"><div class="vhead"><b>{esc(b["market"])}</b><span class="vcount">{b["count"]}</span></div><div class="vnote">{esc(b["note"])}</div></div>' for b in CFG["video_backlog"])
+
+    # section Google Ads (google.json poussé par le Mac — scripts/dashboard_export.py du workspace google-ads)
+    grows, gmaj = "", ""
+    if os.path.exists("google.json"):
+        try:
+            gd = json.load(open("google.json"))
+            gmaj = f' <span class="asub">maj {esc(gd.get("generated_at", "")[5:16].replace("T", " · "))}</span>'
+            for ga in gd.get("accounts", []):
+                camps = [c for c in ga.get("campaigns", []) if c["spend_7d"] >= 1 or c["spend_today"] >= 1]
+                if not camps:
+                    continue
+                g_s = sum(c["spend_today"] for c in camps)
+                g_c = sum(c["conv_today"] for c in camps)
+                grows += (f'<div class="acct"><span>{esc(ga["label"])}</span>'
+                          f'<span class="asub">{g_s:.0f}€ · {g_c:.0f} conv auj.</span></div>')
+                for c in camps:
+                    cpl7 = f"{c['cpl_7d']:.2f}€" if c.get("cpl_7d") else "—"
+                    grows += (f'<div class="crow"><div class="cl1"><span class="cn">{esc(c["name"])}</span>'
+                              f'<span class="pill {"good" if c.get("cpl_7d") and c["cpl_7d"] < 25 else ("warn" if c.get("cpl_7d") and c["cpl_7d"] < 50 else "bad")}">{cpl7}</span></div>'
+                              f'<div class="cl2"><span>auj. {c["spend_today"]:.0f}€ · {c["conv_today"]:.0f} conv</span>'
+                              f'<span>7j {c["spend_7d"]:.0f}€ · {c["conv_7d"]:.0f} conv</span></div></div>')
+        except Exception:
+            grows = ""
+    google_html = f'<section id="google"><h2><span class="tick"></span>Google Ads{gmaj}</h2><div class="clist">{grows}</div></section>' if grows else ""
+
     return f"""<header><div class="brand"><span class="tick"></span>LEADFY <b>ADS</b></div><span class="maj">{upd}</span></header>
 <div class="wrap">{kpi_blocks}</div>
 <section id="important"><h2><span class="tick"></span>Actions</h2>{imp_html}</section>
 <section id="campagnes"><h2><span class="tick"></span>Campagnes</h2><div class="clist">{rows}</div></section>
+{google_html}
 <section id="produits"><h2><span class="tick"></span>CPL par produit</h2><div class="pgrid">{prods}</div></section>
 <section id="cerveau"><h2><span class="tick"></span>Veille</h2>{veille_html}</section>
 <section id="videos"><h2><span class="tick"></span>Vidéos à lancer</h2>{backlog}</section>
-<nav><a href="#important"><i>🚨</i>Actions</a><a href="#campagnes"><i>📈</i>Camp.</a><a href="#produits"><i>💶</i>CPL</a><a href="#cerveau"><i>🧠</i>Veille</a><a href="#videos"><i>🎬</i>Vidéos</a></nav>"""
+<nav><a href="#important"><i>🚨</i>Actions</a><a href="#campagnes"><i>📈</i>Camp.</a><a href="#google"><i>🟦</i>Google</a><a href="#produits"><i>💶</i>CPL</a><a href="#cerveau"><i>🧠</i>Veille</a></nav>"""
 
 
 CSS = """:root{--bg:#0c1118;--s1:#141b26;--s2:#1a2331;--line:rgba(148,170,200,.10);--tx:#e9eef5;--tx2:#93a1b7;--tx3:#62708a;--ac:#5eead4;--good:#4ade80;--warn:#fbbf24;--bad:#fb7185}

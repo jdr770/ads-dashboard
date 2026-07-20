@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-20T14:25",
+ "generated_at": "2026-07-20T16:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -8,11 +8,11 @@
     {
      "name": "[VOLUME] PMax - Castilla y León",
      "status": "ENABLED",
-     "spend_7d": 1132.94,
+     "spend_7d": 1132.92,
      "conv_7d": 41.4,
      "cpl_7d": 27.39,
-     "spend_today": 106.49,
-     "conv_today": 3.6
+     "spend_today": 142.87,
+     "conv_today": 5.2
     },
     {
      "name": "[ZONE-E] PMax - León",
@@ -20,16 +20,16 @@
      "spend_7d": 1087.82,
      "conv_7d": 19.0,
      "cpl_7d": 57.25,
-     "spend_today": 35.82,
+     "spend_today": 46.31,
      "conv_today": 0.0
     },
     {
      "name": "[ZONE-E] PMax - Burgos",
      "status": "ENABLED",
-     "spend_7d": 807.56,
+     "spend_7d": 807.16,
      "conv_7d": 18.1,
-     "cpl_7d": 44.68,
-     "spend_today": 22.41,
+     "cpl_7d": 44.66,
+     "spend_today": 33.15,
      "conv_today": 0.0
     },
     {
@@ -38,13 +38,13 @@
      "spend_7d": 366.89,
      "conv_7d": 17.0,
      "cpl_7d": 21.58,
-     "spend_today": 5.37,
+     "spend_today": 6.92,
      "conv_today": 1.0
     },
     {
      "name": "[ZONE-E] PMax - Sierra CyL",
      "status": "PAUSED",
-     "spend_7d": 205.03,
+     "spend_7d": 205.01,
      "conv_7d": 0.0,
      "cpl_7d": null,
      "spend_today": 0.0,
@@ -53,10 +53,10 @@
     {
      "name": "[VOLUME] PMax - Lugo",
      "status": "ENABLED",
-     "spend_7d": 197.31,
+     "spend_7d": 197.44,
      "conv_7d": 6.0,
-     "cpl_7d": 32.89,
-     "spend_today": 15.72,
+     "cpl_7d": 32.91,
+     "spend_today": 22.53,
      "conv_today": 0.0
     },
     {
@@ -74,7 +74,7 @@
      "spend_7d": 69.47,
      "conv_7d": 5.0,
      "cpl_7d": 13.89,
-     "spend_today": 24.69,
+     "spend_today": 25.67,
      "conv_today": 0.0
     }
    ]
@@ -89,25 +89,25 @@
      "spend_7d": 865.38,
      "conv_7d": 53.0,
      "cpl_7d": 16.33,
-     "spend_today": 12.37,
-     "conv_today": 2.0
+     "spend_today": 17.17,
+     "conv_today": 3.0
     },
     {
-     "name": "[RVS25] castille et leon - PMAX CI best Audience Ok 16",
+     "name": "[RVS25] Espagne - Castille et leon - PMAX CI best Audience Ok 16",
      "status": "ENABLED",
      "spend_7d": 534.54,
      "conv_7d": 42.5,
      "cpl_7d": 12.58,
-     "spend_today": 18.5,
+     "spend_today": 21.31,
      "conv_today": 2.0
     },
     {
      "name": "[RVS25] Espagne - PMAX CI 2 Ok 16",
      "status": "ENABLED",
      "spend_7d": 304.1,
-     "conv_7d": 22.9,
-     "cpl_7d": 13.28,
-     "spend_today": 16.88,
+     "conv_7d": 23.9,
+     "cpl_7d": 12.73,
+     "spend_today": 21.18,
      "conv_today": 0.0
     },
     {
@@ -116,7 +116,7 @@
      "spend_7d": 262.21,
      "conv_7d": 14.2,
      "cpl_7d": 18.41,
-     "spend_today": 11.28,
+     "spend_today": 12.79,
      "conv_today": 0.0
     },
     {
@@ -125,8 +125,8 @@
      "spend_7d": 217.47,
      "conv_7d": 14.5,
      "cpl_7d": 15.05,
-     "spend_today": 0.88,
-     "conv_today": 0.0
+     "spend_today": 0.89,
+     "conv_today": 1.0
     },
     {
      "name": "[RVS25] Espagne PMax 3 Castille et Leon Ok",
@@ -134,7 +134,7 @@
      "spend_7d": 215.27,
      "conv_7d": 16.5,
      "cpl_7d": 13.07,
-     "spend_today": 20.57,
+     "spend_today": 25.69,
      "conv_today": 0.9
     },
     {
@@ -143,7 +143,7 @@
      "spend_7d": 210.05,
      "conv_7d": 9.0,
      "cpl_7d": 23.38,
-     "spend_today": 2.07,
+     "spend_today": 2.8,
      "conv_today": 0.0
     },
     {
@@ -161,7 +161,7 @@
      "spend_7d": 166.83,
      "conv_7d": 8.6,
      "cpl_7d": 19.41,
-     "spend_today": 0.55,
+     "spend_today": 0.61,
      "conv_today": 0.0
     },
     {
@@ -188,7 +188,7 @@
      "spend_7d": 51.31,
      "conv_7d": 3.0,
      "cpl_7d": 17.1,
-     "spend_today": 1.18,
+     "spend_today": 1.2,
      "conv_today": 0.0
     },
     {
@@ -197,7 +197,7 @@
      "spend_7d": 35.96,
      "conv_7d": 0.0,
      "cpl_7d": null,
-     "spend_today": 0.74,
+     "spend_today": 1.03,
      "conv_today": 0.0
     },
     {
@@ -206,7 +206,7 @@
      "spend_7d": 14.5,
      "conv_7d": 2.7,
      "cpl_7d": 5.34,
-     "spend_today": 1.33,
+     "spend_today": 1.5,
      "conv_today": 0.0
     },
     {
@@ -293,8 +293,8 @@
      "spend_7d": 804.52,
      "conv_7d": 52.0,
      "cpl_7d": 15.47,
-     "spend_today": 47.7,
-     "conv_today": 3.0
+     "spend_today": 67.55,
+     "conv_today": 4.0
     },
     {
      "name": "Pmax - New vidéos 07 2026 #2",

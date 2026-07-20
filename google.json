@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-20T18:25",
+ "generated_at": "2026-07-20T22:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -9,36 +9,36 @@
      "name": "[VOLUME] PMax - Castilla y León",
      "status": "ENABLED",
      "spend_7d": 1132.41,
-     "conv_7d": 41.4,
-     "cpl_7d": 27.38,
-     "spend_today": 188.69,
-     "conv_today": 9.6
+     "conv_7d": 42.4,
+     "cpl_7d": 26.73,
+     "spend_today": 272.65,
+     "conv_today": 14.6
     },
     {
      "name": "[ZONE-E] PMax - León",
-     "status": "ENABLED",
+     "status": "PAUSED",
      "spend_7d": 1087.82,
      "conv_7d": 19.0,
      "cpl_7d": 57.25,
-     "spend_today": 58.25,
-     "conv_today": 0.0
+     "spend_today": 81.68,
+     "conv_today": 1.0
     },
     {
      "name": "[ZONE-E] PMax - Burgos",
-     "status": "ENABLED",
+     "status": "PAUSED",
      "spend_7d": 807.16,
-     "conv_7d": 18.1,
-     "cpl_7d": 44.66,
-     "spend_today": 50.19,
-     "conv_today": 0.0
+     "conv_7d": 19.1,
+     "cpl_7d": 42.32,
+     "spend_today": 57.54,
+     "conv_today": 2.0
     },
     {
      "name": "[ZONE-E] PMax - CyL Oeste",
-     "status": "ENABLED",
+     "status": "PAUSED",
      "spend_7d": 366.89,
      "conv_7d": 17.0,
      "cpl_7d": 21.58,
-     "spend_today": 20.07,
+     "spend_today": 48.49,
      "conv_today": 2.0
     },
     {
@@ -56,7 +56,7 @@
      "spend_7d": 197.44,
      "conv_7d": 6.0,
      "cpl_7d": 32.91,
-     "spend_today": 29.86,
+     "spend_today": 41.47,
      "conv_today": 0.0
     },
     {
@@ -74,7 +74,7 @@
      "spend_7d": 69.47,
      "conv_7d": 5.0,
      "cpl_7d": 13.89,
-     "spend_today": 38.02,
+     "spend_today": 33.7,
      "conv_today": 1.0
     }
    ]
@@ -86,10 +86,10 @@
     {
      "name": "8. [RVS] 26Espagne05 Castille et Leon |  Global | Affinité Ok 16",
      "status": "ENABLED",
-     "spend_7d": 865.36,
+     "spend_7d": 865.37,
      "conv_7d": 53.0,
      "cpl_7d": 16.33,
-     "spend_today": 20.94,
+     "spend_today": 28.05,
      "conv_today": 3.0
     },
     {
@@ -98,7 +98,7 @@
      "spend_7d": 534.54,
      "conv_7d": 42.5,
      "cpl_7d": 12.58,
-     "spend_today": 28.5,
+     "spend_today": 40.46,
      "conv_today": 5.0
     },
     {
@@ -107,7 +107,7 @@
      "spend_7d": 304.1,
      "conv_7d": 24.9,
      "cpl_7d": 12.21,
-     "spend_today": 23.85,
+     "spend_today": 39.48,
      "conv_today": 0.0
     },
     {
@@ -116,8 +116,8 @@
      "spend_7d": 262.21,
      "conv_7d": 14.2,
      "cpl_7d": 18.41,
-     "spend_today": 15.92,
-     "conv_today": 0.0
+     "spend_today": 20.31,
+     "conv_today": 1.0
     },
     {
      "name": "8. [RVS] 26Espagne2 Castille et Leon | Centre | CI #2 Ok",
@@ -125,7 +125,7 @@
      "spend_7d": 217.47,
      "conv_7d": 14.5,
      "cpl_7d": 15.05,
-     "spend_today": 1.28,
+     "spend_today": 3.25,
      "conv_today": 1.0
     },
     {
@@ -134,7 +134,7 @@
      "spend_7d": 215.42,
      "conv_7d": 16.5,
      "cpl_7d": 13.08,
-     "spend_today": 31.87,
+     "spend_today": 43.48,
      "conv_today": 0.9
     },
     {
@@ -143,7 +143,7 @@
      "spend_7d": 210.05,
      "conv_7d": 9.0,
      "cpl_7d": 23.38,
-     "spend_today": 3.56,
+     "spend_today": 6.82,
      "conv_today": 0.0
     },
     {
@@ -161,7 +161,7 @@
      "spend_7d": 166.83,
      "conv_7d": 8.6,
      "cpl_7d": 19.41,
-     "spend_today": 0.76,
+     "spend_today": 0.98,
      "conv_today": 0.0
     },
     {
@@ -188,7 +188,7 @@
      "spend_7d": 51.31,
      "conv_7d": 3.0,
      "cpl_7d": 17.1,
-     "spend_today": 1.45,
+     "spend_today": 1.99,
      "conv_today": 0.0
     },
     {
@@ -197,7 +197,7 @@
      "spend_7d": 35.96,
      "conv_7d": 0.0,
      "cpl_7d": null,
-     "spend_today": 2.63,
+     "spend_today": 6.3,
      "conv_today": 0.0
     },
     {
@@ -206,7 +206,7 @@
      "spend_7d": 14.5,
      "conv_7d": 2.7,
      "cpl_7d": 5.34,
-     "spend_today": 2.59,
+     "spend_today": 3.77,
      "conv_today": 0.0
     },
     {
@@ -293,7 +293,7 @@
      "spend_7d": 804.52,
      "conv_7d": 53.0,
      "cpl_7d": 15.18,
-     "spend_today": 84.4,
+     "spend_today": 89.84,
      "conv_today": 6.0
     },
     {

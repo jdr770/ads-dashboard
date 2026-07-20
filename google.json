@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-20T17:25",
+ "generated_at": "2026-07-20T18:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -8,11 +8,11 @@
     {
      "name": "[VOLUME] PMax - Castilla y León",
      "status": "ENABLED",
-     "spend_7d": 1132.7,
+     "spend_7d": 1132.41,
      "conv_7d": 41.4,
-     "cpl_7d": 27.39,
-     "spend_today": 167.02,
-     "conv_today": 7.6
+     "cpl_7d": 27.38,
+     "spend_today": 188.69,
+     "conv_today": 9.6
     },
     {
      "name": "[ZONE-E] PMax - León",
@@ -20,7 +20,7 @@
      "spend_7d": 1087.82,
      "conv_7d": 19.0,
      "cpl_7d": 57.25,
-     "spend_today": 53.11,
+     "spend_today": 58.25,
      "conv_today": 0.0
     },
     {
@@ -29,7 +29,7 @@
      "spend_7d": 807.16,
      "conv_7d": 18.1,
      "cpl_7d": 44.66,
-     "spend_today": 43.44,
+     "spend_today": 50.19,
      "conv_today": 0.0
     },
     {
@@ -38,8 +38,8 @@
      "spend_7d": 366.89,
      "conv_7d": 17.0,
      "cpl_7d": 21.58,
-     "spend_today": 11.86,
-     "conv_today": 1.0
+     "spend_today": 20.07,
+     "conv_today": 2.0
     },
     {
      "name": "[ZONE-E] PMax - Sierra CyL",
@@ -56,7 +56,7 @@
      "spend_7d": 197.44,
      "conv_7d": 6.0,
      "cpl_7d": 32.91,
-     "spend_today": 26.62,
+     "spend_today": 29.86,
      "conv_today": 0.0
     },
     {
@@ -74,8 +74,8 @@
      "spend_7d": 69.47,
      "conv_7d": 5.0,
      "cpl_7d": 13.89,
-     "spend_today": 30.99,
-     "conv_today": 0.0
+     "spend_today": 38.02,
+     "conv_today": 1.0
     }
    ]
   },
@@ -89,7 +89,7 @@
      "spend_7d": 865.36,
      "conv_7d": 53.0,
      "cpl_7d": 16.33,
-     "spend_today": 19.54,
+     "spend_today": 20.94,
      "conv_today": 3.0
     },
     {
@@ -98,16 +98,16 @@
      "spend_7d": 534.54,
      "conv_7d": 42.5,
      "cpl_7d": 12.58,
-     "spend_today": 25.27,
-     "conv_today": 3.0
+     "spend_today": 28.5,
+     "conv_today": 5.0
     },
     {
      "name": "[RVS25] Espagne - PMAX CI 2 Ok 16",
      "status": "ENABLED",
      "spend_7d": 304.1,
-     "conv_7d": 23.9,
-     "cpl_7d": 12.73,
-     "spend_today": 22.01,
+     "conv_7d": 24.9,
+     "cpl_7d": 12.21,
+     "spend_today": 23.85,
      "conv_today": 0.0
     },
     {
@@ -116,7 +116,7 @@
      "spend_7d": 262.21,
      "conv_7d": 14.2,
      "cpl_7d": 18.41,
-     "spend_today": 14.17,
+     "spend_today": 15.92,
      "conv_today": 0.0
     },
     {
@@ -125,7 +125,7 @@
      "spend_7d": 217.47,
      "conv_7d": 14.5,
      "cpl_7d": 15.05,
-     "spend_today": 1.13,
+     "spend_today": 1.28,
      "conv_today": 1.0
     },
     {
@@ -134,7 +134,7 @@
      "spend_7d": 215.42,
      "conv_7d": 16.5,
      "cpl_7d": 13.08,
-     "spend_today": 28.8,
+     "spend_today": 31.87,
      "conv_today": 0.9
     },
     {
@@ -143,7 +143,7 @@
      "spend_7d": 210.05,
      "conv_7d": 9.0,
      "cpl_7d": 23.38,
-     "spend_today": 2.99,
+     "spend_today": 3.56,
      "conv_today": 0.0
     },
     {
@@ -161,7 +161,7 @@
      "spend_7d": 166.83,
      "conv_7d": 8.6,
      "cpl_7d": 19.41,
-     "spend_today": 0.68,
+     "spend_today": 0.76,
      "conv_today": 0.0
     },
     {
@@ -188,7 +188,7 @@
      "spend_7d": 51.31,
      "conv_7d": 3.0,
      "cpl_7d": 17.1,
-     "spend_today": 1.27,
+     "spend_today": 1.45,
      "conv_today": 0.0
     },
     {
@@ -197,7 +197,7 @@
      "spend_7d": 35.96,
      "conv_7d": 0.0,
      "cpl_7d": null,
-     "spend_today": 2.13,
+     "spend_today": 2.63,
      "conv_today": 0.0
     },
     {
@@ -206,7 +206,7 @@
      "spend_7d": 14.5,
      "conv_7d": 2.7,
      "cpl_7d": 5.34,
-     "spend_today": 1.66,
+     "spend_today": 2.59,
      "conv_today": 0.0
     },
     {
@@ -293,8 +293,8 @@
      "spend_7d": 804.52,
      "conv_7d": 53.0,
      "cpl_7d": 15.18,
-     "spend_today": 85.48,
-     "conv_today": 4.0
+     "spend_today": 84.4,
+     "conv_today": 6.0
     },
     {
      "name": "Pmax - New vidéos 07 2026 #2",

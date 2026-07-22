@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-22T11:25",
+ "generated_at": "2026-07-22T12:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -8,11 +8,11 @@
     {
      "name": "[VOLUME] PMax - Castilla y León",
      "status": "ENABLED",
-     "spend_7d": 1885.07,
+     "spend_7d": 1885.42,
      "conv_7d": 100.9,
-     "cpl_7d": 18.67,
-     "spend_today": 104.99,
-     "conv_today": 7.0
+     "cpl_7d": 18.68,
+     "spend_today": 138.71,
+     "conv_today": 9.0
     },
     {
      "name": "[ZONE-E] PMax - León",
@@ -47,7 +47,7 @@
      "spend_7d": 295.91,
      "conv_7d": 8.0,
      "cpl_7d": 36.99,
-     "spend_today": 8.99,
+     "spend_today": 12.43,
      "conv_today": 2.0
     },
     {
@@ -74,7 +74,7 @@
      "spend_7d": 135.85,
      "conv_7d": 9.0,
      "cpl_7d": 15.09,
-     "spend_today": 9.78,
+     "spend_today": 11.41,
      "conv_today": 0.0
     },
     {
@@ -83,8 +83,8 @@
      "spend_7d": 78.01,
      "conv_7d": 1.0,
      "cpl_7d": 78.01,
-     "spend_today": 212.9,
-     "conv_today": 0.0
+     "spend_today": 213.18,
+     "conv_today": 1.0
     }
    ]
   },
@@ -95,10 +95,10 @@
     {
      "name": "8. [RVS] 26Espagne05 Castille et Leon |  Global | Affinité Ok 23",
      "status": "ENABLED",
-     "spend_7d": 553.22,
+     "spend_7d": 553.42,
      "conv_7d": 36.0,
-     "cpl_7d": 15.37,
-     "spend_today": 4.65,
+     "cpl_7d": 15.38,
+     "spend_today": 5.16,
      "conv_today": 0.0
     },
     {
@@ -107,16 +107,16 @@
      "spend_7d": 468.63,
      "conv_7d": 37.5,
      "cpl_7d": 12.5,
-     "spend_today": 19.17,
+     "spend_today": 21.87,
      "conv_today": 0.0
     },
     {
      "name": "[RVS25] Espagne - PMAX CI 2 Ok 23",
      "status": "ENABLED",
-     "spend_7d": 316.89,
-     "conv_7d": 17.9,
-     "cpl_7d": 17.68,
-     "spend_today": 10.03,
+     "spend_7d": 316.94,
+     "conv_7d": 18.9,
+     "cpl_7d": 16.75,
+     "spend_today": 13.7,
      "conv_today": 0.0
     },
     {
@@ -125,16 +125,16 @@
      "spend_7d": 282.19,
      "conv_7d": 19.4,
      "cpl_7d": 14.56,
-     "spend_today": 22.09,
+     "spend_today": 29.39,
      "conv_today": 2.0
     },
     {
      "name": "+[RVS26ES] Espagne - PMAX CI best  zones textes Ok 23",
      "status": "ENABLED",
-     "spend_7d": 193.73,
+     "spend_7d": 193.76,
      "conv_7d": 11.4,
      "cpl_7d": 17.06,
-     "spend_today": 3.09,
+     "spend_today": 4.03,
      "conv_today": 0.0
     },
     {
@@ -143,7 +143,7 @@
      "spend_7d": 129.87,
      "conv_7d": 5.0,
      "cpl_7d": 26.05,
-     "spend_today": 1.43,
+     "spend_today": 1.45,
      "conv_today": 0.0
     },
     {
@@ -152,7 +152,7 @@
      "spend_7d": 81.24,
      "conv_7d": 6.0,
      "cpl_7d": 13.55,
-     "spend_today": 0.91,
+     "spend_today": 1.43,
      "conv_today": 0.0
     },
     {
@@ -161,7 +161,7 @@
      "spend_7d": 50.45,
      "conv_7d": 3.0,
      "cpl_7d": 16.82,
-     "spend_today": 0.61,
+     "spend_today": 0.65,
      "conv_today": 0.0
     },
     {
@@ -170,7 +170,7 @@
      "spend_7d": 24.84,
      "conv_7d": 0.0,
      "cpl_7d": null,
-     "spend_today": 2.11,
+     "spend_today": 2.13,
      "conv_today": 0.0
     },
     {
@@ -179,7 +179,7 @@
      "spend_7d": 19.37,
      "conv_7d": 0.0,
      "cpl_7d": null,
-     "spend_today": 0.26,
+     "spend_today": 0.37,
      "conv_today": 0.0
     },
     {
@@ -188,7 +188,7 @@
      "spend_7d": 18.84,
      "conv_7d": 1.7,
      "cpl_7d": 10.97,
-     "spend_today": 1.01,
+     "spend_today": 4.56,
      "conv_today": 0.0
     },
     {
@@ -266,8 +266,8 @@
      "spend_7d": 784.06,
      "conv_7d": 52.0,
      "cpl_7d": 15.08,
-     "spend_today": 30.58,
-     "conv_today": 0.0
+     "spend_today": 61.0,
+     "conv_today": 1.3
     },
     {
      "name": "Pmax - New vidéos 07 2026 #2",

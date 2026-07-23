@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-23T23:25",
+ "generated_at": "2026-07-24T00:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -8,79 +8,79 @@
     {
      "name": "[VOLUME] PMax - Castilla y León",
      "status": "ENABLED",
-     "spend_7d": 2286.44,
-     "conv_7d": 140.9,
-     "cpl_7d": 16.22,
-     "spend_today": 477.63,
-     "conv_today": 30.0
+     "spend_7d": 2778.08,
+     "conv_7d": 172.9,
+     "cpl_7d": 16.07,
+     "spend_today": 0.04,
+     "conv_today": 0.0
     },
     {
      "name": "[ZONE-E] PMax - León",
      "status": "PAUSED",
-     "spend_7d": 752.55,
-     "conv_7d": 12.0,
-     "cpl_7d": 62.73,
-     "spend_today": 0.0,
-     "conv_today": 0.0
-    },
-    {
-     "name": "[ZONE-E] PMax - Burgos",
-     "status": "PAUSED",
-     "spend_7d": 583.04,
-     "conv_7d": 16.1,
-     "cpl_7d": 36.27,
-     "spend_today": 0.0,
-     "conv_today": 0.0
-    },
-    {
-     "name": "[ZONE-E] PMax - CyL Oeste",
-     "status": "PAUSED",
-     "spend_7d": 358.11,
-     "conv_7d": 20.0,
-     "cpl_7d": 17.91,
+     "spend_7d": 441.12,
+     "conv_7d": 8.0,
+     "cpl_7d": 55.14,
      "spend_today": 0.0,
      "conv_today": 0.0
     },
     {
      "name": "[VOLUME] PMax - Lugo",
      "status": "ENABLED",
-     "spend_7d": 345.91,
-     "conv_7d": 13.0,
-     "cpl_7d": 26.61,
-     "spend_today": 42.07,
-     "conv_today": 1.0
+     "spend_7d": 391.98,
+     "conv_7d": 14.0,
+     "cpl_7d": 28.0,
+     "spend_today": 0.0,
+     "conv_today": 0.0
+    },
+    {
+     "name": "[ZONE-E] PMax - Burgos",
+     "status": "PAUSED",
+     "spend_7d": 380.31,
+     "conv_7d": 12.1,
+     "cpl_7d": 31.5,
+     "spend_today": 0.0,
+     "conv_today": 0.0
+    },
+    {
+     "name": "[ZONE-E] PMax - CyL Oeste",
+     "status": "PAUSED",
+     "spend_7d": 298.56,
+     "conv_7d": 18.0,
+     "cpl_7d": 16.59,
+     "spend_today": 0.0,
+     "conv_today": 0.0
     },
     {
      "name": "[TEST] PMax - CyL sansTCPA",
      "status": "PAUSED",
-     "spend_7d": 287.62,
+     "spend_7d": 285.86,
      "conv_7d": 3.0,
-     "cpl_7d": 95.87,
+     "cpl_7d": 95.29,
      "spend_today": 0.0,
      "conv_today": 0.0
     },
     {
      "name": "[BRAND] Search - Certicasa",
      "status": "ENABLED",
-     "spend_7d": 168.03,
-     "conv_7d": 11.0,
-     "cpl_7d": 15.28,
-     "spend_today": 31.22,
-     "conv_today": 3.0
+     "spend_7d": 198.9,
+     "conv_7d": 13.0,
+     "cpl_7d": 15.3,
+     "spend_today": 0.0,
+     "conv_today": 0.0
     },
     {
      "name": "[ZONE-E] PMax - Sierra Madrid",
      "status": "PAUSED",
-     "spend_7d": 133.96,
-     "conv_7d": 4.0,
-     "cpl_7d": 33.49,
+     "spend_7d": 95.64,
+     "conv_7d": 1.0,
+     "cpl_7d": 95.64,
      "spend_today": 0.0,
      "conv_today": 0.0
     },
     {
      "name": "[ZONE-E] PMax - Sierra CyL",
      "status": "PAUSED",
-     "spend_7d": 123.66,
+     "spend_7d": 51.62,
      "conv_7d": 0.0,
      "cpl_7d": null,
      "spend_today": 0.0,
@@ -93,102 +93,102 @@
    "label": "3JM_Certicasa (Flo)",
    "campaigns": [
     {
-     "name": "8. [RVS] 26Espagne05 Castille et Leon |  Global | Affinité Ok 23",
+     "name": "[RVS25] Espagne PMax 3 Castille et Leon Ok 23",
      "status": "PAUSED",
-     "spend_7d": 364.96,
-     "conv_7d": 33.0,
-     "cpl_7d": 11.06,
-     "spend_today": 10.92,
-     "conv_today": 3.0
+     "spend_7d": 372.47,
+     "conv_7d": 26.4,
+     "cpl_7d": 14.12,
+     "spend_today": 0.0,
+     "conv_today": 0.0
     },
     {
      "name": "[RVS25] Espagne - Castille et leon - PMAX CI best Audience Ok 22",
      "status": "PAUSED",
-     "spend_7d": 359.87,
-     "conv_7d": 27.5,
-     "cpl_7d": 13.09,
-     "spend_today": 37.87,
-     "conv_today": 1.0
-    },
-    {
-     "name": "[RVS25] Espagne PMax 3 Castille et Leon Ok 23",
-     "status": "PAUSED",
-     "spend_7d": 351.97,
-     "conv_7d": 25.4,
-     "cpl_7d": 13.87,
-     "spend_today": 55.92,
-     "conv_today": 4.0
+     "spend_7d": 309.12,
+     "conv_7d": 20.0,
+     "cpl_7d": 15.46,
+     "spend_today": 0.0,
+     "conv_today": 0.0
     },
     {
      "name": "[RVS25] Espagne - PMAX CI 2 Ok 23",
      "status": "PAUSED",
-     "spend_7d": 301.33,
-     "conv_7d": 16.5,
-     "cpl_7d": 18.3,
-     "spend_today": 13.19,
+     "spend_7d": 263.45,
+     "conv_7d": 11.5,
+     "cpl_7d": 22.91,
+     "spend_today": 0.0,
      "conv_today": 0.0
     },
     {
-     "name": "+[RVS26ES] Espagne - PMAX CI best  zones textes Ok 23",
+     "name": "8. [RVS] 26Espagne05 Castille et Leon |  Global | Affinité Ok 23",
      "status": "PAUSED",
-     "spend_7d": 186.21,
-     "conv_7d": 10.4,
-     "cpl_7d": 17.98,
-     "spend_today": 7.96,
-     "conv_today": 1.0
-    },
-    {
-     "name": "[RVS25] Espagne PMax 3 CI LP HZ Ok worker Ok 16",
-     "status": "PAUSED",
-     "spend_7d": 110.57,
-     "conv_7d": 5.0,
-     "cpl_7d": 22.18,
+     "spend_7d": 260.91,
+     "conv_7d": 26.0,
+     "cpl_7d": 10.04,
      "spend_today": 0.0,
      "conv_today": 0.0
     },
     {
      "name": "3. [RVS] 26Espagne2 Castille et Leon | CI Ok",
      "status": "PAUSED",
-     "spend_7d": 93.8,
-     "conv_7d": 2.4,
-     "cpl_7d": 38.53,
-     "spend_today": 74.46,
-     "conv_today": 4.0
+     "spend_7d": 166.74,
+     "conv_7d": 6.4,
+     "cpl_7d": 25.95,
+     "spend_today": 0.0,
+     "conv_today": 0.0
+    },
+    {
+     "name": "+[RVS26ES] Espagne - PMAX CI best  zones textes Ok 23",
+     "status": "PAUSED",
+     "spend_7d": 163.22,
+     "conv_7d": 10.1,
+     "cpl_7d": 16.2,
+     "spend_today": 0.0,
+     "conv_today": 0.0
+    },
+    {
+     "name": "[RVS25] Espagne PMax 3 CI LP HZ Ok worker Ok 16",
+     "status": "PAUSED",
+     "spend_7d": 78.81,
+     "conv_7d": 3.0,
+     "cpl_7d": 26.28,
+     "spend_today": 0.0,
+     "conv_today": 0.0
     },
     {
      "name": "8. [RVS] 26Espagne2 Castille et Leon | Centre | CI #2 Ok",
      "status": "PAUSED",
-     "spend_7d": 45.08,
-     "conv_7d": 5.0,
-     "cpl_7d": 9.02,
-     "spend_today": 20.28,
-     "conv_today": 1.0
+     "spend_7d": 49.72,
+     "conv_7d": 6.0,
+     "cpl_7d": 8.29,
+     "spend_today": 0.0,
+     "conv_today": 0.0
     },
     {
      "name": "8. [RVS] 26Espagne2 Castille et Leon | AI Ok",
      "status": "PAUSED",
-     "spend_7d": 24.12,
+     "spend_7d": 21.11,
      "conv_7d": 0.0,
      "cpl_7d": null,
-     "spend_today": 1.35,
+     "spend_today": 0.0,
      "conv_today": 0.0
     },
     {
      "name": "8. [RVS] 26Espagne05 Castille et Leon |  Global Ok",
      "status": "PAUSED",
-     "spend_7d": 19.23,
+     "spend_7d": 17.22,
      "conv_7d": 0.0,
      "cpl_7d": null,
-     "spend_today": 1.02,
+     "spend_today": 0.0,
      "conv_today": 0.0
     },
     {
      "name": "Demand Gen : 2026-06-19 Ok15",
      "status": "PAUSED",
-     "spend_7d": 8.95,
+     "spend_7d": 8.35,
      "conv_7d": 0.0,
      "cpl_7d": null,
-     "spend_today": 0.74,
+     "spend_today": 0.0,
      "conv_today": 0.0
     }
    ]
@@ -200,11 +200,11 @@
     {
      "name": "[RVS] 26Espagne Castille et Leon",
      "status": "PAUSED",
-     "spend_7d": 853.97,
-     "conv_7d": 60.0,
-     "cpl_7d": 14.23,
-     "spend_today": 114.68,
-     "conv_today": 6.0
+     "spend_7d": 852.5,
+     "conv_7d": 58.0,
+     "cpl_7d": 14.7,
+     "spend_today": 0.0,
+     "conv_today": 0.0
     }
    ]
   }

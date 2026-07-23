@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-23T18:25",
+ "generated_at": "2026-07-23T19:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -8,11 +8,11 @@
     {
      "name": "[VOLUME] PMax - Castilla y León",
      "status": "ENABLED",
-     "spend_7d": 2285.94,
+     "spend_7d": 2286.21,
      "conv_7d": 139.9,
      "cpl_7d": 16.34,
-     "spend_today": 342.22,
-     "conv_today": 14.5
+     "spend_today": 377.86,
+     "conv_today": 21.8
     },
     {
      "name": "[ZONE-E] PMax - León",
@@ -47,15 +47,15 @@
      "spend_7d": 345.91,
      "conv_7d": 13.0,
      "cpl_7d": 26.61,
-     "spend_today": 28.64,
-     "conv_today": 0.0
+     "spend_today": 30.18,
+     "conv_today": 1.0
     },
     {
      "name": "[TEST] PMax - CyL sansTCPA",
      "status": "PAUSED",
-     "spend_7d": 292.03,
+     "spend_7d": 291.98,
      "conv_7d": 3.0,
-     "cpl_7d": 97.34,
+     "cpl_7d": 97.33,
      "spend_today": 0.0,
      "conv_today": 0.0
     },
@@ -65,8 +65,8 @@
      "spend_7d": 168.03,
      "conv_7d": 11.0,
      "cpl_7d": 15.28,
-     "spend_today": 22.35,
-     "conv_today": 2.0
+     "spend_today": 25.71,
+     "conv_today": 3.0
     },
     {
      "name": "[ZONE-E] PMax - Sierra Madrid",
@@ -98,7 +98,7 @@
      "spend_7d": 364.96,
      "conv_7d": 33.0,
      "cpl_7d": 11.06,
-     "spend_today": 10.91,
+     "spend_today": 10.92,
      "conv_today": 3.0
     },
     {
@@ -114,9 +114,9 @@
      "name": "[RVS25] Espagne PMax 3 Castille et Leon Ok 23",
      "status": "PAUSED",
      "spend_7d": 351.97,
-     "conv_7d": 24.4,
-     "cpl_7d": 14.44,
-     "spend_today": 50.67,
+     "conv_7d": 25.4,
+     "cpl_7d": 13.87,
+     "spend_today": 52.84,
      "conv_today": 4.0
     },
     {
@@ -125,7 +125,7 @@
      "spend_7d": 301.33,
      "conv_7d": 16.5,
      "cpl_7d": 18.3,
-     "spend_today": 11.98,
+     "spend_today": 12.17,
      "conv_today": 0.0
     },
     {
@@ -135,7 +135,7 @@
      "conv_7d": 10.4,
      "cpl_7d": 17.98,
      "spend_today": 7.93,
-     "conv_today": 0.0
+     "conv_today": 1.0
     },
     {
      "name": "[RVS25] Espagne PMax 3 CI LP HZ Ok worker Ok 16",
@@ -149,11 +149,11 @@
     {
      "name": "3. [RVS] 26Espagne2 Castille et Leon | CI Ok",
      "status": "PAUSED",
-     "spend_7d": 93.63,
+     "spend_7d": 93.8,
      "conv_7d": 2.4,
-     "cpl_7d": 38.46,
-     "spend_today": 72.86,
-     "conv_today": 3.0
+     "cpl_7d": 38.53,
+     "spend_today": 73.6,
+     "conv_today": 4.0
     },
     {
      "name": "8. [RVS] 26Espagne2 Castille et Leon | Centre | CI #2 Ok",
@@ -161,7 +161,7 @@
      "spend_7d": 45.08,
      "conv_7d": 5.0,
      "cpl_7d": 9.02,
-     "spend_today": 19.81,
+     "spend_today": 19.86,
      "conv_today": 1.0
     },
     {
@@ -170,7 +170,7 @@
      "spend_7d": 24.12,
      "conv_7d": 0.0,
      "cpl_7d": null,
-     "spend_today": 1.34,
+     "spend_today": 1.35,
      "conv_today": 0.0
     },
     {
@@ -203,7 +203,7 @@
      "spend_7d": 852.79,
      "conv_7d": 60.0,
      "cpl_7d": 14.21,
-     "spend_today": 113.05,
+     "spend_today": 113.63,
      "conv_today": 5.0
     }
    ]

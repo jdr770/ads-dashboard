@@ -1,10 +1,92 @@
 {
- "generated_at": "2026-07-23T08:28",
+ "generated_at": "2026-07-23T14:25",
  "accounts": [
   {
    "id": "4275355447",
    "label": "🔒 3J_JDR (perso)",
-   "error": "503 Stream removed (recvmsg:Connection reset by peer (54))"
+   "campaigns": [
+    {
+     "name": "[VOLUME] PMax - Castilla y León",
+     "status": "ENABLED",
+     "spend_7d": 2285.6,
+     "conv_7d": 137.9,
+     "cpl_7d": 16.57,
+     "spend_today": 196.89,
+     "conv_today": 8.0
+    },
+    {
+     "name": "[ZONE-E] PMax - León",
+     "status": "PAUSED",
+     "spend_7d": 752.55,
+     "conv_7d": 12.0,
+     "cpl_7d": 62.73,
+     "spend_today": 0.0,
+     "conv_today": 0.0
+    },
+    {
+     "name": "[ZONE-E] PMax - Burgos",
+     "status": "PAUSED",
+     "spend_7d": 583.04,
+     "conv_7d": 16.1,
+     "cpl_7d": 36.27,
+     "spend_today": 0.0,
+     "conv_today": 0.0
+    },
+    {
+     "name": "[ZONE-E] PMax - CyL Oeste",
+     "status": "PAUSED",
+     "spend_7d": 358.11,
+     "conv_7d": 20.0,
+     "cpl_7d": 17.91,
+     "spend_today": 0.0,
+     "conv_today": 0.0
+    },
+    {
+     "name": "[VOLUME] PMax - Lugo",
+     "status": "ENABLED",
+     "spend_7d": 345.91,
+     "conv_7d": 13.0,
+     "cpl_7d": 26.61,
+     "spend_today": 17.2,
+     "conv_today": 0.0
+    },
+    {
+     "name": "[TEST] PMax - CyL sansTCPA",
+     "status": "PAUSED",
+     "spend_7d": 292.13,
+     "conv_7d": 3.0,
+     "cpl_7d": 97.38,
+     "spend_today": 0.0,
+     "conv_today": 0.0
+    },
+    {
+     "name": "[BRAND] Search - Certicasa",
+     "status": "ENABLED",
+     "spend_7d": 168.03,
+     "conv_7d": 10.0,
+     "cpl_7d": 16.8,
+     "spend_today": 18.91,
+     "conv_today": 0.0
+    },
+    {
+     "name": "[ZONE-E] PMax - Sierra Madrid",
+     "status": "PAUSED",
+     "spend_7d": 133.96,
+     "conv_7d": 4.0,
+     "cpl_7d": 33.49,
+     "spend_today": 0.0,
+     "conv_today": 0.0
+    },
+    {
+     "name": "[ZONE-E] PMax - Sierra CyL",
+     "status": "PAUSED",
+     "spend_7d": 123.66,
+     "conv_7d": 0.0,
+     "cpl_7d": null,
+     "spend_today": 0.0,
+     "conv_today": 0.0
+    }
+   ]
   },
   {
    "id": "4698940482",
@@ -13,46 +95,46 @@
     {
      "name": "8. [RVS] 26Espagne05 Castille et Leon |  Global | Affinité Ok 23",
      "status": "ENABLED",
-     "spend_7d": 364.94,
+     "spend_7d": 364.96,
      "conv_7d": 32.0,
      "cpl_7d": 11.41,
-     "spend_today": 1.36,
-     "conv_today": 0.0
+     "spend_today": 7.13,
+     "conv_today": 3.0
     },
     {
      "name": "[RVS25] Espagne - Castille et leon - PMAX CI best Audience Ok 22",
      "status": "ENABLED",
-     "spend_7d": 359.95,
+     "spend_7d": 359.87,
      "conv_7d": 27.5,
      "cpl_7d": 13.09,
-     "spend_today": 5.27,
+     "spend_today": 28.84,
      "conv_today": 0.0
     },
     {
      "name": "[RVS25] Espagne PMax 3 Castille et Leon Ok 23",
      "status": "ENABLED",
-     "spend_7d": 350.9,
+     "spend_7d": 351.97,
      "conv_7d": 23.4,
-     "cpl_7d": 15.01,
-     "spend_today": 7.26,
+     "cpl_7d": 15.05,
+     "spend_today": 27.55,
      "conv_today": 0.0
     },
     {
      "name": "[RVS25] Espagne - PMAX CI 2 Ok 23",
      "status": "ENABLED",
-     "spend_7d": 301.05,
+     "spend_7d": 301.33,
      "conv_7d": 16.5,
-     "cpl_7d": 18.28,
-     "spend_today": 1.42,
+     "cpl_7d": 18.3,
+     "spend_today": 6.41,
      "conv_today": 0.0
     },
     {
      "name": "+[RVS26ES] Espagne - PMAX CI best  zones textes Ok 23",
      "status": "ENABLED",
-     "spend_7d": 186.35,
+     "spend_7d": 186.19,
      "conv_7d": 10.4,
-     "cpl_7d": 17.99,
-     "spend_today": 0.85,
+     "cpl_7d": 17.97,
+     "spend_today": 5.08,
      "conv_today": 0.0
     },
     {
@@ -67,11 +149,11 @@
     {
      "name": "3. [RVS] 26Espagne2 Castille et Leon | CI Ok",
      "status": "ENABLED",
-     "spend_7d": 92.49,
+     "spend_7d": 93.63,
      "conv_7d": 2.4,
-     "cpl_7d": 37.99,
-     "spend_today": 8.39,
-     "conv_today": 0.0
+     "cpl_7d": 38.46,
+     "spend_today": 60.38,
+     "conv_today": 2.0
     },
     {
      "name": "8. [RVS] 26Espagne2 Castille et Leon | Centre | CI #2 Ok",
@@ -79,8 +161,8 @@
      "spend_7d": 45.08,
      "conv_7d": 5.0,
      "cpl_7d": 9.02,
-     "spend_today": 3.69,
-     "conv_today": 0.0
+     "spend_today": 16.34,
+     "conv_today": 1.0
     },
     {
      "name": "8. [RVS] 26Espagne2 Castille et Leon | AI Ok",
@@ -88,7 +170,7 @@
      "spend_7d": 24.12,
      "conv_7d": 0.0,
      "cpl_7d": null,
-     "spend_today": 0.27,
+     "spend_today": 1.23,
      "conv_today": 0.0
     },
     {
@@ -97,7 +179,7 @@
      "spend_7d": 19.23,
      "conv_7d": 0.0,
      "cpl_7d": null,
-     "spend_today": 0.8,
+     "spend_today": 0.9,
      "conv_today": 0.0
     },
     {
@@ -106,7 +188,7 @@
      "spend_7d": 8.95,
      "conv_7d": 0.0,
      "cpl_7d": null,
-     "spend_today": 0.35,
+     "spend_today": 0.59,
      "conv_today": 0.0
     },
     {
@@ -181,11 +263,11 @@
     {
      "name": "[RVS] 26Espagne Castille et Leon",
      "status": "ENABLED",
-     "spend_7d": 852.37,
-     "conv_7d": 54.0,
-     "cpl_7d": 15.78,
-     "spend_today": 20.26,
-     "conv_today": 0.0
+     "spend_7d": 852.79,
+     "conv_7d": 55.0,
+     "cpl_7d": 15.51,
+     "spend_today": 92.82,
+     "conv_today": 3.0
     },
     {
      "name": "Pmax - New vidéos 07 2026 #2",

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-23T19:25",
+ "generated_at": "2026-07-23T20:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -11,8 +11,8 @@
      "spend_7d": 2286.21,
      "conv_7d": 139.9,
      "cpl_7d": 16.34,
-     "spend_today": 377.86,
-     "conv_today": 21.8
+     "spend_today": 406.79,
+     "conv_today": 24.3
     },
     {
      "name": "[ZONE-E] PMax - León",
@@ -47,15 +47,15 @@
      "spend_7d": 345.91,
      "conv_7d": 13.0,
      "cpl_7d": 26.61,
-     "spend_today": 30.18,
+     "spend_today": 32.58,
      "conv_today": 1.0
     },
     {
      "name": "[TEST] PMax - CyL sansTCPA",
      "status": "PAUSED",
-     "spend_7d": 291.98,
+     "spend_7d": 291.92,
      "conv_7d": 3.0,
-     "cpl_7d": 97.33,
+     "cpl_7d": 97.31,
      "spend_today": 0.0,
      "conv_today": 0.0
     },
@@ -65,7 +65,7 @@
      "spend_7d": 168.03,
      "conv_7d": 11.0,
      "cpl_7d": 15.28,
-     "spend_today": 25.71,
+     "spend_today": 29.35,
      "conv_today": 3.0
     },
     {
@@ -116,7 +116,7 @@
      "spend_7d": 351.97,
      "conv_7d": 25.4,
      "cpl_7d": 13.87,
-     "spend_today": 52.84,
+     "spend_today": 53.88,
      "conv_today": 4.0
     },
     {
@@ -125,7 +125,7 @@
      "spend_7d": 301.33,
      "conv_7d": 16.5,
      "cpl_7d": 18.3,
-     "spend_today": 12.17,
+     "spend_today": 12.58,
      "conv_today": 0.0
     },
     {
@@ -152,7 +152,7 @@
      "spend_7d": 93.8,
      "conv_7d": 2.4,
      "cpl_7d": 38.53,
-     "spend_today": 73.6,
+     "spend_today": 73.91,
      "conv_today": 4.0
     },
     {
@@ -161,7 +161,7 @@
      "spend_7d": 45.08,
      "conv_7d": 5.0,
      "cpl_7d": 9.02,
-     "spend_today": 19.86,
+     "spend_today": 20.28,
      "conv_today": 1.0
     },
     {
@@ -200,10 +200,10 @@
     {
      "name": "[RVS] 26Espagne Castille et Leon",
      "status": "PAUSED",
-     "spend_7d": 852.79,
+     "spend_7d": 853.97,
      "conv_7d": 60.0,
-     "cpl_7d": 14.21,
-     "spend_today": 113.63,
+     "cpl_7d": 14.23,
+     "spend_today": 114.15,
      "conv_today": 5.0
     }
    ]

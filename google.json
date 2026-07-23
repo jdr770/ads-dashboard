@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-23T14:25",
+ "generated_at": "2026-07-23T15:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -9,10 +9,10 @@
      "name": "[VOLUME] PMax - Castilla y León",
      "status": "ENABLED",
      "spend_7d": 2285.6,
-     "conv_7d": 137.9,
-     "cpl_7d": 16.57,
-     "spend_today": 196.89,
-     "conv_today": 8.0
+     "conv_7d": 138.9,
+     "cpl_7d": 16.45,
+     "spend_today": 218.43,
+     "conv_today": 10.0
     },
     {
      "name": "[ZONE-E] PMax - León",
@@ -47,15 +47,15 @@
      "spend_7d": 345.91,
      "conv_7d": 13.0,
      "cpl_7d": 26.61,
-     "spend_today": 17.2,
+     "spend_today": 18.92,
      "conv_today": 0.0
     },
     {
      "name": "[TEST] PMax - CyL sansTCPA",
      "status": "PAUSED",
-     "spend_7d": 292.13,
+     "spend_7d": 292.11,
      "conv_7d": 3.0,
-     "cpl_7d": 97.38,
+     "cpl_7d": 97.37,
      "spend_today": 0.0,
      "conv_today": 0.0
     },
@@ -63,10 +63,10 @@
      "name": "[BRAND] Search - Certicasa",
      "status": "ENABLED",
      "spend_7d": 168.03,
-     "conv_7d": 10.0,
-     "cpl_7d": 16.8,
+     "conv_7d": 11.0,
+     "cpl_7d": 15.28,
      "spend_today": 18.91,
-     "conv_today": 0.0
+     "conv_today": 2.0
     },
     {
      "name": "[ZONE-E] PMax - Sierra Madrid",
@@ -98,7 +98,7 @@
      "spend_7d": 364.96,
      "conv_7d": 32.0,
      "cpl_7d": 11.41,
-     "spend_today": 7.13,
+     "spend_today": 8.3,
      "conv_today": 3.0
     },
     {
@@ -107,7 +107,7 @@
      "spend_7d": 359.87,
      "conv_7d": 27.5,
      "cpl_7d": 13.09,
-     "spend_today": 28.84,
+     "spend_today": 31.77,
      "conv_today": 0.0
     },
     {
@@ -116,8 +116,8 @@
      "spend_7d": 351.97,
      "conv_7d": 23.4,
      "cpl_7d": 15.05,
-     "spend_today": 27.55,
-     "conv_today": 0.0
+     "spend_today": 34.39,
+     "conv_today": 1.5
     },
     {
      "name": "[RVS25] Espagne - PMAX CI 2 Ok 23",
@@ -125,16 +125,16 @@
      "spend_7d": 301.33,
      "conv_7d": 16.5,
      "cpl_7d": 18.3,
-     "spend_today": 6.41,
+     "spend_today": 7.89,
      "conv_today": 0.0
     },
     {
      "name": "+[RVS26ES] Espagne - PMAX CI best  zones textes Ok 23",
      "status": "ENABLED",
-     "spend_7d": 186.19,
+     "spend_7d": 186.21,
      "conv_7d": 10.4,
-     "cpl_7d": 17.97,
-     "spend_today": 5.08,
+     "cpl_7d": 17.98,
+     "spend_today": 6.21,
      "conv_today": 0.0
     },
     {
@@ -152,7 +152,7 @@
      "spend_7d": 93.63,
      "conv_7d": 2.4,
      "cpl_7d": 38.46,
-     "spend_today": 60.38,
+     "spend_today": 62.44,
      "conv_today": 2.0
     },
     {
@@ -161,7 +161,7 @@
      "spend_7d": 45.08,
      "conv_7d": 5.0,
      "cpl_7d": 9.02,
-     "spend_today": 16.34,
+     "spend_today": 16.74,
      "conv_today": 1.0
     },
     {
@@ -170,7 +170,7 @@
      "spend_7d": 24.12,
      "conv_7d": 0.0,
      "cpl_7d": null,
-     "spend_today": 1.23,
+     "spend_today": 1.27,
      "conv_today": 0.0
     },
     {
@@ -179,7 +179,7 @@
      "spend_7d": 19.23,
      "conv_7d": 0.0,
      "cpl_7d": null,
-     "spend_today": 0.9,
+     "spend_today": 0.91,
      "conv_today": 0.0
     },
     {
@@ -188,7 +188,7 @@
      "spend_7d": 8.95,
      "conv_7d": 0.0,
      "cpl_7d": null,
-     "spend_today": 0.59,
+     "spend_today": 0.62,
      "conv_today": 0.0
     },
     {
@@ -262,39 +262,12 @@
    "campaigns": [
     {
      "name": "[RVS] 26Espagne Castille et Leon",
-     "status": "ENABLED",
+     "status": "PAUSED",
      "spend_7d": 852.79,
      "conv_7d": 55.0,
      "cpl_7d": 15.51,
-     "spend_today": 92.82,
-     "conv_today": 3.0
-    },
-    {
-     "name": "Pmax - New vidéos 07 2026 #2",
-     "status": "ENABLED",
-     "spend_7d": 0.0,
-     "conv_7d": 0.0,
-     "cpl_7d": null,
-     "spend_today": 0.0,
-     "conv_today": 0.0
-    },
-    {
-     "name": "Pmax - New vidéos 1 à 4 - 07 2026 15",
-     "status": "ENABLED",
-     "spend_7d": 0.0,
-     "conv_7d": 0.0,
-     "cpl_7d": null,
-     "spend_today": 0.0,
-     "conv_today": 0.0
-    },
-    {
-     "name": "Pmax - New vidéos 07 2026 #3 Castille y Leon",
-     "status": "ENABLED",
-     "spend_7d": 0.0,
-     "conv_7d": 0.0,
-     "cpl_7d": null,
-     "spend_today": 0.0,
-     "conv_today": 0.0
+     "spend_today": 107.76,
+     "conv_today": 4.0
     }
    ]
   }

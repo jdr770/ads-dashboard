@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-24T11:25",
+ "generated_at": "2026-07-24T12:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -8,11 +8,11 @@
     {
      "name": "[VOLUME] PMax - Castilla y León",
      "status": "ENABLED",
-     "spend_7d": 2786.66,
+     "spend_7d": 2788.41,
      "conv_7d": 172.9,
-     "cpl_7d": 16.11,
-     "spend_today": 171.03,
-     "conv_today": 3.0
+     "cpl_7d": 16.12,
+     "spend_today": 193.83,
+     "conv_today": 6.0
     },
     {
      "name": "[ZONE-E] PMax - León",
@@ -26,11 +26,11 @@
     {
      "name": "[VOLUME] PMax - Lugo",
      "status": "ENABLED",
-     "spend_7d": 394.11,
+     "spend_7d": 393.86,
      "conv_7d": 14.0,
-     "cpl_7d": 28.15,
-     "spend_today": 12.34,
-     "conv_today": 0.0
+     "cpl_7d": 28.13,
+     "spend_today": 14.57,
+     "conv_today": 1.0
     },
     {
      "name": "[ZONE-E] PMax - Burgos",
@@ -53,9 +53,9 @@
     {
      "name": "[TEST] PMax - CyL sansTCPA",
      "status": "PAUSED",
-     "spend_7d": 285.64,
+     "spend_7d": 285.53,
      "conv_7d": 3.0,
-     "cpl_7d": 95.21,
+     "cpl_7d": 95.18,
      "spend_today": 0.0,
      "conv_today": 0.0
     },
@@ -65,8 +65,8 @@
      "spend_7d": 198.9,
      "conv_7d": 13.0,
      "cpl_7d": 15.3,
-     "spend_today": 11.61,
-     "conv_today": 0.0
+     "spend_today": 16.41,
+     "conv_today": 1.0
     },
     {
      "name": "[ZONE-E] PMax - Sierra Madrid",

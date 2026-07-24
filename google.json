@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-24T12:25",
+ "generated_at": "2026-07-24T13:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -8,11 +8,11 @@
     {
      "name": "[VOLUME] PMax - Castilla y León",
      "status": "ENABLED",
-     "spend_7d": 2788.41,
-     "conv_7d": 172.9,
-     "cpl_7d": 16.12,
-     "spend_today": 193.83,
-     "conv_today": 6.0
+     "spend_7d": 2788.62,
+     "conv_7d": 173.9,
+     "cpl_7d": 16.03,
+     "spend_today": 220.29,
+     "conv_today": 7.0
     },
     {
      "name": "[ZONE-E] PMax - León",
@@ -29,7 +29,7 @@
      "spend_7d": 393.86,
      "conv_7d": 14.0,
      "cpl_7d": 28.13,
-     "spend_today": 14.57,
+     "spend_today": 17.48,
      "conv_today": 1.0
     },
     {
@@ -65,7 +65,7 @@
      "spend_7d": 198.9,
      "conv_7d": 13.0,
      "cpl_7d": 15.3,
-     "spend_today": 16.41,
+     "spend_today": 18.05,
      "conv_today": 1.0
     },
     {

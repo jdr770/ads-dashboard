@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-24T16:25",
+ "generated_at": "2026-07-24T18:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -8,11 +8,11 @@
     {
      "name": "[VOLUME] PMax - Castilla y León",
      "status": "ENABLED",
-     "spend_7d": 2788.67,
-     "conv_7d": 173.9,
-     "cpl_7d": 16.03,
-     "spend_today": 309.07,
-     "conv_today": 17.0
+     "spend_7d": 2789.64,
+     "conv_7d": 174.9,
+     "cpl_7d": 15.95,
+     "spend_today": 375.35,
+     "conv_today": 21.0
     },
     {
      "name": "[ZONE-E] PMax - León",
@@ -29,8 +29,8 @@
      "spend_7d": 393.86,
      "conv_7d": 14.0,
      "cpl_7d": 28.13,
-     "spend_today": 28.73,
-     "conv_today": 1.0
+     "spend_today": 32.34,
+     "conv_today": 2.0
     },
     {
      "name": "[ZONE-E] PMax - Burgos",
@@ -65,7 +65,7 @@
      "spend_7d": 198.9,
      "conv_7d": 13.0,
      "cpl_7d": 15.3,
-     "spend_today": 21.29,
+     "spend_today": 23.29,
      "conv_today": 1.0
     },
     {
@@ -96,8 +96,8 @@
      "name": "[RVS25] Espagne PMax 3 Castille et Leon Ok 23",
      "status": "PAUSED",
      "spend_7d": 373.48,
-     "conv_7d": 26.4,
-     "cpl_7d": 14.16,
+     "conv_7d": 26.6,
+     "cpl_7d": 14.06,
      "spend_today": 0.0,
      "conv_today": 0.0
     },

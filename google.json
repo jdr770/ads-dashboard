@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-24T00:25",
+ "generated_at": "2026-07-24T08:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -8,11 +8,11 @@
     {
      "name": "[VOLUME] PMax - Castilla y León",
      "status": "ENABLED",
-     "spend_7d": 2778.08,
+     "spend_7d": 2785.91,
      "conv_7d": 172.9,
-     "cpl_7d": 16.07,
-     "spend_today": 0.04,
-     "conv_today": 0.0
+     "cpl_7d": 16.11,
+     "spend_today": 82.87,
+     "conv_today": 1.0
     },
     {
      "name": "[ZONE-E] PMax - León",
@@ -26,10 +26,10 @@
     {
      "name": "[VOLUME] PMax - Lugo",
      "status": "ENABLED",
-     "spend_7d": 391.98,
+     "spend_7d": 393.58,
      "conv_7d": 14.0,
-     "cpl_7d": 28.0,
-     "spend_today": 0.0,
+     "cpl_7d": 28.11,
+     "spend_today": 5.55,
      "conv_today": 0.0
     },
     {
@@ -53,9 +53,9 @@
     {
      "name": "[TEST] PMax - CyL sansTCPA",
      "status": "PAUSED",
-     "spend_7d": 285.86,
+     "spend_7d": 285.64,
      "conv_7d": 3.0,
-     "cpl_7d": 95.29,
+     "cpl_7d": 95.21,
      "spend_today": 0.0,
      "conv_today": 0.0
     },
@@ -95,18 +95,18 @@
     {
      "name": "[RVS25] Espagne PMax 3 Castille et Leon Ok 23",
      "status": "PAUSED",
-     "spend_7d": 372.47,
+     "spend_7d": 373.18,
      "conv_7d": 26.4,
-     "cpl_7d": 14.12,
+     "cpl_7d": 14.15,
      "spend_today": 0.0,
      "conv_today": 0.0
     },
     {
      "name": "[RVS25] Espagne - Castille et leon - PMAX CI best Audience Ok 22",
      "status": "PAUSED",
-     "spend_7d": 309.12,
+     "spend_7d": 309.41,
      "conv_7d": 20.0,
-     "cpl_7d": 15.46,
+     "cpl_7d": 15.47,
      "spend_today": 0.0,
      "conv_today": 0.0
     },
@@ -140,7 +140,7 @@
     {
      "name": "+[RVS26ES] Espagne - PMAX CI best  zones textes Ok 23",
      "status": "PAUSED",
-     "spend_7d": 163.22,
+     "spend_7d": 163.2,
      "conv_7d": 10.1,
      "cpl_7d": 16.2,
      "spend_today": 0.0,
@@ -150,8 +150,8 @@
      "name": "[RVS25] Espagne PMax 3 CI LP HZ Ok worker Ok 16",
      "status": "PAUSED",
      "spend_7d": 78.81,
-     "conv_7d": 3.0,
-     "cpl_7d": 26.28,
+     "conv_7d": 4.0,
+     "cpl_7d": 19.71,
      "spend_today": 0.0,
      "conv_today": 0.0
     },

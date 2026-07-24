@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-24T08:25",
+ "generated_at": "2026-07-24T11:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -8,11 +8,11 @@
     {
      "name": "[VOLUME] PMax - Castilla y León",
      "status": "ENABLED",
-     "spend_7d": 2785.91,
+     "spend_7d": 2786.66,
      "conv_7d": 172.9,
      "cpl_7d": 16.11,
-     "spend_today": 82.87,
-     "conv_today": 1.0
+     "spend_today": 171.03,
+     "conv_today": 3.0
     },
     {
      "name": "[ZONE-E] PMax - León",
@@ -26,10 +26,10 @@
     {
      "name": "[VOLUME] PMax - Lugo",
      "status": "ENABLED",
-     "spend_7d": 393.58,
+     "spend_7d": 394.11,
      "conv_7d": 14.0,
-     "cpl_7d": 28.11,
-     "spend_today": 5.55,
+     "cpl_7d": 28.15,
+     "spend_today": 12.34,
      "conv_today": 0.0
     },
     {
@@ -65,7 +65,7 @@
      "spend_7d": 198.9,
      "conv_7d": 13.0,
      "cpl_7d": 15.3,
-     "spend_today": 0.0,
+     "spend_today": 11.61,
      "conv_today": 0.0
     },
     {
@@ -95,16 +95,16 @@
     {
      "name": "[RVS25] Espagne PMax 3 Castille et Leon Ok 23",
      "status": "PAUSED",
-     "spend_7d": 373.18,
+     "spend_7d": 373.48,
      "conv_7d": 26.4,
-     "cpl_7d": 14.15,
+     "cpl_7d": 14.16,
      "spend_today": 0.0,
      "conv_today": 0.0
     },
     {
      "name": "[RVS25] Espagne - Castille et leon - PMAX CI best Audience Ok 22",
      "status": "PAUSED",
-     "spend_7d": 309.41,
+     "spend_7d": 309.32,
      "conv_7d": 20.0,
      "cpl_7d": 15.47,
      "spend_today": 0.0,
@@ -122,7 +122,7 @@
     {
      "name": "8. [RVS] 26Espagne05 Castille et Leon |  Global | Affinité Ok 23",
      "status": "PAUSED",
-     "spend_7d": 260.91,
+     "spend_7d": 260.89,
      "conv_7d": 26.0,
      "cpl_7d": 10.04,
      "spend_today": 0.0,
@@ -131,9 +131,9 @@
     {
      "name": "3. [RVS] 26Espagne2 Castille et Leon | CI Ok",
      "status": "PAUSED",
-     "spend_7d": 166.74,
+     "spend_7d": 166.84,
      "conv_7d": 6.4,
-     "cpl_7d": 25.95,
+     "cpl_7d": 25.97,
      "spend_today": 0.0,
      "conv_today": 0.0
     },
@@ -167,7 +167,7 @@
     {
      "name": "8. [RVS] 26Espagne2 Castille et Leon | AI Ok",
      "status": "PAUSED",
-     "spend_7d": 21.11,
+     "spend_7d": 21.1,
      "conv_7d": 0.0,
      "cpl_7d": null,
      "spend_today": 0.0,
@@ -185,7 +185,7 @@
     {
      "name": "Demand Gen : 2026-06-19 Ok15",
      "status": "PAUSED",
-     "spend_7d": 8.35,
+     "spend_7d": 8.34,
      "conv_7d": 0.0,
      "cpl_7d": null,
      "spend_today": 0.0,

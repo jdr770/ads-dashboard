@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-26T02:25",
+ "generated_at": "2026-07-26T03:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -8,11 +8,11 @@
     {
      "name": "[VOLUME] PMax - Castilla y León",
      "status": "ENABLED",
-     "spend_7d": 3015.73,
+     "spend_7d": 3015.91,
      "conv_7d": 230.9,
      "cpl_7d": 13.06,
-     "spend_today": 27.36,
-     "conv_today": 0.0
+     "spend_today": 31.91,
+     "conv_today": 2.0
     },
     {
      "name": "[VOLUME] PMax - Lugo",
@@ -20,7 +20,7 @@
      "spend_7d": 368.54,
      "conv_7d": 22.0,
      "cpl_7d": 16.75,
-     "spend_today": 3.37,
+     "spend_today": 4.0,
      "conv_today": 0.0
     },
     {

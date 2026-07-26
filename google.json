@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-26T10:25",
+ "generated_at": "2026-07-26T11:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -11,8 +11,8 @@
      "spend_7d": 3016.05,
      "conv_7d": 230.9,
      "cpl_7d": 13.06,
-     "spend_today": 164.43,
-     "conv_today": 5.0
+     "spend_today": 210.51,
+     "conv_today": 9.0
     },
     {
      "name": "[VOLUME] PMax - Lugo",
@@ -20,7 +20,7 @@
      "spend_7d": 368.54,
      "conv_7d": 22.0,
      "cpl_7d": 16.75,
-     "spend_today": 9.86,
+     "spend_today": 11.8,
      "conv_today": 0.0
     },
     {

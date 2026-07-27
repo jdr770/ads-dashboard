@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-27T07:25",
+ "generated_at": "2026-07-28T00:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -8,20 +8,20 @@
     {
      "name": "[VOLUME] PMax - Castilla y León",
      "status": "ENABLED",
-     "spend_7d": 3102.41,
-     "conv_7d": 237.7,
-     "cpl_7d": 13.05,
-     "spend_today": 44.34,
-     "conv_today": 7.0
+     "spend_7d": 3103.71,
+     "conv_7d": 239.7,
+     "cpl_7d": 12.95,
+     "spend_today": 446.51,
+     "conv_today": 49.0
     },
     {
      "name": "[VOLUME] PMax - Lugo",
      "status": "ENABLED",
-     "spend_7d": 341.66,
+     "spend_7d": 341.86,
      "conv_7d": 24.0,
      "cpl_7d": 14.24,
-     "spend_today": 2.8,
-     "conv_today": 0.0
+     "spend_today": 40.04,
+     "conv_today": 4.0
     },
     {
      "name": "[TEST] PMax - CyL sansTCPA",
@@ -36,10 +36,10 @@
      "name": "[BRAND] Search - Certicasa",
      "status": "ENABLED",
      "spend_7d": 216.51,
-     "conv_7d": 11.9,
-     "cpl_7d": 18.17,
-     "spend_today": 7.57,
-     "conv_today": 0.0
+     "conv_7d": 12.9,
+     "cpl_7d": 16.76,
+     "spend_today": 33.42,
+     "conv_today": 1.0
     },
     {
      "name": "[ZONE-E] PMax - León",
@@ -78,8 +78,8 @@
      "name": "[RVS25] Espagne PMax 3 Castille et Leon Ok 23",
      "status": "PAUSED",
      "spend_7d": 247.73,
-     "conv_7d": 15.9,
-     "cpl_7d": 15.57,
+     "conv_7d": 17.9,
+     "cpl_7d": 13.83,
      "spend_today": 0.0,
      "conv_today": 0.0
     },
@@ -96,15 +96,15 @@
      "name": "[RVS25] Espagne - PMAX CI 2 Ok 23",
      "status": "PAUSED",
      "spend_7d": 167.28,
-     "conv_7d": 4.0,
-     "cpl_7d": 41.82,
+     "conv_7d": 5.0,
+     "cpl_7d": 33.46,
      "spend_today": 0.0,
      "conv_today": 0.0
     },
     {
      "name": "3. [RVS] 26Espagne2 Castille et Leon | CI Ok",
      "status": "PAUSED",
-     "spend_7d": 158.96,
+     "spend_7d": 158.98,
      "conv_7d": 5.7,
      "cpl_7d": 27.85,
      "spend_today": 0.0,

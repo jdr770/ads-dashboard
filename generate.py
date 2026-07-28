@@ -423,6 +423,7 @@ if(localStorage.getItem('k')){{document.getElementById('pw').value=localStorage.
 
 
 def telegram(text):
+    return  # envois Telegram désactivés à la demande de Jordan (28/07/2026) — réactiver en supprimant cette ligne
     if not TG_TOKEN:
         return
     try:

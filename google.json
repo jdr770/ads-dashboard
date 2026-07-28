@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-28T01:25",
+ "generated_at": "2026-07-28T14:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -8,27 +8,27 @@
     {
      "name": "[VOLUME] PMax - Castilla y León",
      "status": "ENABLED",
-     "spend_7d": 3210.46,
-     "conv_7d": 266.1,
-     "cpl_7d": 12.07,
-     "spend_today": 0.06,
-     "conv_today": 0.0
+     "spend_7d": 3216.22,
+     "conv_7d": 266.7,
+     "cpl_7d": 12.06,
+     "spend_today": 207.08,
+     "conv_today": 19.3
     },
     {
      "name": "[VOLUME] PMax - Lugo",
      "status": "ENABLED",
-     "spend_7d": 335.96,
+     "spend_7d": 338.22,
      "conv_7d": 28.0,
-     "cpl_7d": 12.0,
-     "spend_today": 0.0,
-     "conv_today": 0.0
+     "cpl_7d": 12.08,
+     "spend_today": 19.47,
+     "conv_today": 2.0
     },
     {
      "name": "[TEST] PMax - CyL sansTCPA",
      "status": "PAUSED",
-     "spend_7d": 284.0,
+     "spend_7d": 283.94,
      "conv_7d": 3.0,
-     "cpl_7d": 94.67,
+     "cpl_7d": 94.65,
      "spend_today": 0.0,
      "conv_today": 0.0
     },
@@ -38,8 +38,8 @@
      "spend_7d": 216.23,
      "conv_7d": 12.9,
      "cpl_7d": 16.74,
-     "spend_today": 0.0,
-     "conv_today": 0.0
+     "spend_today": 17.29,
+     "conv_today": 1.0
     }
    ]
   },
@@ -50,7 +50,7 @@
     {
      "name": "[RVS25] Espagne PMax 3 Castille et Leon Ok 23",
      "status": "PAUSED",
-     "spend_7d": 198.22,
+     "spend_7d": 198.19,
      "conv_7d": 17.0,
      "cpl_7d": 11.66,
      "spend_today": 0.0,

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-30T22:25",
+ "generated_at": "2026-08-02T12:28",
  "accounts": [
   {
    "id": "4275355447",
@@ -8,133 +8,41 @@
     {
      "name": "[VOLUME] PMax - Castilla y León",
      "status": "ENABLED",
-     "spend_7d": 3279.17,
-     "conv_7d": 294.5,
-     "cpl_7d": 11.13,
-     "spend_today": 384.32,
-     "conv_today": 36.6
+     "spend_7d": 3651.87,
+     "conv_7d": 353.1,
+     "cpl_7d": 10.34,
+     "spend_today": 210.66,
+     "conv_today": 11.0
     },
     {
      "name": "[VOLUME] PMax - Lugo",
      "status": "ENABLED",
-     "spend_7d": 326.49,
-     "conv_7d": 33.0,
-     "cpl_7d": 9.89,
-     "spend_today": 39.55,
-     "conv_today": 4.0
+     "spend_7d": 376.14,
+     "conv_7d": 40.0,
+     "cpl_7d": 9.4,
+     "spend_today": 23.4,
+     "conv_today": 1.0
     },
     {
      "name": "[BRAND] Search - Certicasa",
      "status": "ENABLED",
-     "spend_7d": 213.87,
-     "conv_7d": 13.9,
-     "cpl_7d": 15.37,
-     "spend_today": 24.58,
-     "conv_today": 1.0
+     "spend_7d": 201.45,
+     "conv_7d": 9.9,
+     "cpl_7d": 20.32,
+     "spend_today": 10.66,
+     "conv_today": 0.0
     }
    ]
   },
   {
    "id": "4698940482",
    "label": "3JM_Certicasa (Flo)",
-   "campaigns": [
-    {
-     "name": "3. [RVS] 26Espagne2 Castille et Leon | CI Ok",
-     "status": "PAUSED",
-     "spend_7d": 74.67,
-     "conv_7d": 4.0,
-     "cpl_7d": 18.71,
-     "spend_today": 0.0,
-     "conv_today": 0.0
-    },
-    {
-     "name": "[RVS25] Espagne PMax 3 Castille et Leon Ok 23",
-     "status": "PAUSED",
-     "spend_7d": 56.82,
-     "conv_7d": 4.0,
-     "cpl_7d": 14.21,
-     "spend_today": 0.0,
-     "conv_today": 0.0
-    },
-    {
-     "name": "[RVS25] Espagne - Castille et leon - PMAX CI best Audience Ok 22",
-     "status": "PAUSED",
-     "spend_7d": 37.75,
-     "conv_7d": 1.0,
-     "cpl_7d": 37.75,
-     "spend_today": 0.0,
-     "conv_today": 0.0
-    },
-    {
-     "name": "8. [RVS] 26Espagne2 Castille et Leon | Centre | CI #2 Ok",
-     "status": "PAUSED",
-     "spend_7d": 20.28,
-     "conv_7d": 1.0,
-     "cpl_7d": 20.28,
-     "spend_today": 0.0,
-     "conv_today": 0.0
-    },
-    {
-     "name": "[RVS25] Espagne - PMAX CI 2 Ok 23",
-     "status": "PAUSED",
-     "spend_7d": 13.19,
-     "conv_7d": 0.0,
-     "cpl_7d": null,
-     "spend_today": 0.0,
-     "conv_today": 0.0
-    },
-    {
-     "name": "8. [RVS] 26Espagne05 Castille et Leon |  Global | Affinité Ok 23",
-     "status": "PAUSED",
-     "spend_7d": 10.92,
-     "conv_7d": 3.0,
-     "cpl_7d": 3.64,
-     "spend_today": 0.0,
-     "conv_today": 0.0
-    },
-    {
-     "name": "+[RVS26ES] Espagne - PMAX CI best  zones textes Ok 23",
-     "status": "PAUSED",
-     "spend_7d": 7.93,
-     "conv_7d": 1.0,
-     "cpl_7d": 7.93,
-     "spend_today": 0.0,
-     "conv_today": 0.0
-    },
-    {
-     "name": "8. [RVS] 26Espagne2 Castille et Leon | AI Ok",
-     "status": "PAUSED",
-     "spend_7d": 1.35,
-     "conv_7d": 0.0,
-     "cpl_7d": null,
-     "spend_today": 0.0,
-     "conv_today": 0.0
-    },
-    {
-     "name": "8. [RVS] 26Espagne05 Castille et Leon |  Global Ok",
-     "status": "PAUSED",
-     "spend_7d": 1.02,
-     "conv_7d": 0.0,
-     "cpl_7d": null,
-     "spend_today": 0.0,
-     "conv_today": 0.0
-    }
-   ]
+   "campaigns": []
   },
   {
    "id": "2185026254",
    "label": "3JM_ES (Flo)",
-   "campaigns": [
-    {
-     "name": "[RVS] 26Espagne Castille et Leon",
-     "status": "PAUSED",
-     "spend_7d": 114.5,
-     "conv_7d": 9.0,
-     "cpl_7d": 12.72,
-     "spend_today": 0.0,
-     "conv_today": 0.0
-    }
-   ]
+   "campaigns": []
   }
  ]
 }

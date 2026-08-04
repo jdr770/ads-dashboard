@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-04T08:25",
+ "generated_at": "2026-08-04T09:31",
  "accounts": [
   {
    "id": "4275355447",
@@ -11,25 +11,25 @@
      "spend_7d": 3898.91,
      "conv_7d": 376.3,
      "cpl_7d": 10.36,
-     "spend_today": 60.29,
-     "conv_today": 3.0
+     "spend_today": 91.4,
+     "conv_today": 4.0
     },
     {
      "name": "[VOLUME] PMax - Lugo",
      "status": "ENABLED",
-     "spend_7d": 414.91,
-     "conv_7d": 39.9,
-     "cpl_7d": 10.4,
-     "spend_today": 5.37,
+     "spend_7d": 415.52,
+     "conv_7d": 40.9,
+     "cpl_7d": 10.16,
+     "spend_today": 8.2,
      "conv_today": 0.0
     },
     {
      "name": "[DGEN] Demand Gen - Castilla y León",
      "status": "ENABLED",
-     "spend_7d": 348.61,
+     "spend_7d": 348.68,
      "conv_7d": 10.0,
-     "cpl_7d": 34.89,
-     "spend_today": 11.45,
+     "cpl_7d": 34.9,
+     "spend_today": 28.84,
      "conv_today": 0.0
     },
     {
@@ -38,7 +38,7 @@
      "spend_7d": 210.21,
      "conv_7d": 9.0,
      "cpl_7d": 23.36,
-     "spend_today": 8.63,
+     "spend_today": 11.69,
      "conv_today": 2.0
     }
    ]

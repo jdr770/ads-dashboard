@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-08T23:25",
+ "generated_at": "2026-08-09T00:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -11,7 +11,7 @@
      "spend_7d": 4858.58,
      "conv_7d": 414.5,
      "cpl_7d": 11.72,
-     "spend_today": 724.09,
+     "spend_today": 727.65,
      "conv_today": 32.5
     },
     {
@@ -20,8 +20,8 @@
      "spend_7d": 1014.52,
      "conv_7d": 29.3,
      "cpl_7d": 34.59,
-     "spend_today": 150.39,
-     "conv_today": 8.3
+     "spend_today": 158.92,
+     "conv_today": 9.3
     },
     {
      "name": "[VOLUME] PMax - Lugo",
@@ -29,7 +29,7 @@
      "spend_7d": 461.13,
      "conv_7d": 40.4,
      "cpl_7d": 11.4,
-     "spend_today": 73.5,
+     "spend_today": 73.77,
      "conv_today": 3.0
     },
     {
@@ -38,7 +38,7 @@
      "spend_7d": 284.12,
      "conv_7d": 12.0,
      "cpl_7d": 23.68,
-     "spend_today": 43.05,
+     "spend_today": 41.37,
      "conv_today": 3.0
     }
    ]

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-11T22:25",
+ "generated_at": "2026-08-11T23:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -11,8 +11,8 @@
      "spend_7d": 5185.09,
      "conv_7d": 372.2,
      "cpl_7d": 13.93,
-     "spend_today": 679.07,
-     "conv_today": 46.4
+     "spend_today": 691.42,
+     "conv_today": 47.7
     },
     {
      "name": "[DGEN] Demand Gen - Castilla y León",
@@ -20,7 +20,7 @@
      "spend_7d": 1154.92,
      "conv_7d": 50.6,
      "cpl_7d": 22.83,
-     "spend_today": 125.74,
+     "spend_today": 131.7,
      "conv_today": 5.0
     },
     {
@@ -29,8 +29,8 @@
      "spend_7d": 458.87,
      "conv_7d": 43.0,
      "cpl_7d": 10.68,
-     "spend_today": 51.55,
-     "conv_today": 1.0
+     "spend_today": 54.32,
+     "conv_today": 2.0
     },
     {
      "name": "[BRAND] Search - Certicasa",
@@ -46,7 +46,7 @@
   {
    "id": "4698940482",
    "label": "3JM_Certicasa (Flo)",
-   "error": "503 Stream removed (recvmsg:Connection reset by peer (54))"
+   "campaigns": []
   },
   {
    "id": "2185026254",

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-11T23:25",
+ "generated_at": "2026-08-12T15:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -8,37 +8,37 @@
     {
      "name": "[VOLUME] PMax - Castilla y León",
      "status": "ENABLED",
-     "spend_7d": 5185.09,
-     "conv_7d": 372.2,
-     "cpl_7d": 13.93,
-     "spend_today": 691.42,
-     "conv_today": 47.7
+     "spend_7d": 5126.95,
+     "conv_7d": 366.9,
+     "cpl_7d": 13.97,
+     "spend_today": 358.93,
+     "conv_today": 15.5
     },
     {
      "name": "[DGEN] Demand Gen - Castilla y León",
      "status": "ENABLED",
-     "spend_7d": 1154.92,
+     "spend_7d": 1126.43,
      "conv_7d": 50.6,
-     "cpl_7d": 22.83,
-     "spend_today": 131.7,
-     "conv_today": 5.0
+     "cpl_7d": 22.26,
+     "spend_today": 77.87,
+     "conv_today": 3.9
     },
     {
      "name": "[VOLUME] PMax - Lugo",
      "status": "ENABLED",
-     "spend_7d": 458.87,
-     "conv_7d": 43.0,
-     "cpl_7d": 10.68,
-     "spend_today": 54.32,
+     "spend_7d": 463.93,
+     "conv_7d": 41.0,
+     "cpl_7d": 11.33,
+     "spend_today": 24.59,
      "conv_today": 2.0
     },
     {
      "name": "[BRAND] Search - Certicasa",
      "status": "ENABLED",
-     "spend_7d": 303.27,
-     "conv_7d": 16.0,
-     "cpl_7d": 18.95,
-     "spend_today": 40.25,
+     "spend_7d": 303.21,
+     "conv_7d": 13.0,
+     "cpl_7d": 23.32,
+     "spend_today": 21.09,
      "conv_today": 2.0
     }
    ]

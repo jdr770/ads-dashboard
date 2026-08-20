@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-20T21:25",
+ "generated_at": "2026-08-20T22:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -11,16 +11,16 @@
      "spend_7d": 5052.67,
      "conv_7d": 351.5,
      "cpl_7d": 14.37,
-     "spend_today": 655.9,
-     "conv_today": 18.0
+     "spend_today": 677.43,
+     "conv_today": 20.0
     },
     {
      "name": "[DGEN] Demand Gen - Castilla y León",
      "status": "ENABLED",
-     "spend_7d": 1029.29,
+     "spend_7d": 1029.28,
      "conv_7d": 67.4,
      "cpl_7d": 15.26,
-     "spend_today": 119.06,
+     "spend_today": 127.22,
      "conv_today": 5.0
     },
     {
@@ -29,7 +29,7 @@
      "spend_7d": 545.7,
      "conv_7d": 55.0,
      "cpl_7d": 9.93,
-     "spend_today": 74.36,
+     "spend_today": 75.81,
      "conv_today": 1.0
     },
     {
@@ -38,7 +38,7 @@
      "spend_7d": 364.57,
      "conv_7d": 10.0,
      "cpl_7d": 36.46,
-     "spend_today": 163.93,
+     "spend_today": 166.21,
      "conv_today": 10.0
     },
     {

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-21T16:25",
+ "generated_at": "2026-08-21T17:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -11,17 +11,17 @@
      "spend_7d": 5025.64,
      "conv_7d": 337.9,
      "cpl_7d": 14.87,
-     "spend_today": 493.66,
-     "conv_today": 12.9
+     "spend_today": 539.26,
+     "conv_today": 14.9
     },
     {
      "name": "[DGEN] Demand Gen - Castilla y León",
      "status": "ENABLED",
-     "spend_7d": 1035.77,
+     "spend_7d": 1035.76,
      "conv_7d": 66.4,
      "cpl_7d": 15.6,
-     "spend_today": 66.31,
-     "conv_today": 4.0
+     "spend_today": 73.34,
+     "conv_today": 5.0
     },
     {
      "name": "[VOLUME] PMax - Galicia Este",
@@ -29,7 +29,7 @@
      "spend_7d": 559.76,
      "conv_7d": 54.0,
      "cpl_7d": 10.38,
-     "spend_today": 20.84,
+     "spend_today": 23.09,
      "conv_today": 1.0
     },
     {
@@ -38,7 +38,7 @@
      "spend_7d": 531.49,
      "conv_7d": 26.1,
      "cpl_7d": 20.4,
-     "spend_today": 97.27,
+     "spend_today": 105.36,
      "conv_today": 2.9
     },
     {

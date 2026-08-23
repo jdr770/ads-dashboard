@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-24T00:25",
+ "generated_at": "2026-08-24T01:28",
  "accounts": [
   {
    "id": "4275355447",
@@ -8,55 +8,55 @@
     {
      "name": "[VOLUME] PMax - Castilla y León",
      "status": "PAUSED",
-     "spend_7d": 4966.25,
-     "conv_7d": 300.1,
-     "cpl_7d": 16.55,
-     "spend_today": 690.49,
-     "conv_today": 24.0
+     "spend_7d": 4938.68,
+     "conv_7d": 261.3,
+     "cpl_7d": 18.9,
+     "spend_today": 0.0,
+     "conv_today": 0.0
     },
     {
      "name": "[DGEN] Demand Gen - Castilla y León",
      "status": "ENABLED",
-     "spend_7d": 1041.64,
-     "conv_7d": 68.5,
-     "cpl_7d": 15.2,
-     "spend_today": 130.79,
-     "conv_today": 5.0
+     "spend_7d": 1044.11,
+     "conv_7d": 63.4,
+     "cpl_7d": 16.47,
+     "spend_today": 0.1,
+     "conv_today": 0.0
     },
     {
      "name": "[VOLUME] PMax - Madrid",
      "status": "ENABLED",
-     "spend_7d": 841.67,
-     "conv_7d": 55.0,
-     "cpl_7d": 15.3,
-     "spend_today": 161.33,
-     "conv_today": 10.0
+     "spend_7d": 1003.27,
+     "conv_7d": 65.0,
+     "cpl_7d": 15.43,
+     "spend_today": 0.02,
+     "conv_today": 0.0
     },
     {
      "name": "[VOLUME] PMax - Galicia Este",
      "status": "ENABLED",
-     "spend_7d": 566.76,
-     "conv_7d": 51.0,
-     "cpl_7d": 11.12,
-     "spend_today": 61.29,
-     "conv_today": 6.0
+     "spend_7d": 568.1,
+     "conv_7d": 47.5,
+     "cpl_7d": 11.97,
+     "spend_today": 0.0,
+     "conv_today": 0.0
     },
     {
      "name": "[BRAND] Search - Certicasa",
      "status": "ENABLED",
-     "spend_7d": 278.06,
-     "conv_7d": 17.0,
-     "cpl_7d": 16.36,
-     "spend_today": 40.7,
-     "conv_today": 3.0
+     "spend_7d": 276.87,
+     "conv_7d": 13.0,
+     "cpl_7d": 21.3,
+     "spend_today": 0.0,
+     "conv_today": 0.0
     },
     {
      "name": "[VOLUME] PMax - Castilla y León v2",
      "status": "ENABLED",
-     "spend_7d": 0.0,
+     "spend_7d": 0.91,
      "conv_7d": 0.0,
      "cpl_7d": null,
-     "spend_today": 0.15,
+     "spend_today": 0.03,
      "conv_today": 0.0
     }
    ]

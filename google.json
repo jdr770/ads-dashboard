@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-27T12:27",
+ "generated_at": "2026-08-27T13:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -17,11 +17,11 @@
     {
      "name": "[VOLUME] PMax - Castilla y León v2",
      "status": "ENABLED",
-     "spend_7d": 1812.49,
-     "conv_7d": 75.0,
-     "cpl_7d": 24.16,
-     "spend_today": 157.35,
-     "conv_today": 2.0
+     "spend_7d": 1812.52,
+     "conv_7d": 75.5,
+     "cpl_7d": 23.99,
+     "spend_today": 174.92,
+     "conv_today": 3.5
     },
     {
      "name": "[VOLUME] PMax - Madrid",
@@ -29,26 +29,26 @@
      "spend_7d": 1086.86,
      "conv_7d": 95.0,
      "cpl_7d": 11.44,
-     "spend_today": 264.32,
+     "spend_today": 270.59,
      "conv_today": 16.0
     },
     {
      "name": "[DGEN] Demand Gen - Castilla y León",
      "status": "ENABLED",
-     "spend_7d": 1033.37,
+     "spend_7d": 1033.36,
      "conv_7d": 57.7,
      "cpl_7d": 17.92,
-     "spend_today": 65.43,
+     "spend_today": 68.49,
      "conv_today": 3.8
     },
     {
      "name": "[VOLUME] PMax - Galicia Este",
      "status": "ENABLED",
-     "spend_7d": 485.81,
+     "spend_7d": 485.82,
      "conv_7d": 28.1,
      "cpl_7d": 17.29,
-     "spend_today": 23.16,
-     "conv_today": 0.4
+     "spend_today": 25.47,
+     "conv_today": 0.9
     },
     {
      "name": "[BRAND] Search - Certicasa",
@@ -56,17 +56,17 @@
      "spend_7d": 465.69,
      "conv_7d": 17.0,
      "cpl_7d": 27.39,
-     "spend_today": 67.68,
+     "spend_today": 74.94,
      "conv_today": 0.0
     },
     {
      "name": "[VOLUME] PMax - Resto España",
      "status": "ENABLED",
-     "spend_7d": 382.87,
+     "spend_7d": 383.08,
      "conv_7d": 36.0,
-     "cpl_7d": 10.63,
-     "spend_today": 74.34,
-     "conv_today": 3.0
+     "cpl_7d": 10.64,
+     "spend_today": 80.56,
+     "conv_today": 5.7
     },
     {
      "name": "[VOLUME] PMax - Aragón",
@@ -74,7 +74,7 @@
      "spend_7d": 246.76,
      "conv_7d": 27.0,
      "cpl_7d": 9.14,
-     "spend_today": 67.61,
+     "spend_today": 71.32,
      "conv_today": 3.0
     }
    ]

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-26T23:25",
+ "generated_at": "2026-08-27T09:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -8,74 +8,74 @@
     {
      "name": "[VOLUME] PMax - Castilla y León",
      "status": "PAUSED",
-     "spend_7d": 3517.77,
-     "conv_7d": 165.3,
-     "cpl_7d": 21.28,
+     "spend_7d": 2794.98,
+     "conv_7d": 133.3,
+     "cpl_7d": 20.98,
      "spend_today": 0.0,
+     "conv_today": 0.0
+    },
+    {
+     "name": "[VOLUME] PMax - Castilla y León v2",
+     "status": "ENABLED",
+     "spend_7d": 1811.65,
+     "conv_7d": 74.9,
+     "cpl_7d": 24.18,
+     "spend_today": 71.05,
      "conv_today": 0.0
     },
     {
      "name": "[VOLUME] PMax - Madrid",
      "status": "ENABLED",
-     "spend_7d": 1303.26,
-     "conv_7d": 98.0,
-     "cpl_7d": 13.3,
-     "spend_today": 144.72,
-     "conv_today": 11.0
-    },
-    {
-     "name": "[VOLUME] PMax - Castilla y León v2",
-     "status": "ENABLED",
-     "spend_7d": 1281.77,
-     "conv_7d": 52.9,
-     "cpl_7d": 24.21,
-     "spend_today": 511.79,
-     "conv_today": 21.0
+     "spend_7d": 1086.86,
+     "conv_7d": 94.0,
+     "cpl_7d": 11.56,
+     "spend_today": 163.34,
+     "conv_today": 10.0
     },
     {
      "name": "[DGEN] Demand Gen - Castilla y León",
      "status": "ENABLED",
-     "spend_7d": 1041.1,
-     "conv_7d": 64.7,
-     "cpl_7d": 16.08,
-     "spend_today": 138.96,
-     "conv_today": 6.0
+     "spend_7d": 1033.39,
+     "conv_7d": 57.7,
+     "cpl_7d": 17.92,
+     "spend_today": 38.06,
+     "conv_today": 1.0
     },
     {
      "name": "[VOLUME] PMax - Galicia Este",
      "status": "ENABLED",
-     "spend_7d": 557.17,
-     "conv_7d": 35.0,
-     "cpl_7d": 15.92,
-     "spend_today": 57.79,
+     "spend_7d": 485.81,
+     "conv_7d": 27.0,
+     "cpl_7d": 17.99,
+     "spend_today": 16.15,
      "conv_today": 0.0
     },
     {
      "name": "[BRAND] Search - Certicasa",
      "status": "ENABLED",
-     "spend_7d": 413.38,
-     "conv_7d": 18.0,
-     "cpl_7d": 22.97,
-     "spend_today": 87.58,
-     "conv_today": 1.0
+     "spend_7d": 465.69,
+     "conv_7d": 17.0,
+     "cpl_7d": 27.39,
+     "spend_today": 26.24,
+     "conv_today": 0.0
     },
     {
      "name": "[VOLUME] PMax - Resto España",
      "status": "ENABLED",
-     "spend_7d": 251.42,
-     "conv_7d": 24.0,
-     "cpl_7d": 10.48,
-     "spend_today": 128.22,
-     "conv_today": 12.0
+     "spend_7d": 382.6,
+     "conv_7d": 36.0,
+     "cpl_7d": 10.63,
+     "spend_today": 43.74,
+     "conv_today": 1.0
     },
     {
      "name": "[VOLUME] PMax - Aragón",
      "status": "ENABLED",
-     "spend_7d": 160.15,
-     "conv_7d": 15.0,
-     "cpl_7d": 10.68,
-     "spend_today": 85.07,
-     "conv_today": 12.0
+     "spend_7d": 246.76,
+     "conv_7d": 27.0,
+     "cpl_7d": 9.14,
+     "spend_today": 39.3,
+     "conv_today": 1.0
     }
    ]
   },

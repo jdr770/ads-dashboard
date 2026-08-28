@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-28T12:32",
+ "generated_at": "2026-08-28T14:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -8,10 +8,10 @@
     {
      "name": "[VOLUME] PMax - Castilla y León v2",
      "status": "ENABLED",
-     "spend_7d": 2293.73,
-     "conv_7d": 116.4,
-     "cpl_7d": 19.71,
-     "spend_today": 128.55,
+     "spend_7d": 2293.74,
+     "conv_7d": 117.4,
+     "cpl_7d": 19.54,
+     "spend_today": 176.94,
      "conv_today": 5.0
     },
     {
@@ -27,18 +27,18 @@
      "name": "[VOLUME] PMax - Madrid",
      "status": "ENABLED",
      "spend_7d": 1236.88,
-     "conv_7d": 97.9,
-     "cpl_7d": 12.63,
-     "spend_today": 114.71,
-     "conv_today": 4.0
+     "conv_7d": 98.9,
+     "cpl_7d": 12.5,
+     "spend_today": 160.81,
+     "conv_today": 8.0
     },
     {
      "name": "[DGEN] Demand Gen - Castilla y León",
      "status": "ENABLED",
-     "spend_7d": 1025.25,
+     "spend_7d": 1025.24,
      "conv_7d": 55.1,
      "cpl_7d": 18.62,
-     "spend_today": 58.84,
+     "spend_today": 71.64,
      "conv_today": 0.0
     },
     {
@@ -47,25 +47,25 @@
      "spend_7d": 591.09,
      "conv_7d": 22.6,
      "cpl_7d": 26.16,
-     "spend_today": 44.42,
+     "spend_today": 50.27,
      "conv_today": 1.0
     },
     {
      "name": "[VOLUME] PMax - Resto España",
      "status": "ENABLED",
      "spend_7d": 571.52,
-     "conv_7d": 61.0,
-     "cpl_7d": 9.37,
-     "spend_today": 79.37,
-     "conv_today": 1.0
+     "conv_7d": 62.0,
+     "cpl_7d": 9.22,
+     "spend_today": 96.18,
+     "conv_today": 2.0
     },
     {
      "name": "[VOLUME] PMax - Galicia Este",
      "status": "ENABLED",
-     "spend_7d": 467.94,
+     "spend_7d": 468.85,
      "conv_7d": 27.0,
-     "cpl_7d": 17.33,
-     "spend_today": 26.76,
+     "cpl_7d": 17.37,
+     "spend_today": 31.63,
      "conv_today": 2.0
     },
     {
@@ -74,8 +74,8 @@
      "spend_7d": 408.36,
      "conv_7d": 41.0,
      "cpl_7d": 9.96,
-     "spend_today": 50.15,
-     "conv_today": 0.0
+     "spend_today": 63.14,
+     "conv_today": 2.0
     }
    ]
   },

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-30T09:28",
+ "generated_at": "2026-08-30T10:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -11,16 +11,16 @@
      "spend_7d": 3060.94,
      "conv_7d": 161.7,
      "cpl_7d": 18.93,
-     "spend_today": 60.07,
-     "conv_today": 1.0
+     "spend_today": 77.88,
+     "conv_today": 2.0
     },
     {
      "name": "[VOLUME] PMax - Madrid",
      "status": "ENABLED",
-     "spend_7d": 1363.49,
+     "spend_7d": 1363.51,
      "conv_7d": 98.0,
      "cpl_7d": 13.91,
-     "spend_today": 28.76,
+     "spend_today": 39.44,
      "conv_today": 1.0
     },
     {
@@ -29,7 +29,7 @@
      "spend_7d": 1010.32,
      "conv_7d": 44.1,
      "cpl_7d": 22.93,
-     "spend_today": 25.99,
+     "spend_today": 40.83,
      "conv_today": 0.0
     },
     {
@@ -38,8 +38,8 @@
      "spend_7d": 899.96,
      "conv_7d": 86.0,
      "cpl_7d": 10.46,
-     "spend_today": 27.37,
-     "conv_today": 1.0
+     "spend_today": 40.05,
+     "conv_today": 2.0
     },
     {
      "name": "[VOLUME] PMax - Castilla y León",
@@ -56,7 +56,7 @@
      "spend_7d": 677.66,
      "conv_7d": 25.6,
      "cpl_7d": 26.47,
-     "spend_today": 17.08,
+     "spend_today": 20.39,
      "conv_today": 0.0
     },
     {
@@ -65,7 +65,7 @@
      "spend_7d": 646.59,
      "conv_7d": 59.0,
      "cpl_7d": 10.96,
-     "spend_today": 24.9,
+     "spend_today": 37.98,
      "conv_today": 2.0
     },
     {
@@ -74,7 +74,7 @@
      "spend_7d": 452.11,
      "conv_7d": 30.0,
      "cpl_7d": 15.07,
-     "spend_today": 17.96,
+     "spend_today": 20.3,
      "conv_today": 0.0
     }
    ]

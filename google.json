@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-30T15:25",
+ "generated_at": "2026-08-30T19:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -8,11 +8,11 @@
     {
      "name": "[VOLUME] PMax - Castilla y León v2",
      "status": "ENABLED",
-     "spend_7d": 3063.28,
-     "conv_7d": 163.5,
-     "cpl_7d": 18.74,
-     "spend_today": 196.08,
-     "conv_today": 7.0
+     "spend_7d": 3063.85,
+     "conv_7d": 164.5,
+     "cpl_7d": 18.63,
+     "spend_today": 310.69,
+     "conv_today": 11.0
     },
     {
      "name": "[VOLUME] PMax - Madrid",
@@ -20,17 +20,17 @@
      "spend_7d": 1360.46,
      "conv_7d": 100.0,
      "cpl_7d": 13.6,
-     "spend_today": 149.45,
-     "conv_today": 8.0
+     "spend_today": 224.31,
+     "conv_today": 19.0
     },
     {
      "name": "[DGEN] Demand Gen - Castilla y León",
      "status": "ENABLED",
-     "spend_7d": 1010.23,
+     "spend_7d": 1010.22,
      "conv_7d": 45.0,
      "cpl_7d": 22.44,
-     "spend_today": 74.01,
-     "conv_today": 2.0
+     "spend_today": 97.32,
+     "conv_today": 3.0
     },
     {
      "name": "[VOLUME] PMax - Resto España",
@@ -38,8 +38,8 @@
      "spend_7d": 899.96,
      "conv_7d": 87.0,
      "cpl_7d": 10.34,
-     "spend_today": 106.22,
-     "conv_today": 6.0
+     "spend_today": 160.88,
+     "conv_today": 11.5
     },
     {
      "name": "[VOLUME] PMax - Castilla y León",
@@ -56,8 +56,8 @@
      "spend_7d": 677.66,
      "conv_7d": 25.6,
      "cpl_7d": 26.47,
-     "spend_today": 63.88,
-     "conv_today": 1.0
+     "spend_today": 81.9,
+     "conv_today": 2.0
     },
     {
      "name": "[VOLUME] PMax - Aragón",
@@ -65,8 +65,8 @@
      "spend_7d": 646.59,
      "conv_7d": 59.0,
      "cpl_7d": 10.96,
-     "spend_today": 91.14,
-     "conv_today": 6.0
+     "spend_today": 126.01,
+     "conv_today": 9.0
     },
     {
      "name": "[VOLUME] PMax - Galicia Este",
@@ -74,8 +74,8 @@
      "spend_7d": 452.11,
      "conv_7d": 31.0,
      "cpl_7d": 14.58,
-     "spend_today": 39.46,
-     "conv_today": 2.0
+     "spend_today": 58.72,
+     "conv_today": 7.0
     }
    ]
   },

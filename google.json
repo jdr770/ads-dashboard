@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-30T10:25",
+ "generated_at": "2026-08-30T12:31",
  "accounts": [
   {
    "id": "4275355447",
@@ -8,43 +8,43 @@
     {
      "name": "[VOLUME] PMax - Castilla y León v2",
      "status": "ENABLED",
-     "spend_7d": 3060.94,
-     "conv_7d": 161.7,
-     "cpl_7d": 18.93,
-     "spend_today": 77.88,
+     "spend_7d": 3062.08,
+     "conv_7d": 163.5,
+     "cpl_7d": 18.73,
+     "spend_today": 129.42,
      "conv_today": 2.0
     },
     {
      "name": "[VOLUME] PMax - Madrid",
      "status": "ENABLED",
-     "spend_7d": 1363.51,
-     "conv_7d": 98.0,
-     "cpl_7d": 13.91,
-     "spend_today": 39.44,
-     "conv_today": 1.0
+     "spend_7d": 1363.5,
+     "conv_7d": 99.0,
+     "cpl_7d": 13.77,
+     "spend_today": 66.91,
+     "conv_today": 2.0
     },
     {
      "name": "[DGEN] Demand Gen - Castilla y León",
      "status": "ENABLED",
-     "spend_7d": 1010.32,
-     "conv_7d": 44.1,
-     "cpl_7d": 22.93,
-     "spend_today": 40.83,
-     "conv_today": 0.0
+     "spend_7d": 1010.25,
+     "conv_7d": 45.0,
+     "cpl_7d": 22.45,
+     "spend_today": 60.51,
+     "conv_today": 1.0
     },
     {
      "name": "[VOLUME] PMax - Resto España",
      "status": "ENABLED",
      "spend_7d": 899.96,
-     "conv_7d": 86.0,
-     "cpl_7d": 10.46,
-     "spend_today": 40.05,
+     "conv_7d": 87.0,
+     "cpl_7d": 10.34,
+     "spend_today": 77.49,
      "conv_today": 2.0
     },
     {
      "name": "[VOLUME] PMax - Castilla y León",
      "status": "PAUSED",
-     "spend_7d": 696.59,
+     "spend_7d": 696.42,
      "conv_7d": 33.0,
      "cpl_7d": 21.13,
      "spend_today": 0.0,
@@ -56,7 +56,7 @@
      "spend_7d": 677.66,
      "conv_7d": 25.6,
      "cpl_7d": 26.47,
-     "spend_today": 20.39,
+     "spend_today": 30.18,
      "conv_today": 0.0
     },
     {
@@ -65,7 +65,7 @@
      "spend_7d": 646.59,
      "conv_7d": 59.0,
      "cpl_7d": 10.96,
-     "spend_today": 37.98,
+     "spend_today": 58.59,
      "conv_today": 2.0
     },
     {
@@ -74,8 +74,8 @@
      "spend_7d": 452.11,
      "conv_7d": 30.0,
      "cpl_7d": 15.07,
-     "spend_today": 20.3,
-     "conv_today": 0.0
+     "spend_today": 26.45,
+     "conv_today": 1.0
     }
    ]
   },

@@ -1,83 +1,10 @@
 {
- "generated_at": "2026-08-30T19:25",
+ "generated_at": "2026-08-31T07:26",
  "accounts": [
   {
    "id": "4275355447",
    "label": "🔒 3J_JDR (perso)",
-   "campaigns": [
-    {
-     "name": "[VOLUME] PMax - Castilla y León v2",
-     "status": "ENABLED",
-     "spend_7d": 3063.85,
-     "conv_7d": 164.5,
-     "cpl_7d": 18.63,
-     "spend_today": 310.69,
-     "conv_today": 11.0
-    },
-    {
-     "name": "[VOLUME] PMax - Madrid",
-     "status": "ENABLED",
-     "spend_7d": 1360.46,
-     "conv_7d": 100.0,
-     "cpl_7d": 13.6,
-     "spend_today": 224.31,
-     "conv_today": 19.0
-    },
-    {
-     "name": "[DGEN] Demand Gen - Castilla y León",
-     "status": "ENABLED",
-     "spend_7d": 1010.22,
-     "conv_7d": 45.0,
-     "cpl_7d": 22.44,
-     "spend_today": 97.32,
-     "conv_today": 3.0
-    },
-    {
-     "name": "[VOLUME] PMax - Resto España",
-     "status": "ENABLED",
-     "spend_7d": 899.96,
-     "conv_7d": 87.0,
-     "cpl_7d": 10.34,
-     "spend_today": 160.88,
-     "conv_today": 11.5
-    },
-    {
-     "name": "[VOLUME] PMax - Castilla y León",
-     "status": "PAUSED",
-     "spend_7d": 696.3,
-     "conv_7d": 33.0,
-     "cpl_7d": 21.12,
-     "spend_today": 0.0,
-     "conv_today": 0.0
-    },
-    {
-     "name": "[BRAND] Search - Certicasa",
-     "status": "ENABLED",
-     "spend_7d": 677.66,
-     "conv_7d": 25.6,
-     "cpl_7d": 26.47,
-     "spend_today": 81.9,
-     "conv_today": 2.0
-    },
-    {
-     "name": "[VOLUME] PMax - Aragón",
-     "status": "ENABLED",
-     "spend_7d": 646.59,
-     "conv_7d": 59.0,
-     "cpl_7d": 10.96,
-     "spend_today": 126.01,
-     "conv_today": 9.0
-    },
-    {
-     "name": "[VOLUME] PMax - Galicia Este",
-     "status": "ENABLED",
-     "spend_7d": 452.11,
-     "conv_7d": 31.0,
-     "cpl_7d": 14.58,
-     "spend_today": 58.72,
-     "conv_today": 7.0
-    }
-   ]
+   "error": "503 Stream removed (recvmsg:Connection reset by peer (54))"
   },
   {
    "id": "4698940482",

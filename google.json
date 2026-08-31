@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-31T21:25",
+ "generated_at": "2026-08-31T22:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -11,7 +11,7 @@
      "spend_7d": 3446.46,
      "conv_7d": 191.7,
      "cpl_7d": 17.98,
-     "spend_today": 279.59,
+     "spend_today": 280.11,
      "conv_today": 11.8
     },
     {
@@ -20,7 +20,7 @@
      "spend_7d": 1425.93,
      "conv_7d": 110.0,
      "cpl_7d": 12.96,
-     "spend_today": 182.44,
+     "spend_today": 183.17,
      "conv_today": 9.0
     },
     {
@@ -38,7 +38,7 @@
      "spend_7d": 999.14,
      "conv_7d": 45.5,
      "cpl_7d": 21.95,
-     "spend_today": 73.11,
+     "spend_today": 73.13,
      "conv_today": 3.0
     },
     {
@@ -47,7 +47,7 @@
      "spend_7d": 794.92,
      "conv_7d": 73.0,
      "cpl_7d": 10.88,
-     "spend_today": 75.68,
+     "spend_today": 76.41,
      "conv_today": 9.0
     },
     {
@@ -65,7 +65,7 @@
      "spend_7d": 452.96,
      "conv_7d": 33.0,
      "cpl_7d": 13.73,
-     "spend_today": 52.73,
+     "spend_today": 52.75,
      "conv_today": 0.0
     }
    ]

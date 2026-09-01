@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-01T21:25",
+ "generated_at": "2026-09-01T22:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -11,7 +11,7 @@
      "spend_7d": 2882.72,
      "conv_7d": 177.9,
      "cpl_7d": 16.21,
-     "spend_today": 253.64,
+     "spend_today": 286.88,
      "conv_today": 9.0
     },
     {
@@ -20,8 +20,8 @@
      "spend_7d": 1457.42,
      "conv_7d": 111.0,
      "cpl_7d": 13.13,
-     "spend_today": 185.38,
-     "conv_today": 15.5
+     "spend_today": 216.42,
+     "conv_today": 14.9
     },
     {
      "name": "[VOLUME] PMax - Resto España",
@@ -29,7 +29,7 @@
      "spend_7d": 1202.23,
      "conv_7d": 118.0,
      "cpl_7d": 10.19,
-     "spend_today": 169.34,
+     "spend_today": 179.63,
      "conv_today": 7.0
     },
     {
@@ -38,7 +38,7 @@
      "spend_7d": 924.7,
      "conv_7d": 40.1,
      "cpl_7d": 23.08,
-     "spend_today": 82.73,
+     "spend_today": 94.57,
      "conv_today": 6.0
     },
     {
@@ -47,7 +47,7 @@
      "spend_7d": 873.66,
      "conv_7d": 83.0,
      "cpl_7d": 10.53,
-     "spend_today": 117.5,
+     "spend_today": 122.83,
      "conv_today": 6.0
     },
     {
@@ -56,8 +56,8 @@
      "spend_7d": 700.48,
      "conv_7d": 23.6,
      "cpl_7d": 29.68,
-     "spend_today": 162.03,
-     "conv_today": 1.0
+     "spend_today": 171.02,
+     "conv_today": 2.0
     },
     {
      "name": "[VOLUME] PMax - Galicia Este",
@@ -65,7 +65,7 @@
      "spend_7d": 451.94,
      "conv_7d": 34.8,
      "cpl_7d": 12.99,
-     "spend_today": 72.9,
+     "spend_today": 77.31,
      "conv_today": 2.0
     }
    ]

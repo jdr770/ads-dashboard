@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-01T20:25",
+ "generated_at": "2026-09-01T21:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -11,8 +11,8 @@
      "spend_7d": 2882.72,
      "conv_7d": 177.9,
      "cpl_7d": 16.21,
-     "spend_today": 222.92,
-     "conv_today": 6.0
+     "spend_today": 253.64,
+     "conv_today": 9.0
     },
     {
      "name": "[VOLUME] PMax - Madrid",
@@ -20,8 +20,8 @@
      "spend_7d": 1457.42,
      "conv_7d": 111.0,
      "cpl_7d": 13.13,
-     "spend_today": 155.47,
-     "conv_today": 11.5
+     "spend_today": 185.38,
+     "conv_today": 15.5
     },
     {
      "name": "[VOLUME] PMax - Resto España",
@@ -29,8 +29,8 @@
      "spend_7d": 1202.23,
      "conv_7d": 118.0,
      "cpl_7d": 10.19,
-     "spend_today": 145.25,
-     "conv_today": 6.0
+     "spend_today": 169.34,
+     "conv_today": 7.0
     },
     {
      "name": "[DGEN] Demand Gen - Castilla y León",
@@ -38,7 +38,7 @@
      "spend_7d": 924.7,
      "conv_7d": 40.1,
      "cpl_7d": 23.08,
-     "spend_today": 72.92,
+     "spend_today": 82.73,
      "conv_today": 6.0
     },
     {
@@ -47,7 +47,7 @@
      "spend_7d": 873.66,
      "conv_7d": 83.0,
      "cpl_7d": 10.53,
-     "spend_today": 101.41,
+     "spend_today": 117.5,
      "conv_today": 6.0
     },
     {
@@ -56,8 +56,8 @@
      "spend_7d": 700.48,
      "conv_7d": 23.6,
      "cpl_7d": 29.68,
-     "spend_today": 111.16,
-     "conv_today": 0.0
+     "spend_today": 162.03,
+     "conv_today": 1.0
     },
     {
      "name": "[VOLUME] PMax - Galicia Este",
@@ -65,7 +65,7 @@
      "spend_7d": 451.94,
      "conv_7d": 34.8,
      "cpl_7d": 12.99,
-     "spend_today": 66.44,
+     "spend_today": 72.9,
      "conv_today": 2.0
     }
    ]

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-01T12:25",
+ "generated_at": "2026-09-01T13:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -8,19 +8,19 @@
     {
      "name": "[VOLUME] PMax - Castilla y León v2",
      "status": "ENABLED",
-     "spend_7d": 2881.85,
-     "conv_7d": 175.9,
-     "cpl_7d": 16.39,
-     "spend_today": 6.43,
+     "spend_7d": 2882.72,
+     "conv_7d": 177.9,
+     "cpl_7d": 16.21,
+     "spend_today": 6.97,
      "conv_today": 0.0
     },
     {
      "name": "[VOLUME] PMax - Madrid",
      "status": "ENABLED",
-     "spend_7d": 1456.15,
+     "spend_7d": 1457.42,
      "conv_7d": 111.0,
-     "cpl_7d": 13.12,
-     "spend_today": 2.79,
+     "cpl_7d": 13.13,
+     "spend_today": 3.46,
      "conv_today": 0.0
     },
     {
@@ -29,16 +29,16 @@
      "spend_7d": 1202.23,
      "conv_7d": 116.0,
      "cpl_7d": 10.37,
-     "spend_today": 4.3,
+     "spend_today": 4.72,
      "conv_today": 0.0
     },
     {
      "name": "[DGEN] Demand Gen - Castilla y León",
      "status": "ENABLED",
      "spend_7d": 924.7,
-     "conv_7d": 40.0,
-     "cpl_7d": 23.09,
-     "spend_today": 1.1,
+     "conv_7d": 40.1,
+     "cpl_7d": 23.08,
+     "spend_today": 10.85,
      "conv_today": 0.0
     },
     {
@@ -47,7 +47,7 @@
      "spend_7d": 873.66,
      "conv_7d": 83.0,
      "cpl_7d": 10.53,
-     "spend_today": 1.42,
+     "spend_today": 1.67,
      "conv_today": 0.0
     },
     {
@@ -56,7 +56,7 @@
      "spend_7d": 700.48,
      "conv_7d": 23.6,
      "cpl_7d": 29.68,
-     "spend_today": 0.0,
+     "spend_today": 13.63,
      "conv_today": 0.0
     },
     {
@@ -65,7 +65,7 @@
      "spend_7d": 451.94,
      "conv_7d": 34.0,
      "cpl_7d": 13.29,
-     "spend_today": 1.16,
+     "spend_today": 2.2,
      "conv_today": 0.0
     }
    ]

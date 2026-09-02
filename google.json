@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-02T10:25",
+ "generated_at": "2026-09-02T11:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -8,47 +8,47 @@
     {
      "name": "[VOLUME] PMax - Castilla y León v2",
      "status": "ENABLED",
-     "spend_7d": 2810.95,
+     "spend_7d": 2811.34,
      "conv_7d": 156.6,
-     "cpl_7d": 17.95,
-     "spend_today": 67.82,
+     "cpl_7d": 17.96,
+     "spend_today": 88.27,
      "conv_today": 2.0
     },
     {
      "name": "[VOLUME] PMax - Madrid",
      "status": "ENABLED",
-     "spend_7d": 1595.04,
+     "spend_7d": 1595.03,
      "conv_7d": 119.5,
      "cpl_7d": 13.35,
-     "spend_today": 21.93,
-     "conv_today": 0.5
+     "spend_today": 31.34,
+     "conv_today": 2.5
     },
     {
      "name": "[VOLUME] PMax - Resto España",
      "status": "ENABLED",
-     "spend_7d": 1145.5,
+     "spend_7d": 1146.34,
      "conv_7d": 100.3,
-     "cpl_7d": 11.42,
-     "spend_today": 76.65,
-     "conv_today": 4.5
+     "cpl_7d": 11.43,
+     "spend_today": 88.87,
+     "conv_today": 5.0
     },
     {
      "name": "[DGEN] Demand Gen - Castilla y León",
      "status": "ENABLED",
-     "spend_7d": 911.84,
+     "spend_7d": 911.85,
      "conv_7d": 42.0,
      "cpl_7d": 21.73,
-     "spend_today": 26.87,
-     "conv_today": 0.0
+     "spend_today": 34.17,
+     "conv_today": 1.0
     },
     {
      "name": "[VOLUME] PMax - Aragón",
      "status": "ENABLED",
-     "spend_7d": 850.7,
+     "spend_7d": 851.06,
      "conv_7d": 76.0,
-     "cpl_7d": 11.19,
-     "spend_today": 36.63,
-     "conv_today": 2.0
+     "cpl_7d": 11.2,
+     "spend_today": 44.62,
+     "conv_today": 4.0
     },
     {
      "name": "[BRAND] Search - Certicasa",
@@ -56,7 +56,7 @@
      "spend_7d": 771.68,
      "conv_7d": 21.6,
      "cpl_7d": 35.73,
-     "spend_today": 6.04,
+     "spend_today": 8.12,
      "conv_today": 0.0
     },
     {
@@ -65,7 +65,7 @@
      "spend_7d": 457.19,
      "conv_7d": 31.0,
      "cpl_7d": 14.75,
-     "spend_today": 16.98,
+     "spend_today": 20.56,
      "conv_today": 1.0
     }
    ]

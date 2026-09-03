@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-03T02:25",
+ "generated_at": "2026-09-03T08:25",
  "accounts": [
   {
    "id": "4275355447",
@@ -8,20 +8,20 @@
     {
      "name": "[VOLUME] PMax - Castilla y León v2",
      "status": "ENABLED",
-     "spend_7d": 2757.44,
-     "conv_7d": 143.9,
-     "cpl_7d": 19.16,
-     "spend_today": 45.64,
-     "conv_today": 0.0
+     "spend_7d": 2758.9,
+     "conv_7d": 144.9,
+     "cpl_7d": 19.04,
+     "spend_today": 97.49,
+     "conv_today": 1.0
     },
     {
      "name": "[VOLUME] PMax - Madrid",
      "status": "ENABLED",
-     "spend_7d": 1716.77,
+     "spend_7d": 1719.92,
      "conv_7d": 116.5,
-     "cpl_7d": 14.74,
-     "spend_today": 33.5,
-     "conv_today": 0.0
+     "cpl_7d": 14.76,
+     "spend_today": 52.96,
+     "conv_today": 1.0
     },
     {
      "name": "[VOLUME] PMax - Resto España",
@@ -29,26 +29,26 @@
      "spend_7d": 1182.16,
      "conv_7d": 98.0,
      "cpl_7d": 12.07,
-     "spend_today": 9.05,
-     "conv_today": 0.0
+     "spend_today": 46.87,
+     "conv_today": 1.0
     },
     {
      "name": "[DGEN] Demand Gen - Castilla y León",
      "status": "ENABLED",
-     "spend_7d": 951.8,
+     "spend_7d": 951.83,
      "conv_7d": 42.0,
      "cpl_7d": 22.67,
-     "spend_today": 8.56,
-     "conv_today": 0.0
+     "spend_today": 17.77,
+     "conv_today": 1.0
     },
     {
      "name": "[VOLUME] PMax - Aragón",
      "status": "ENABLED",
-     "spend_7d": 892.89,
+     "spend_7d": 893.18,
      "conv_7d": 78.0,
      "cpl_7d": 11.45,
-     "spend_today": 6.22,
-     "conv_today": 0.0
+     "spend_today": 29.58,
+     "conv_today": 1.0
     },
     {
      "name": "[BRAND] Search - Certicasa",
@@ -56,7 +56,7 @@
      "spend_7d": 717.67,
      "conv_7d": 21.6,
      "cpl_7d": 33.23,
-     "spend_today": 2.4,
+     "spend_today": 5.04,
      "conv_today": 0.0
     },
     {
@@ -65,7 +65,7 @@
      "spend_7d": 474.04,
      "conv_7d": 34.9,
      "cpl_7d": 13.58,
-     "spend_today": 4.53,
+     "spend_today": 10.93,
      "conv_today": 0.0
     }
    ]

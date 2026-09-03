@@ -36,7 +36,7 @@ jobs:
         run: |
           git config user.name "dashboard-bot"
           git config user.email "bot@leadfy.fr"
-          git add alerts_state.json || true
+          git add alerts_state.json scale_state.json || true
           git diff --cached --quiet || git commit -m "alert state [skip ci]"
           git push || true
       - uses: actions/upload-pages-artifact@v3

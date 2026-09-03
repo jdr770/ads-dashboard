@@ -1,0 +1,49 @@
+{
+  "ES": {
+    "mode": "SCALE_X5",
+    "label": "🇪🇸 España — SCALE ×5",
+    "account": "act_1548718242483908",
+    "leads_baseline_daily": 75,
+    "leads_target_daily": 375,
+    "cpl_max": 15.0,
+    "dsl_daily": 1900,
+    "palier_pct_min": 20,
+    "palier_pct_max": 30,
+    "palier_days": 3,
+    "directive": "Ordre Jordan 03/09 : il me faut 5× plus de leads, on scale à mort. CPL toléré jusqu'à 15 € pendant la montée. Rounds labo tous les 3-4 jours avec le stock vierge. Zone E en réserve de surface.",
+    "stock_creas": {
+      "CYL vierges (batch août)": ["CYL1_A", "CYL2_B", "CYL3_A", "CYL4_B", "CYL5_A", "CYL6_B", "CYL7_A", "CYL7_C"],
+      "H génériques utilisables": ["H04_C", "H04_E", "H05_E", "H08_C", "H09_C", "H11_C (réhabilitée)", "H11_E (réhabilitée)"],
+      "Corps opposés (batch juillet)": ["~12 variantes corps opposé des hooks validés"],
+      "Surface en réserve": ["Zone E : 4 campagnes pausées prêtes (León/Burgos/Sierra/Oeste)"]
+    },
+    "interdites": ["H06_E", "H08_E (sous-titres FR)", "CYL3_E", "CYL2_C", "CYL6_E", "SHORT_*"]
+  },
+  "BE_ISO": {
+    "mode": "VOLUME_STABLE",
+    "label": "🇧🇪 ISO Belgique — volume stable 2 clients",
+    "account": "act_939768347627456",
+    "cpl_max": 5.0,
+    "dsl_daily": 230,
+    "palier_days": 4,
+    "directive": "Servir 2 clients (Wallonie only / Flandre+Wallonie). CPL < 5 €. Ne JAMAIS toucher ce qui tourne bien. Refresh textes obligatoire au 01/10 (deadline septembre dans les copies).",
+    "stock_creas": {
+      "Cartoon claymation": ["5 vidéos jamais lancées (BATCH ISO BE CARTOON)"],
+      "Bibliothèque Meta": ["Script_1/Script_2 jamais testées (voir BRIEF_LABO_WALLON)"]
+    }
+  },
+  "TER": {
+    "mode": "TEST",
+    "label": "🏢 Terciario B2B ES — test",
+    "campaign_match": ["TERCIARIO"],
+    "cpl_max": 15.0,
+    "directive": "Juger à 72h. Winner attendu : TER_A2_hostal (7,91 € chez le loueur). Tuer vite ou pousser."
+  },
+  "LED": {
+    "mode": "TEST",
+    "label": "💡 LED CAE ES — test",
+    "campaign_match": ["ES_LED_CAE"],
+    "cpl_max": 15.0,
+    "directive": "Lancement nuit du 03/09 (GO Jordan). CPL cible 8-15 € brut. Créneau Ad Library vide. Juger à 72h par thème (SUPER/HOTEL/GYM/TIENDA)."
+  }
+}

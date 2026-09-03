@@ -1,188 +1,81 @@
 {
   "accounts": [
     {
+      "id": "act_1548718242483908",
+      "label": "🇪🇸 ES ISO (Certicasa)",
+      "market": "es",
+      "target_cpl": 15.0,
+      "campaign_targets": {
+        "ARAGON": 8.0,
+        "VIDEO_TEST": 10.0,
+        "TERCIARIO": 15.0,
+        "LED_CAE": 15.0
+      }
+    },
+    {
       "id": "act_939768347627456",
       "label": "🇧🇪 BE ISO_1",
+      "market": "be",
       "target_cpl": 5.0,
       "campaign_targets": {
-        "LABORATOIRE": 3.0,
-        "MULTI BE TEST": 6.0
-      },
-      "group": "perso"
+        "WALLONIE ONLY": 4.0,
+        "FLANDRE": 5.5,
+        "MULTI BE": 8.0
+      }
     },
     {
       "id": "act_3065694270339966",
       "label": "🇧🇪 BE Solar_1",
-      "target_cpl": 15.0,
-      "group": "perso"
-    },
-    {
-      "id": "act_1101511028200755",
-      "label": "🇱🇺 LUX PVCH (Nova 174_1)",
-      "target_cpl": 15.0,
-      "group": "perso",
-      "campaign_targets": {
-        "CHASSIS": 25.0,
-        "PVCH": 9.0
-      }
-    },
-    {
-      "id": "act_980359137327107",
-      "label": "🇧🇪 RT Wallonie (Nova 174_2)",
-      "target_cpl": 5.0,
-      "group": "perso"
-    },
-    {
-      "id": "act_1585141998932759",
-      "label": "🇱🇺 LUX TH_1 (PV)",
-      "target_cpl": 30.0,
-      "group": "perso"
+      "market": "be",
+      "target_cpl": 15.0
     },
     {
       "id": "act_2026890828170822",
       "label": "🇧🇪 JRC RENO TOIT (restreint)",
+      "market": "be",
       "target_cpl": 4.5,
-      "watch_restriction": true,
-      "group": "perso"
+      "watch_restriction": true
+    },
+    {
+      "id": "act_980359137327107",
+      "label": "🇧🇪 RT Nova 174_2 (restreint)",
+      "market": "be",
+      "target_cpl": 5.0,
+      "watch_restriction": true
     },
     {
       "id": "act_400772636441454",
       "label": "🇱🇺 LUX Solar_1 (restreint)",
+      "market": "be",
       "target_cpl": 10.0,
-      "watch_restriction": true,
-      "group": "perso"
-    },
-    {
-      "id": "act_1548718242483908",
-      "label": "🇪🇸 ES ISO (Certicasa)",
-      "target_cpl": 10.0,
-      "campaign_targets": {
-        "ES_ISO_VIDEO_TEST": 7.0,
-        "VIDEO ZONE": 7.0
-      },
-      "group": "certicasa"
+      "watch_restriction": true
     }
   ],
   "launches": [
     {
-      "name": "ES vidéo (test + zones)",
-      "at": "2026-07-06T16:00:00Z",
-      "campaign_match": [
-        "ES_ISO_VIDEO_TEST",
-        "VIDEO ZONE"
-      ]
+      "name": "🇪🇸 Relance ES (7 campagnes)",
+      "at": "2026-09-02T13:30:00Z",
+      "market": "es",
+      "campaign_match": ["RESTO ZONAS", "CASTILLA", "ARAGON", "MADRID", "GALICIA", "VIDEO_TEST", "ES_ISO_VIDEO"]
     },
     {
-      "name": "LUX PVCH Vague 1",
-      "at": "2026-07-07T08:00:00Z",
-      "campaign_match": [
-        "MULTI LUX PVCH TEST"
-      ]
+      "name": "🏢 Terciario B2B",
+      "at": "2026-09-02T13:30:00Z",
+      "market": "es",
+      "campaign_match": ["TERCIARIO"]
     },
     {
-      "name": "RT Wallonie (winners + test)",
-      "at": "2026-07-06T21:30:00Z",
-      "campaign_match": [
-        "RT - WINNERS",
-        "RT - TEST"
-      ]
-    },
-    {
-      "name": "BE MULTI Vague 1",
-      "at": "2026-07-07T10:00:00Z",
-      "campaign_match": [
-        "MULTI BE TEST"
-      ]
-    },
-    {
-      "name": "RT Vague 2A+2B",
-      "at": "2026-07-09T12:00:00Z",
-      "campaign_match": [
-        "RT - TEST"
-      ]
-    }
-  ],
-  "video_backlog": [
-    {
-      "market": "🇧🇪 BE MULTI",
-      "note": "Vague 2 = 9 hooks restants (H2,H3,H5,H6,H8,H9,H11,H12,H14) × corps GAGNANT uniquement — après lecture 72h (~10/07)",
-      "count": 18
-    },
-    {
-      "market": "🇱🇺 LUX PVCH",
-      "note": "Vague 2 déjà montée en pause (2 ad sets) : activer le corps gagnant après lecture 72h (~10/07)",
-      "count": 12
-    },
-    {
-      "market": "🇧🇪 RT Wallonie",
-      "note": "Réserve : A1_ (base), A2_ (base), A2__12 — les paris faibles. Vagues 2A/2B lancées le 09/07 (12 vidéos). A1__1 = perdante, jamais relancer.",
-      "count": 3
-    },
-    {
-      "market": "🇪🇸 ES ISO",
-      "note": "6 hooks génériques 9:16 en réserve (déjà uploadés côté fichiers) + 12 vidéos 16:9/1:1 chez Google via Flo",
-      "count": 6
+      "name": "🇧🇪 Relance ISO BE (2 championnes)",
+      "at": "2026-09-02T14:10:00Z",
+      "market": "be",
+      "campaign_match": ["ISO BE -"]
     }
   ],
   "rules": {
-    "freq_warn": 2.2,
-    "freq_alert": 2.6,
+    "freq_warn": 2.0,
+    "freq_alert": 2.4,
     "cpl_warn_ratio": 1.5,
     "cpl_alert_ratio": 2.0,
     "min_spend_for_alert": 15.0
-  },
-  "products": [
-    {
-      "label": "🇪🇸 ISO España",
-      "accounts": [
-        "act_1548718242483908"
-      ]
-    },
-    {
-      "label": "🏠 Réno toiture",
-      "accounts": [
-        "act_980359137327107",
-        "act_2026890828170822"
-      ]
-    },
-    {
-      "label": "☀️ Solar BE",
-      "accounts": [
-        "act_3065694270339966"
-      ]
-    },
-    {
-      "label": "🏡 Multi BE",
-      "name_contains": [
-        "MULTI BE"
-      ]
-    },
-    {
-      "label": "🧱 ISO BE",
-      "name_contains": [
-        "LABORATOIRE"
-      ]
-    },
-    {
-      "label": "☀️ PV LUX",
-      "name_contains": [
-        "LUXPV",
-        "LUX PV",
-        "PV_LUX"
-      ]
-    },
-    {
-      "label": "🪟 Châssis LUX",
-      "name_contains": [
-        "CHASSIS"
-      ]
-    },
-    {
-      "label": "🇱🇺 Multi PVCH LUX",
-      "name_contains": [
-        "PVCH",
-        "MULTI LUX"
-      ]
-    }
-  ]
+  }
 }

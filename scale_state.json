@@ -1,0 +1,34 @@
+{
+ "ES_LED_CAE_TEST": {
+  "budget": 200.0,
+  "since": "2026-09-03"
+ },
+ "TERCIARIO TEST": {
+  "budget": 60.0,
+  "since": "2026-09-03"
+ },
+ "RESTO ZONAS": {
+  "budget": 280.0,
+  "since": "2026-09-03"
+ },
+ "ES_ISO_VIDEO_TEST": {
+  "budget": 120.0,
+  "since": "2026-09-03"
+ },
+ "ARAGON": {
+  "budget": 100.0,
+  "since": "2026-09-03"
+ },
+ "GALICIA EST ( 27 32 )": {
+  "budget": 80.0,
+  "since": "2026-09-03"
+ },
+ "MADRID": {
+  "budget": 80.0,
+  "since": "2026-09-03"
+ },
+ "CASTILLA Y L\u00c9ON": {
+  "budget": 180.0,
+  "since": "2026-09-03"
+ }
+}

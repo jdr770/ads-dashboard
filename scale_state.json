@@ -16,8 +16,8 @@
   "since": "2026-09-04"
  },
  "ARAGON": {
-  "budget": 130.0,
-  "since": "2026-09-04"
+  "budget": 165.0,
+  "since": "2026-09-08"
  },
  "GALICIA EST ( 27 32 )": {
   "budget": 80.0,
@@ -30,5 +30,9 @@
  "CASTILLA Y L\u00c9ON": {
   "budget": 180.0,
   "since": "2026-09-03"
+ },
+ "ES - ISO - MOTOR AMPLIO (21 prov sin CyL)": {
+  "budget": 250.0,
+  "since": "2026-09-08"
  }
 }

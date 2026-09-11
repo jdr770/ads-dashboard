@@ -38,5 +38,9 @@
  "ES - ISO - LABO CREAS": {
   "budget": 0.0,
   "since": "2026-09-08"
+ },
+ "ES - ISO - CATALU\u00d1A 08+17 (Barcelona y Girona)": {
+  "budget": 150.0,
+  "since": "2026-09-11"
  }
 }

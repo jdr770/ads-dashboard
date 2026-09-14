@@ -42,5 +42,9 @@
  "ES - ISO - CATALU\u00d1A 08+17 (Barcelona y Girona)": {
   "budget": 150.0,
   "since": "2026-09-11"
+ },
+ "ES - LABO MO (test cr\u00e9as, ABO)": {
+  "budget": 0.0,
+  "since": "2026-09-14"
  }
 }

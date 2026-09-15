@@ -4,8 +4,8 @@
   "since": "2026-09-03"
  },
  "TERCIARIO TEST": {
-  "budget": 60.0,
-  "since": "2026-09-03"
+  "budget": 130.0,
+  "since": "2026-09-15"
  },
  "RESTO ZONAS": {
   "budget": 336.0,
@@ -32,8 +32,8 @@
   "since": "2026-09-15"
  },
  "ES - ISO - MOTOR AMPLIO (21 prov sin CyL)": {
-  "budget": 420.0,
-  "since": "2026-09-10"
+  "budget": 520.0,
+  "since": "2026-09-15"
  },
  "ES - ISO - LABO CREAS": {
   "budget": 0.0,
@@ -46,5 +46,9 @@
  "ES - LABO MO (test cr\u00e9as, ABO)": {
   "budget": 0.0,
   "since": "2026-09-14"
+ },
+ "ES - LE LABO DE MOMO (test cr\u00e9as, ABO)": {
+  "budget": 0.0,
+  "since": "2026-09-15"
  }
 }

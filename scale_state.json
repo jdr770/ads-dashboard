@@ -50,5 +50,33 @@
  "ES - LE LABO DE MOMO (test cr\u00e9as, ABO)": {
   "budget": 0.0,
   "since": "2026-09-15"
+ },
+ "ES | ISO-RES | MULTIZONE | ABO": {
+  "budget": 0.0,
+  "since": "2026-09-20"
+ },
+ "ES | ISO-RES | CAT-08+17 | CBO": {
+  "budget": 195.0,
+  "since": "2026-09-20"
+ },
+ "ES | ISO-TER | B2B | CBO": {
+  "budget": 130.0,
+  "since": "2026-09-20"
+ },
+ "ES | ISO-RES | GEN | CBO": {
+  "budget": 800.0,
+  "since": "2026-09-20"
+ },
+ "ES | ISO-RES | ARAGON | CBO": {
+  "budget": 215.0,
+  "since": "2026-09-20"
+ },
+ "ES | ISO-RES | GALICIA-27+32 | CBO": {
+  "budget": 80.0,
+  "since": "2026-09-20"
+ },
+ "ES | ISO-RES | CYL | CBO": {
+  "budget": 400.0,
+  "since": "2026-09-20"
  }
 }

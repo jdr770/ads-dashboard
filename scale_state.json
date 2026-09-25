@@ -86,5 +86,17 @@
  "ES | ISO-RES | CLM-13+02 | CBO": {
   "budget": 100.0,
   "since": "2026-09-24"
+ },
+ "ES | TEST | ABO": {
+  "budget": 0.0,
+  "since": "2026-09-25"
+ },
+ "ES | PROD | HORS-CYL | CBO": {
+  "budget": 1090.0,
+  "since": "2026-09-25"
+ },
+ "ES | PROD | CYL | CBO": {
+  "budget": 580.0,
+  "since": "2026-09-25"
  }
 }

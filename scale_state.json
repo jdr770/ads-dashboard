@@ -60,8 +60,8 @@
   "since": "2026-09-24"
  },
  "ES | ISO-TER | B2B | CBO": {
-  "budget": 130.0,
-  "since": "2026-09-20"
+  "budget": 60.0,
+  "since": "2026-09-27"
  },
  "ES | ISO-RES | GEN | CBO": {
   "budget": 800.0,
@@ -98,5 +98,37 @@
  "ES | PROD | CYL | CBO": {
   "budget": 400.0,
   "since": "2026-09-25"
+ },
+ "ES | ISO-RES | TEST | REFONTE | CBO": {
+  "budget": 160.0,
+  "since": "2026-09-27"
+ },
+ "ES | ISO-RES | CYL | REFONTE | CBO": {
+  "budget": 300.0,
+  "since": "2026-09-27"
+ },
+ "ES | ISO-RES | GALICIA | REFONTE | CBO": {
+  "budget": 120.0,
+  "since": "2026-09-27"
+ },
+ "ES | ISO-RES | NORTE | REFONTE | CBO": {
+  "budget": 150.0,
+  "since": "2026-09-27"
+ },
+ "ES | ISO-RES | ARAGON | REFONTE | CBO": {
+  "budget": 220.0,
+  "since": "2026-09-27"
+ },
+ "ES | ISO-RES | CLM | REFONTE | CBO": {
+  "budget": 300.0,
+  "since": "2026-09-27"
+ },
+ "ES | ISO-RES | CATALUNA | REFONTE | CBO": {
+  "budget": 300.0,
+  "since": "2026-09-27"
+ },
+ "ES | ISO-RES | MADRID | REFONTE | CBO": {
+  "budget": 250.0,
+  "since": "2026-09-27"
  }
 }

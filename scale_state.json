@@ -130,5 +130,9 @@
  "ES | ISO-RES | MADRID | REFONTE | CBO": {
   "budget": 250.0,
   "since": "2026-09-27"
+ },
+ "ES | ISO-RES | IMAGES TEST | ABO": {
+  "budget": 0.0,
+  "since": "2026-10-09"
  }
 }

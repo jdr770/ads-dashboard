@@ -134,5 +134,9 @@
  "ES | ISO-RES | IMAGES TEST | ABO": {
   "budget": 0.0,
   "since": "2026-10-09"
+ },
+ "ES | ISO-RES | NACIONAL+CYL | 2026-10-11": {
+  "budget": 1770.0,
+  "since": "2026-10-10"
  }
 }
